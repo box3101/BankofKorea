@@ -1,0 +1,20 @@
+footer#footer.footer {
+  padding-left: 30px;
+  background: #BBBBBB 0% 0% no-repeat padding-box;
+  height: 70px;
+  display: flex; 
+  align-items: center;
+  box-sizing: border-box;
+  div.flex.gap60 {
+    div.for-logo {
+      img {
+      }
+    }
+
+    p {
+      font: normal normal normal 12px/18px Pretendard;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+  }
+}

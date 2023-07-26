@@ -3,6 +3,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 // 1. utility
+@import "utility/function.scss";
 @import "utility/mixin.scss";
 
 // 2. base
@@ -15,8 +16,15 @@
 @import "components/input.scss";
 @import "components/button.scss";
 @import "components/common.scss";
+@import "components/select.scss";
+@import "components/table.scss";
 
 // 4. layout
+@import "layout/layout.scss";
+@import "layout/footer.scss";
+@import "layout/header.scss";
+@import "layout/nav.scss";
 
 // 5. pages
 @import "pages/login.scss";
+@import "pages/_dashboard.scss";

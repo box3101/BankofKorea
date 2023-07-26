@@ -1,7 +1,7 @@
 export const menu = [
 	{
 		category: "lftmLrnCty",
-		title: "평생학습도시",
+		title: "평가설정",
 		items: [
 			{ url: "Greeting", title: "인사말" },
 			{ url: "VsnNdGoal", title: "비전과 목표" },
@@ -13,7 +13,7 @@ export const menu = [
 	},
 	{
 		category: "enrollment",
-		title: "수강신청",
+		title: "평가관리",
 		items: [
 			{ url: "CourseRegistration", title: "수강신청" },
 			{ url: "SeaOfLearning", title: "배우는바다 Online" },
@@ -21,7 +21,7 @@ export const menu = [
 	},
 	{
 		category: "netWork",
-		title: "네트워크",
+		title: "평가운영",
 		items: [
 			{ url: "LifelongLearningInstitute", title: "평생학습기관" },
 			{ url: "LifelongLearningClub", title: "평생학습동아리" },
@@ -33,7 +33,7 @@ export const menu = [
 	},
 	{
 		category: "communityspace",
-		title: "나눔공간",
+		title: "평가결과",
 		items: [
 			{ url: "RenterInformation", title: "대관 안내" },
 			{ url: "RenterApplication", title: "대관 신청" },
@@ -42,7 +42,7 @@ export const menu = [
 	},
 	{
 		category: "OpenForum",
-		title: "열린마당",
+		title: "승진·이동관리",
 		items: [
 			{ url: "notice", title: "공지사항" },
 			{ url: "library", title: "자료실" },
@@ -50,7 +50,7 @@ export const menu = [
 	},
 	{
 		category: "EducationInnovationZone",
-		title: "교육혁신지구",
+		title: "알림관리",
 		items: [
 			{ url: "Exploration", title: "구석구석 탐방" },
 			{ url: "JungguVillageSchool", title: "중구마을학교" },
@@ -61,7 +61,7 @@ export const menu = [
 	},
 	{
 		category: "UserServices",
-		title: "사용자 서비스",
+		title: "평가시스템관리",
 		items: [
 			{ url: "Login", title: "로그인" },
 			{ url: "SignUp", title: "회원가입" },

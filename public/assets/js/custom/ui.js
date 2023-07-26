@@ -1,5 +1,5 @@
 (function () {
-  const comBtnActive = () => {
+  function comBtnActive() {
     const rippleElements = document.querySelectorAll('.com-btn');
 
     rippleElements.forEach(element => {
@@ -18,10 +18,27 @@
     });
   }
 
+  function navi() {
+    const $$gnbItem = document.querySelectorAll(".gnbItem");
+    const $gnbItem = document.querySelector(".gnbItem");
+
+
+    $$gnbItem.forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        if (!this.classList.contains("on")) {
+          $$gnbItem.forEach((item) => item.classList.remove("on"));
+          this.classList.add("on");
+        }
+        else this.classList.remove("on");
+      });
+    });
+  }
+
   function eventBinding() {
     if (document.querySelector('.com-btn')) {
       comBtnActive();
     }
+    navi();
   }
 
   function init() {

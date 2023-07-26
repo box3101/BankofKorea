@@ -14,13 +14,12 @@ button {
 .com-btn {
   box-sizing: border-box;
   border: 1px solid #666666;
-  width: 100%;
   position: relative;
   z-index: 1;
   top: 0;
   transition: 0.25s ease-in-out;
   border-radius: 4px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   &::after {
@@ -41,7 +40,7 @@ button {
     transition: all 0.3s ease;
     opacity: 0.1;
   }
-  &.after-none::after{
+  &.after-none::after {
     display: none;
   }
   &:hover,
@@ -69,7 +68,9 @@ button {
   }
 
   &.btn-sm {
-    padding: 6px 12px;
+    min-width: 80px;
+    height: 30px;
+    border: none;
   }
 
   // 폰트 크기 설정
@@ -83,7 +84,7 @@ button {
   }
 
   &.font-sm {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   // 반지름 설정
@@ -100,6 +101,11 @@ button {
   }
 
   // 배경색 설정
+  &.bg-main {
+    background-color: $main-color;
+    color: #fff;
+  }
+
   &.bg-gray {
     background-color: $gray;
     color: #fff;
@@ -166,3 +172,37 @@ button {
   }
 }
 /*=====  End of 버튼 클릭시 효과  ======*/
+
+.search-btn {
+  width: 80px;
+  height: 30px;
+  display: inline-block;
+  background: #0559ae 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  font: normal normal 600 14px/16px Pretendard;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border:none;
+}
+
+.excel-btn {
+  width: 118px;
+  height: 28px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #00a100;
+  border-radius: 2px;
+  font: normal normal 600 14px/16px Pretendard;
+  letter-spacing: 0px;
+  color: #00a100;
+}
+
+.add-btn {
+  width: 80px;
+  height: 28px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #0559ae;
+  border-radius: 2px;
+  font: normal normal 600 14px/16px Pretendard;
+  letter-spacing: 0px;
+  color: #0559ae;
+}

@@ -1,4 +1,11 @@
 $main-color: #004884;
 $sec-color: #00A8ff;
 $gray : #666;
-$gray2 : #999
+$gray2 : #999;
+
+$path-set: (
+  icon: "../assets/img/icon/",
+  img: "../assets/img/",
+  logo: "../assets/img/logo/",
+  object: "../assets/img/object/",
+);

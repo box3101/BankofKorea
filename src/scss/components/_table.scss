@@ -1,0 +1,32 @@
+.com-table {
+  position: relative;
+  /* 테이블의 너비와 레이아웃을 설정합니다. */
+  width: 100%;
+  table-layout: fixed; /* 각 셀의 너비를 고정합니다. */
+  border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
+}
+
+.com-table th, .com-table td {
+  /* 헤더와 데이터 셀에 패딩을 추가합니다. */
+  padding: 8px;
+  text-align: center; /* 텍스트 정렬을 설정합니다. */
+  border: 1px solid #aaa; /* 셀 경계선 스타일을 설정합니다. */
+}
+
+.com-table th {
+  /* 테이블 헤더 스타일링 */
+  background-color: #B2DDFF; /* 헤더 배경색을 설정합니다. */
+  color: #000; /* 헤더 텍스트 색상을 설정합니다. */
+  position: sticky;
+  top: -1px;
+  border-bottom: 1px solid #aaa;
+}
+
+.com-table tr:nth-child(even) {
+  /* 짝수 줄 배경색을 설정합니다. */
+  background-color: #f9f9f9;
+}
+
+.tbl-scroll{
+  overflow-y: scroll;
+}

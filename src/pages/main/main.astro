@@ -9,8 +9,10 @@ const idName = 'login';
 <Layout
   pageTitle={pageTitle}
   idName={idName}
+  pageCnt = "noCnt"
   pageHeader="noHeader"
   pageFooter="noFooter"
+  pageNav ="noNav"
 >
   <!-- 컨텐츠가 들어갈 부분 -->
   <section class="login flex">
@@ -49,19 +51,19 @@ const idName = 'login';
           </div>
           <div class="row mt16">
             <div class="flex jcb gap16">
-              <a href="#" class="com-btn btn-md font-md bg-gray"
+              <a href="#" class="wid100 com-btn btn-md font-md bg-gray"
                 >비밀번호 변경</a
               >
-              <a href="#" class="com-btn btn-md font-md after-none"
+              <a href="#" class="wid100 com-btn btn-md font-md after-none"
                 >비밀번호 초기화</a
               >
             </div>
           </div>
         </div>
       </form>
-       <!-- 이용관련안내 -->
-       <div class="use-info">
-        <h3>직원평가시스템 이용 관련 안내</h3>
+      <!-- 이용관련안내 -->
+      <div class="use-info">
+        <h3 class="circle-title">직원평가시스템 이용 관련 안내</h3>
         <ul class="arrow-list">
           <li>최초로 로그인시 비밀번호를 초기화 및 변경해야 한다.</li>
           <li>
@@ -69,8 +71,8 @@ const idName = 'login';
             메일을 발송하여 평가단계를 안내합니다.
           </li>
           <li>
-            직원평가시스템 이용 및 평가절차와 관련한 사항 등은 관리자(5555)
-            에게 전화 또는 메일로 문의해 주시기 바랍니다.
+            직원평가시스템 이용 및 평가절차와 관련한 사항 등은 관리자(5555) 에게
+            전화 또는 메일로 문의해 주시기 바랍니다.
           </li>
         </ul>
       </div>

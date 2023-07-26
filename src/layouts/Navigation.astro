@@ -1,26 +1,33 @@
 ---
-import { menu } from "../menu.js";
+import { menu } from '../menu.js';
 ---
 
-<ul class="gnb" id="gnb" tabindex="0">
-	{
-		menu.map(function ({ category, title, items }) {
-			return (
-				<li class="gnbItem">
-					<a href={`../${category}/${items[0].url}.html`} class="gnbLink">
-						{title}
-					</a>
-					<ul class="subPanel">
-						{items.map(function ({ url, title }) {
-							return (
-								<li>
-									<a href={`../${category}/${url}.html`}>{title}</a>
-								</li>
-							);
-						})}
-					</ul>
-				</li>
-			);
-		})
-	}
-</ul>
+<div class="gnb-wrap">
+  <div class="nav-logo mt10">
+    <h1>
+      <img src="../assets/img/nav-logo.png" alt="" />
+    </h1>
+  </div>
+  <ul class="gnb" id="gnb" tabindex="0">
+    {
+      menu.map(function ({ category, title, items }) {
+        return (
+          <li class="gnbItem">
+            <a href="#none" class="gnbLink">
+              {title}
+            </a>
+            <ul class="subPanel">
+              {items.map(function ({ url, title }) {
+                return (
+                  <li>
+                    <a href={`../${category}/${url}.html`}>{title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

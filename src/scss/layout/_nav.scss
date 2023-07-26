@@ -1,0 +1,64 @@
+
+.gnb {
+  margin-top: 17px;
+  border-top: 1px solid #222;
+}
+
+.gnbItem {
+  position: relative;
+  border-bottom: 1px solid #222;
+
+  &.on {
+    .subPanel {
+      display: block;
+      @include make-before {
+        width: 8px;
+        height: 48px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  > a {
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    padding-left: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    transition: all 0.3s;
+    @include make-before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      background: url(../../assets/img/gnbItem.png);
+      width: 12px;
+      height: 12px;
+      transition: all 0.3s;
+    }
+    &:hover {
+      &::before {
+        transform: rotate(90deg) translateX(-5px);
+        transform-origin: center;
+      }
+    }
+  }
+
+  .subPanel {
+    display: none;
+    background: #008cf9 0% 0% no-repeat padding-box;
+    li {
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0px;
+        color: #ffffff;
+      }
+    }
+  }
+}

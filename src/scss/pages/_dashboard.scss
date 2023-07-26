@@ -1,0 +1,311 @@
+.db-logo {
+  .img-wrap {
+    position: relative;
+    img {
+      height: 190px;
+      width: 100%;
+    }
+    .txt-wrap {
+      h2 {
+        font: normal normal bold 38px/45px Pretendard;
+        letter-spacing: 0px;
+        color: #ffffff;
+      }
+      p {
+        margin-top: 8px;
+        font: normal normal 300 20px/24px Pretendard;
+        letter-spacing: 0px;
+        color: #eeeeee;
+      }
+      text-align: center;
+      @include poall;
+    }
+  }
+}
+.db-section {
+  margin-top: 17px;
+}
+.db-item {
+  position: relative;
+  padding: 20px 45px;
+  background: #fff;
+  border-radius: 10px;
+  &.small {
+    padding: 7px 20px;
+  }
+  .top-border {
+    @include make-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      width: 100%;
+      height: 6px;
+      background: $main-color;
+      border-radius: 10px 10px 0px 0px;
+    }
+  }
+}
+
+ul.step {
+  position: relative;
+  .bar {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: 3px;
+    background: #666;
+  }
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  li.step__item {
+    width: 82px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:last-of-type {
+      @include make-after {
+        display: none;
+      }
+    }
+    @include make-after {
+      width: 10px;
+      height: 15px;
+      @include bg-url('img', 'step-arr.svg');
+      position: absolute;
+      top: 14px;
+      background-size: contain;
+      left: 115px;
+    }
+    &.status-in-progress .circle-number {
+      background: $sec-color;
+    }
+    &.status-current .circle-number {
+      background: $main-color;
+    }
+    &.status-default .circle-number {
+      background: #bbb;
+      opacity: 1;
+      + .step-desc {
+        opacity: 0.4;
+      }
+    }
+    div.circle-number {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      font: normal normal 600 20px/57px Pretendard;
+      letter-spacing: 0px;
+      color: #ffffff;
+      justify-content: center;
+      div.circle-small {
+        position: absolute;
+        top: -2px;
+        right: -5px;
+        background: #ff0000 0% 0% no-repeat padding-box;
+        border: 1px solid #ff0000;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          font: normal normal normal 12px/16px Pretendard;
+          letter-spacing: 0px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    div.step-desc {
+      margin-top: 7px;
+      text-align: center;
+      font: normal normal 600 15px/20px Pretendard;
+      letter-spacing: -.5px;
+      color: #222222;
+    }
+  }
+}
+
+div.shortcut {
+  div.shortcut__list {
+    display: flex;
+    gap: 32px;
+    div.shortcut__item {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      // width: 164px;
+      height: 60px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 3px solid $sec-color;
+      border-radius: 70px;
+      padding: 7px;
+      box-sizing: border-box;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        flex: 1.2;
+        border: 3px solid $main-color;
+        .icon {
+          background: $main-color;
+        }
+      }
+      a {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        div.icon {
+          width: 46px;
+          height: 46px;
+          /* UI Properties */
+          background: $sec-color 0% 0% no-repeat padding-box;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+          }
+        }
+
+        div.txt {
+          display: flex;
+          align-items: center;
+          font: normal normal 600 16px/19px Pretendard;
+          letter-spacing: 0px;
+          color: #222222;
+          text-align: center;
+          word-break: keep-all;
+        }
+      }
+    }
+  }
+}
+
+.db-evaluation {
+  .tit {
+    font: normal normal 600 18px/19px Pretendard;
+    letter-spacing: 0px;
+    color: #222222;
+    margin-bottom: 15px;
+  }
+  .evaluation {
+    margin-top: 10px;
+  }
+}
+
+.db-noti {
+  ul {
+    li {
+      padding: 7px 0;
+      border-bottom: 1px solid #bbb;
+      &:last-of-type {
+        margin-bottom: 0;
+        border-bottom: none;;
+      }
+      a.flex.aic.gap20 {
+        position: relative;
+        @include make-before {
+          @include poy;
+          right: 10px;
+          @include bg-url('img', 'arr-hover.svg');
+          background-size: cover;
+          width: 34px;
+          height: 9px;
+        }
+        display: flex;
+        align-items: center;
+        div.date {
+          width: 100px;
+          height: 54px;
+          background: #fff;
+          border: 1px solid #666;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          div.year-nomth {
+            font: normal normal normal 12px/14px Pretendard;
+            letter-spacing: 0px;
+            color: #666;
+          }
+          div.day {
+            margin-top: 3px;
+            font: normal normal 600 20px/24px Pretendard;
+            letter-spacing: 0px;
+            color: #222;
+          }
+        }
+        &:hover {
+          @include make-before {
+            @include bg-url('img', 'arr-hover-on.svg');
+          }
+          div.date {
+            border: 1px solid $main-color;
+            background: $main-color;
+          }
+          div.year-nomth,
+          div.day {
+            color: #fff !important;
+          }
+          p.cnt {
+            color: $main-color !important;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p.cnt {
+        font: normal normal normal 16px/19px Pretendard;
+        letter-spacing: 0px;
+        color: #222222;
+      }
+    }
+  }
+}
+
+.db-download {
+  li {
+    &:first-of-type {
+      margin-bottom: 12px;
+      a {
+        display: inline-flex;
+        width: 100%;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #4bb1ff;
+        border-radius: 10px;
+      }
+    }
+    a {
+      width: 100%;
+      height: 107px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #004981;
+      border-radius: 10px;
+      p {
+        span {
+          position: relative;
+          left: 2px;
+          top: 1px;
+          font: normal normal bold 20px/24px Pretendard;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+}

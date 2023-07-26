@@ -1,20 +1,28 @@
----
-import Navigation from './Navigation.astro';
----
-
 <!-- header -->
-<header id="header" class="header gnbJs">
-  <div class="headerWrap">
-    <div class="headerInner">
-      <h1 class="logo">
+<header id="header" class="header">
+  <div class="header__inner">
+    <div class="breadcrumb">
+      <span>
         <a href="../main/main.html">
-          <img src="../assets/img/logo.png" alt="인천중구교육포털 배우는바다" />
+          <img src="../assets/img/home.svg" alt="" />
         </a>
-      </h1>
-
-      <!-- 네비게이션 -->
-      <Navigation />
-      <!-- 네비게이션 eee -->
+      </span>
+      <span>평가관리</span>
+      <span>목표·면담 설정</span>
+      <span>목표마스터 설정</span>
+    </div>
+    <div class="user-info">
+      <div class="name">
+        <div class="img-wrap">
+          <div class="img" style="background:url('../assets/img/user-img.svg')">
+          </div>
+          <div class="txt">dev01</div>
+        </div>
+      </div>
+      <div class="welcome-msg">님 직원평가시스템 접속을 환영합니다.</div>
+    </div>
+    <div class="login-wrap">
+      <a href="#" class="logout-link"> 로그아웃</a>
     </div>
   </div>
 </header>

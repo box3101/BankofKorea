@@ -1,0 +1,211 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '대시보드';
+const pageTitle = `Home > ${title}`;
+const idName = 'dashboard';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">목표마스터 설정</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex aic jcb">
+          <div class="lef f33">
+            <div class="row">
+              <label class="com-label" for="goal-year-select">목표년도</label>
+              <div class="com-select w180">
+                <select id="goal-year-select" class="select-goal-year input-md v-motion">
+                  <!-- 년도 옵션 -->
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <label class="com-label" for="goal-times-select"
+                >전체 목표차수</label
+              >
+              <div class="com-select w180">
+                <select id="goal-times-select" class="select-goal-times input-md v-motion">
+                  <!-- 차수 옵션 -->
+                  <option value="1">1차</option>
+                  <option value="2">2차</option>
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <label class="com-label" for="goal-target-select">목표대상</label>
+              <div class="com-select w180">
+                <select id="goal-target-select" class="select-goal-target input-md v-motion">
+                  <!-- 대상 옵션 -->
+                  <option value="target1">대상1</option>
+                  <option value="target2">대상2</option>
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn"
+              >검색</button
+            >
+          </div>
+        </div>
+
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic jcb">
+            <button type="button" class="com-btn excel-btn">엑셀 내리기</button>
+            <button type="button" class="com-btn add-btn">추가</button>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:320px;">
+            <table class="com-table">
+              <tr>
+                <th>No.</th>
+                <th>목표년도</th>
+                <th>목표차수</th>
+                <th>목표구분</th>
+                <th>목표설정시작일</th>
+                <th>목표설정종료일</th>
+                <th>진행상태</th>
+                <th>등록자명</th>
+                <th>등록자 ID</th>
+                <th>등록일자</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2023년</td>
+                  <td>차수없음</td>
+                  <td>일반직</td>
+                  <td>2023.07.14</td>
+                  <td>2025.04.21</td>
+                  <td>준비중</td>
+                  <td>김한국</td>
+                  <td>Korea_01</td>
+                  <td>2023.03.12</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>
