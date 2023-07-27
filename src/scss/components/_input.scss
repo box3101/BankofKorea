@@ -32,8 +32,13 @@ input {
     height: 40px;
   }
 
-  &.input-md {
+  &.input-mid {
     height: 32px;
+    &::placeholder {
+      font: normal normal normal 12px/14px Pretendard;
+      letter-spacing: 0px;
+      color: #222222;
+    }
   }
 
   &.input-sm {
@@ -65,8 +70,8 @@ input {
     border-color: #0000ff;
   }
 
-  &.border-green {
-    border-color: #00ff00;
+  &.border-gray {
+    border-color: #ced4da;
   }
 
   // 입력란 배경색 설정

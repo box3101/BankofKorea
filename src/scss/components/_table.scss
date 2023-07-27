@@ -6,7 +6,8 @@
   border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
 }
 
-.com-table th, .com-table td {
+.com-table th,
+.com-table td {
   /* 헤더와 데이터 셀에 패딩을 추가합니다. */
   padding: 8px;
   text-align: center; /* 텍스트 정렬을 설정합니다. */
@@ -15,7 +16,7 @@
 
 .com-table th {
   /* 테이블 헤더 스타일링 */
-  background-color: #B2DDFF; /* 헤더 배경색을 설정합니다. */
+  background-color: #b2ddff; /* 헤더 배경색을 설정합니다. */
   color: #000; /* 헤더 텍스트 색상을 설정합니다. */
   position: sticky;
   top: -1px;
@@ -27,6 +28,24 @@
   background-color: #f9f9f9;
 }
 
-.tbl-scroll{
+.tbl-scroll {
   overflow-y: scroll;
+}
+
+.comtable.type2 {
+  margin-top: 10px;
+  table {
+    th,td{
+      border: 1px solid #aaa;
+    }
+    th {
+      font: normal normal 600 16px/41px Pretendard;
+      letter-spacing: 0px;
+      color: #222222;
+      background-color: #b2ddff;
+    }
+    td{
+      padding-left: 20px;
+    }
+  }
 }

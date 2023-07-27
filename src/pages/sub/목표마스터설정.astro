@@ -1,0 +1,364 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '목표마스터 설정';
+const pageTitle = `Home > ${title}`;
+const idName = 'dashboard';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">목표마스터 설정</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex aic jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="goal-year-select">목표년도</label>
+                <div class="com-select w180">
+                  <select
+                    id="goal-year-select"
+                    class="select-goal-year input-md v-motion"
+                  >
+                    <!-- 년도 옵션 -->
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <!-- ... -->
+                  </select>
+                </div>
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-times-select"
+                  >전체 목표차수</label
+                >
+                <div class="com-select w180">
+                  <select
+                    id="goal-times-select"
+                    class="select-goal-times input-md v-motion"
+                  >
+                    <!-- 차수 옵션 -->
+                    <option value="1">1차</option>
+                    <option value="2">2차</option>
+                    <!-- ... -->
+                  </select>
+                </div>
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-target-select"
+                  >목표대상</label
+                >
+                <div class="com-select w180">
+                  <select
+                    id="goal-target-select"
+                    class="select-goal-target input-md v-motion"
+                  >
+                    <!-- 대상 옵션 -->
+                    <option value="target1">대상1</option>
+                    <option value="target2">대상2</option>
+                    <!-- ... -->
+                  </select>
+                </div>
+              </article>
+            </section>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic jcb">
+            <button type="button" class="com-btn excel-btn">엑셀 내리기</button>
+            <button type="button" class="com-btn add-btn">추가</button>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:305px;">
+            <div class="com-table">
+              <table>
+                <tr>
+                  <th>No.</th>
+                  <th>목표년도</th>
+                  <th>목표차수</th>
+                  <th>목표구분</th>
+                  <th>목표설정시작일</th>
+                  <th>목표설정종료일</th>
+                  <th>진행상태</th>
+                  <th>등록자명</th>
+                  <th>등록자 ID</th>
+                  <th>등록일자</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cnt">
+      <div class="cnt__head type1">
+        <div class="com-tab-wrap">
+          <ul class="head">
+            <li class="on">
+              <a href="javascript:void(0)">목표마스터 상세</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">목표라인 설정</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">목표작성 현황</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-contents">
+        <div class="tab-item cnt__body">
+          <div class="com-table-wrap">
+            <div class="head flex aic jcb">
+              <button type="button" class="com-btn bg-orange btn-sm"
+                >마감</button
+              >
+              <div class="btn-wrap flex gap5">
+                <button type="button" class="com-btn btn-sm">저장</button>
+                <button type="button" class="com-btn btn-sm bg-white border"
+                  >삭제</button
+                >
+              </div>
+            </div>
+            <div class="comtable type2">
+              <table>
+                <colgroup>
+                  <col width="15%" />
+                  <col width="35%" />
+                  <col width="15%" />
+                  <col width="35%" />
+                </colgroup>
+                <tr>
+                  <th>목표년도</th>
+                  <td>
+                    <div class="com-select w250">
+                      <select name="" id="">
+                        <option value="">2024년</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th>진행상태</th>
+                  <td><span class="main-color font-bold">진행중</span></td>
+                </tr>
+                <tr>
+                  <th>설정기간</th>
+                  <td colspan="3">
+                    <div class="com-date-range">
+                      <div class="com-date-range">
+                        <input
+                          type="text"
+                          class="com-input input-mid border-gray w120 datepicker-input"
+                          placeholder="YYYY.MM.DD"
+                        />
+                        <img
+                          class="calendar-icon datepicker-button"
+                          src="../assets/img/date-icon.svg"
+                          alt="calendar-icon"
+                        />
+                        <span>~</span>
+                        <input
+                          type="text"
+                          class="com-input input-mid border-gray w120 datepicker-input"
+                          placeholder="YYYY.MM.DD"
+                        />
+                        <img
+                          class="calendar-icon datepicker-button"
+                          src="../assets/img/date-icon.svg"
+                          alt="calendar-icon"
+                        />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>목표구분</th>
+                  <td>
+                    <div class="com-radio">
+                      <label>
+                        <input
+                          type="radio"
+                          class="com-input input-radio"
+                          name="employmentType"
+                          value="regular"
+                        />
+                        <span>일반직</span>
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          class="com-input input-radio"
+                          name="employmentType"
+                          value="contract"
+                        />
+                        <span>계약직</span>
+                      </label>
+                    </div>
+                  </td>
+                  <th>목표차수</th>
+                  <td>
+                    <div class="com-select w250">
+                      <select name="" id="">
+                        <option value="">차수없음</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>등록자명</th>
+                  <td>홍길동</td>
+                  <th>목표차수</th>
+                  <td>
+                    <div class="com-select w250">
+                      <select name="" id="">
+                        <option value="">차수없음</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>등록일</th>
+                  <td>2023.07.04</td>
+                  <th>수정일</th>
+                  <td> 20203.07.07</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-item cnt__body">2</div>
+        <div class="tab-item cnt__body">3</div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

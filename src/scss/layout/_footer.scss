@@ -2,9 +2,13 @@ footer#footer.footer {
   padding-left: 30px;
   background: #BBBBBB 0% 0% no-repeat padding-box;
   height: 70px;
-  display: flex; 
+  display: flex;
   align-items: center;
   box-sizing: border-box;
+  position: absolute;
+  /* left: 0; */
+  width: 100%;
+  bottom: 0;
   div.flex.gap60 {
     div.for-logo {
       img {
@@ -12,7 +16,7 @@ footer#footer.footer {
     }
 
     p {
-      font: normal normal normal 12px/18px Pretendard;
+      font: normal normal normal 14px/1.5 Pretendard;
       letter-spacing: 0px;
       color: #ffffff;
     }

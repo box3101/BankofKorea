@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_314" data-name="사각형 314" width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_346" data-name="그룹 346" transform="translate(-611 -223)">
+    <path id="패스_6911" data-name="패스 6911" d="M.5,2.16V14.7l7.756,1.66V.5Z" transform="translate(610.571 222.571)" fill="#00a100"/>
+    <g id="그룹_343" data-name="그룹 343" transform="translate(611 223)">
+      <g id="그룹_342" data-name="그룹 342" transform="translate(0)" clip-path="url(#clip-path)">
+        <path id="패스_6912" data-name="패스 6912" d="M7.8,16.366.5,14.7V2.161L7.8.5Z" transform="translate(-0.433 -0.433)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <rect id="사각형_315" data-name="사각형 315" width="7.479" height="11.565" transform="translate(619.45 225.217)" fill="#00a100"/>
+    <g id="그룹_345" data-name="그룹 345" transform="translate(611 223)">
+      <g id="그룹_344" data-name="그룹 344" transform="translate(0)" clip-path="url(#clip-path)">
+        <rect id="사각형_316" data-name="사각형 316" width="7.039" height="11.826" transform="translate(8.894 2.087)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="패스_6913" data-name="패스 6913" d="M3.743,9.635,2.182,6.76H3.495l.593,1.225c.144.28.264.569.44.938h.04c.144-.369.264-.658.393-.938l.56-1.225H6.77L5.209,9.69l1.665,3H5.561L4.9,11.381c-.152-.3-.289-.617-.465-.977H4.4c-.144.36-.289.673-.432.977l-.633,1.313H2.077Z" transform="translate(-0.759 -1.727)" fill="#fff"/>
+        <line id="선_1" data-name="선 1" x2="3.763" transform="translate(10.532 4.904)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="선_2" data-name="선 2" x2="3.763" transform="translate(10.532 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="선_3" data-name="선 3" x2="3.763" transform="translate(10.532 11.096)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

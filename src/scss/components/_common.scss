@@ -1,9 +1,12 @@
+/* =================== font-weight =================== */
+.font-bold{
+  font-weight: 600;
+}
 /* =================== color =================== */
-
-.main-color{
+.main-color {
   color: $main-color;
 }
-.sec-color{
+.sec-color {
   color: $sec-color;
 }
 
@@ -56,7 +59,6 @@
 }
 .flex {
   display: flex;
-  width: 100%;
   &.two-item {
     width: 50%;
   }
@@ -72,9 +74,11 @@
     &.type1 article:nth-of-type(3) {
       width: 20%; /* 290/1600 */
     }
+    &.type2 { gap : 60px;}
   }
   &.four-item {
-    width: 25%;
+    display: flex;
+    gap: 20px;
   }
 }
 .flex.allc {
@@ -100,6 +104,7 @@
 @for $i from 1 through 1000 {
   .w#{$i} {
     width: #{$i}px !important;
+    flex: 0 0 #{$i}px !important;
   }
 }
 /* =================== Margin , Padding=================== */
@@ -234,7 +239,7 @@ html::-webkit-scrollbar-thumb {
   @include make-before {
     position: relative;
     top: 2px;
-    background: #fff;
+    @include bg-url("img","com-title-lg.svg");
     margin-right: 10px;
     width: 17px;
     height: 16px;
@@ -244,3 +249,117 @@ html::-webkit-scrollbar-thumb {
   letter-spacing: 0px;
   color: #ffffff;
 }
+
+/* =================== tab =================== */
+.com-tab-wrap {
+  height: 100%;
+  display: flex;
+  ul.head {
+    display: flex;
+    height: 100%;
+    gap: 56px;
+    li {
+      height: 100%;
+      a {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        font: normal normal normal 20px/24px Pretendard;
+        letter-spacing: 0px;
+        color: #666666;
+        @include make-after{
+          width: 0%;
+        }
+      }
+      &.on,&:hover {
+        a {
+          position: relative;
+          font: normal normal bold 20px/24px Pretendard;
+          letter-spacing: 0px;
+          color: #0559ae;
+          box-sizing: border-box;
+          @include make-after{
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: $main-color;
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =================== 공통 라디오 =================== */
+.com-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.com-radio label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  span{
+    display: inline-block;
+    flex:none;
+  }
+}
+.com-input.input-radio {
+  margin-right: 5px;
+  cursor: pointer;
+}
+/* =================== 공통 div table =================== */
+.com-div-table-wrap{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.flex-container {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center; 
+  height: 80px;
+  background: #0559AE;
+  border-bottom: 2px solid #0559AE;
+  box-sizing: content-box;
+  >div{
+    flex:1;
+    height: 100%;
+    border-bottom: none;
+  }
+  >.flex-item{
+    flex: 0.7;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0559AE;
+  color: #fff;
+  height: 40px;
+  border: 0.5px solid #BBBBBB;
+  box-sizing: border-box;
+  margin-left: -1px;
+  font-weight: bold;
+  &.bg-white{
+    background: #fff;
+    font-size: 14px;
+    color: #222;
+  }
+}
+

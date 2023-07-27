@@ -7,6 +7,11 @@
   height: 50px;
   background: #333;
   box-sizing: border-box;
+  &__inner{
+    display: flex;
+    align-items: center;
+    gap:59px;
+  }
 }
 .breadcrumb {
   display: flex;

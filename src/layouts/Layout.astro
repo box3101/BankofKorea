@@ -2,7 +2,7 @@
 import Footer from './Footer.astro';
 import Header from './Header.astro';
 import Navigation from './Navigation.astro';
-import "../css/ui.css"
+// import '../css/ui.css';
 
 const { pageTitle, pageHeader, pageFooter, pageNav, idName } = Astro.props;
 ---
@@ -12,15 +12,25 @@ const { pageTitle, pageHeader, pageFooter, pageNav, idName } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- 스타일 -->
-    <link rel="stylesheet" href="../../assets/css/ui.css" />
+    <!-- 달력 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/ui.css" />
     <!-- 스타일 eee -->
 
     <!-- 스크립트 -->
+    <!-- 달력 라이브러리 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"
+    ></script>
+
     <script defer src="../assets/js/custom/ui.js"></script>
     <!-- 스크립트 eee -->
 
@@ -30,10 +40,13 @@ const { pageTitle, pageHeader, pageFooter, pageNav, idName } = Astro.props;
   <body>
     <main id={idName} class={idName}>
       <div id="wrap">
-        {pageNav !== 'noNav' && <Navigation />}
         <div class="content-body">
           {pageHeader !== 'noHeader' && <Header />}
-          <slot />
+
+          <div class="container">
+            {pageNav !== 'noNav' && <Navigation />}
+            <slot />
+          </div>
           {pageFooter !== 'noFooter' && <Footer />}
         </div>
       </div>
