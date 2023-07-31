@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const pageTitle = '공통팝업';
+const idName = 'login';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <!-- 공통팝업 -->
+
+    <button class="open-btn" onclick="renderPopupType1()">팝업 1 열기</button>
+    <button class="open-btn" onclick="renderPopupType2()">팝업 2 열기</button>
+
+    <div class="compopup-container"></div>
+    <!-- 공통팝업 eee -->
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

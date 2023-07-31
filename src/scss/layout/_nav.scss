@@ -145,7 +145,7 @@
             color: #999999;
             transition: all 0.2s;
             &:hover {
-              color: $sec-color;
+              color: $main-color;
               font-weight: bold;
               &::after {
                 background: $sec-color;

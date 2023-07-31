@@ -17,6 +17,8 @@
 }
 .com-select{
   position: relative;
+  border: 1px solid #BBBBBB;
+  border-radius: 4px;
 }
 .com-select::after {
   /* 화살표 아이콘을 가상 요소로 추가 */

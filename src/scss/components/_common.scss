@@ -9,7 +9,8 @@
 .sec-color {
   color: $sec-color;
 }
-
+.c-blue{color: $main-color;font-weight: bold;}
+.c-red{color: red;font-weight: bold;}
 /* =================== hid =================== */
 
 // 높이는 가지고 싶은데 안보이게 할 경우
@@ -74,7 +75,7 @@
     &.type1 article:nth-of-type(3) {
       width: 20%; /* 290/1600 */
     }
-    &.type2 { gap : 60px;}
+    &.type2 { gap : 40px;}
   }
   &.four-item {
     display: flex;
@@ -105,6 +106,12 @@
   .w#{$i} {
     width: #{$i}px !important;
     flex: 0 0 #{$i}px !important;
+  }
+}
+/* =================== Zindex =================== */
+@for $i from 1 through 1000 {
+  .z-index#{$i} {
+    z-index: #{$i}px !important;
   }
 }
 /* =================== Margin , Padding=================== */
@@ -320,6 +327,11 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   gap: 70px;
+  &.type-1{
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
 }
 .flex-container {
   flex: 1 1 auto;

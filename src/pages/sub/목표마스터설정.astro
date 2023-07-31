@@ -1,9 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
 
 const title = '목표마스터 설정';
 const pageTitle = `Home > ${title}`;
-const idName = 'dashboard';
+const idName = 'GoalMaster';
+
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
@@ -19,49 +23,19 @@ const idName = 'dashboard';
             <section class="flex three-item type2">
               <article class="row">
                 <label class="com-label" for="goal-year-select">목표년도</label>
-                <div class="com-select w180">
-                  <select
-                    id="goal-year-select"
-                    class="select-goal-year input-md v-motion"
-                  >
-                    <!-- 년도 옵션 -->
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <ComSelect id="goal-year-select" wid="180" />
               </article>
               <article class="row">
                 <label class="com-label" for="goal-times-select"
                   >전체 목표차수</label
                 >
-                <div class="com-select w180">
-                  <select
-                    id="goal-times-select"
-                    class="select-goal-times input-md v-motion"
-                  >
-                    <!-- 차수 옵션 -->
-                    <option value="1">1차</option>
-                    <option value="2">2차</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <ComSelect id="goal-times-select" wid="180" />
               </article>
               <article class="row">
                 <label class="com-label" for="goal-target-select"
                   >목표대상</label
                 >
-                <div class="com-select w180">
-                  <select
-                    id="goal-target-select"
-                    class="select-goal-target input-md v-motion"
-                  >
-                    <!-- 대상 옵션 -->
-                    <option value="target1">대상1</option>
-                    <option value="target2">대상2</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <ComSelect id="goal-target-select" wid="180" />
               </article>
             </section>
           </div>
@@ -98,7 +72,7 @@ const idName = 'dashboard';
                     <td>일반직</td>
                     <td>2023.07.14</td>
                     <td>2025.04.21</td>
-                    <td>준비중</td>
+                    <td><span class="c-blue">진행중</span></td>
                     <td>김한국</td>
                     <td>Korea_01</td>
                     <td>2023.03.12</td>
@@ -110,7 +84,7 @@ const idName = 'dashboard';
                     <td>일반직</td>
                     <td>2023.07.14</td>
                     <td>2025.04.21</td>
-                    <td>준비중</td>
+                    <td><span class="c-red">마감</span></td>
                     <td>김한국</td>
                     <td>Korea_01</td>
                     <td>2023.03.12</td>
@@ -249,7 +223,7 @@ const idName = 'dashboard';
                 >
               </div>
             </div>
-            <div class="comtable type2">
+            <div class="com-table-type2">
               <table>
                 <colgroup>
                   <col width="15%" />
@@ -258,90 +232,40 @@ const idName = 'dashboard';
                   <col width="35%" />
                 </colgroup>
                 <tr>
-                  <th>목표년도</th>
+                  <th><label for="a1">목표년도</label></th>
                   <td>
-                    <div class="com-select w250">
-                      <select name="" id="">
-                        <option value="">2024년</option>
-                      </select>
-                    </div>
+                    <ComSelect id="a1" wid="280" />
                   </td>
                   <th>진행상태</th>
                   <td><span class="main-color font-bold">진행중</span></td>
                 </tr>
                 <tr>
-                  <th>설정기간</th>
+                  <th
+                    ><label for="a2">설정기간 시작</label><label
+                      for="a3"
+                      class="hidden">설정기간 끝</label
+                    ></th
+                  >
                   <td colspan="3">
-                    <div class="com-date-range">
-                      <div class="com-date-range">
-                        <input
-                          type="text"
-                          class="com-input input-mid border-gray w120 datepicker-input"
-                          placeholder="YYYY.MM.DD"
-                        />
-                        <img
-                          class="calendar-icon datepicker-button"
-                          src="../assets/img/date-icon.svg"
-                          alt="calendar-icon"
-                        />
-                        <span>~</span>
-                        <input
-                          type="text"
-                          class="com-input input-mid border-gray w120 datepicker-input"
-                          placeholder="YYYY.MM.DD"
-                        />
-                        <img
-                          class="calendar-icon datepicker-button"
-                          src="../assets/img/date-icon.svg"
-                          alt="calendar-icon"
-                        />
-                      </div>
-                    </div>
+                    <DateRange id="a2" id2="a3" />
                   </td>
                 </tr>
                 <tr>
                   <th>목표구분</th>
                   <td>
-                    <div class="com-radio">
-                      <label>
-                        <input
-                          type="radio"
-                          class="com-input input-radio"
-                          name="employmentType"
-                          value="regular"
-                        />
-                        <span>일반직</span>
-                      </label>
-                      <label>
-                        <input
-                          type="radio"
-                          class="com-input input-radio"
-                          name="employmentType"
-                          value="contract"
-                        />
-                        <span>계약직</span>
-                      </label>
-                    </div>
+                    <ComRadio name="일반직" name2="계약직"></ComRadio>
                   </td>
-                  <th>목표차수</th>
+                  <th><label for="a11">목표차수</label></th>
                   <td>
-                    <div class="com-select w250">
-                      <select name="" id="">
-                        <option value="">차수없음</option>
-                      </select>
-                    </div>
+                    <ComSelect id="a11" wid="280" />
                   </td>
                 </tr>
                 <tr>
                   <th>등록자명</th>
                   <td>홍길동</td>
-                  <th>목표차수</th>
+                  <th><label for="a12">목표차수</label></th>
                   <td>
-                    <div class="com-select w250">
-                      <select name="" id="">
-                        <option value="">차수없음</option>
-                      </select>
-                    </div>
+                    <ComSelect id="a12" wid="280" />
                   </td>
                 </tr>
                 <tr>

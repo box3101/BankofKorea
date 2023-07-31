@@ -1,4 +1,4 @@
-export const menu = [
+const menu = [
 	{
 		category: "sub",
 		title: "대시보드",
@@ -108,16 +108,16 @@ export const menu = [
 			},
 		],
 	},
-	{
-		category: "sub",
-		title: "알림관리",
-		items: [
-			{ url: "공지사항", title: "공지사항" },
-			{ url: "faq", title: "FAQ" },
-			{ url: "자료실", title: "자료실" },
-			{ url: "알림메시지", title: "알림메시지" },
-		],
-	},
+	// {
+	// 	category: "sub",
+	// 	title: "알림관리",
+	// 	items: [
+	// 		{ url: "공지사항", title: "공지사항" },
+	// 		{ url: "faq", title: "FAQ" },
+	// 		{ url: "자료실", title: "자료실" },
+	// 		{ url: "알림메시지", title: "알림메시지" },
+	// 	],
+	// },
 	{
 		category: "sub",
 		title: "시스템관리",
@@ -155,3 +155,5 @@ export const menu = [
 	},
 
 ];
+
+export default menu

@@ -1,9 +1,11 @@
 ---
+import ComInput from '../../components/ComInput.astro';
+import ComSelect from '../../components/ComSelect.astro';
 import Layout from '../../layouts/Layout.astro';
 
 const title = '리더십리뷰 운영';
 const pageTitle = `Home > ${title}`;
-const idName = 'dashboard';
+const idName = 'LR';
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
@@ -18,98 +20,34 @@ const idName = 'dashboard';
           <div class="lef">
             <section class="flex three-item type2">
               <article class="row">
-                <label class="com-label" for="goal-year-select">목표년도</label>
-                <div class="com-select w180">
-                  <select
-                    id="goal-year-select"
-                    class="select-goal-year input-md v-motion"
-                  >
-                    <!-- 년도 옵션 -->
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <label class="com-label" for="a1">리뷰년도</label>
+                <ComSelect id="a1" wid="180" />
               </article>
               <article class="row">
-                <label class="com-label" for="goal-times-select"
-                  >전체 목표차수</label
-                >
-                <div class="com-select w180">
-                  <select
-                    id="goal-times-select"
-                    class="select-goal-times input-md v-motion"
-                  >
-                    <!-- 차수 옵션 -->
-                    <option value="1">1차</option>
-                    <option value="2">2차</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <label class="com-label" for="a2">리뷰차수</label>
+                <ComSelect id="a2" wid="180" />
               </article>
               <article class="row">
-                <label class="com-label" for="goal-target-select"
-                  >목표대상</label
-                >
-                <div class="com-select w180">
-                  <select
-                    id="goal-target-select"
-                    class="select-goal-target input-md v-motion"
-                  >
-                    <!-- 대상 옵션 -->
-                    <option value="target1">대상1</option>
-                    <option value="target2">대상2</option>
-                    <!-- ... -->
-                  </select>
-                </div>
+                <label class="com-label" for="a3">리뷰대상</label>
+                <ComSelect id="a3" wid="180" />
               </article>
             </section>
             <section class="flex three-item type2">
               <article class="row">
-                <label class="com-label" for="goal-year-select">목표년도</label>
-                <div class="com-select w180">
-                  <select
-                    id="goal-year-select"
-                    class="select-goal-year input-md v-motion"
-                  >
-                  </select>
-                </div>
+                <label class="com-label" for="a4">부서명</label>
+                <ComSelect id="a4" wid="180" />
               </article>
               <article class="row">
-                <label class="com-label" for="goal-times-select"
-                  >전체 목표차수</label
-                >
-                <div class="com-select w180">
-                  <select
-                    id="goal-times-select"
-                    class="select-goal-times input-md v-motion"
-                  >
-                  </select>
-                </div>
+                <label class="com-label" for="a5">행번</label>
+                <ComInput id="a5" wid="180" />
               </article>
               <article class="row">
-                <label class="com-label" for="goal-target-select"
-                  >목표대상</label
-                >
-                <div class="com-select w180">
-                  <select
-                    id="goal-target-select"
-                    class="select-goal-target input-md v-motion"
-                  >
-                  </select>
-                </div>
+                <label class="com-label" for="a6">이름</label>
+                <ComInput id="a6" wid="180" />
               </article>
               <article class="row">
-                <label class="com-label" for="goal-target-select"
-                  >목표대상</label
-                >
-                <div class="com-select w180">
-                  <select
-                    id="goal-target-select"
-                    class="select-goal-target input-md v-motion"
-                  >
-                  </select>
-                </div>
+                <label class="com-label" for="a7">진행단계</label>
+                <ComSelect id="a7" wid="180" />
               </article>
             </section>
           </div>
@@ -118,7 +56,7 @@ const idName = 'dashboard';
           </div>
         </div>
 
-        <div class="com-div-table-wrap">
+        <div class="com-div-table-wrap type-1">
           <div class="flex-container">
             <div class="flex-item">리뷰대기</div>
             <div class="flex-column">
@@ -150,6 +88,14 @@ const idName = 'dashboard';
             <div class="flex-column">
               <div class="flex-item">위험요소</div>
               <div class="flex-item bg-white">250/300</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="com-table-wrap">
+          <div class="tbl-scroll mt10" style="max-height:305px;">
+            <div class="com-table">
+
             </div>
           </div>
         </div>

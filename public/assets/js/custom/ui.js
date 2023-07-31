@@ -1,12 +1,5 @@
 (function () {
 
-  // 공통 motion
-  function comMotion(){
-    document.querySelector('.cnt-wrap').classList.add("v-motion");
-    let $$tabList = document.querySelectorAll('.tab-contents .cnt__body');
-    $$tabList.forEach(el => el.classList.add("v-motion"));
-  }
-
   // 버튼 효과
   function comBtnActive() {
     const rippleElements = document.querySelectorAll('.com-btn');
@@ -31,20 +24,20 @@
   function navi() {
     const $$gnbItem = document.querySelectorAll(".gnbItem");
     const $gnbItem = document.querySelector(".gnbItem");
+    const $subMenu = document.querySelector(".subMenu li");
 
-    // 첫번째 대시보드만 활성화
+    // 각 첫번째 메뉴 활성화 프로젝트 진행 시 삭제해주세요.
     $gnbItem.classList.add("on");
+    $subMenu.classList.add("on");
 
-    // 
 
-    $$gnbItem.forEach(function (el, idx) {
-      // 클릭 이벤트
+    $$gnbItem.forEach(function (el) {
       el.addEventListener("click", function (e) {
         if (!this.classList.contains("on")) {
           $$gnbItem.forEach((item) => item.classList.remove("on"));
           this.classList.add("on");
         }
-        // else this.classList.remove("on");
+        else this.classList.remove("on");
       });
     });
   }
@@ -66,8 +59,63 @@
     });
   }
 
+  // 공통 팝업
+  document.addEventListener('DOMContentLoaded', function () {
+    window.renderPopupType1 = function () {
+      let popupCnt = document.querySelector('.compopup-container');
+      let html = `
+      <div class="com-popup">
+        <div class="popup-content">
+          <div class="popup-title">제목</div>
+          <div class="popup-body">
+            <div>타입1</div>
+            <button onclick="renderPopupType1_1(event)">팝업 타입1-1</button>
+            <button onclick="closePopup(event)">닫기</button>
+          </div>
+        </div>
+      </div>
+      `
+      popupCnt.innerHTML = html;
+    },
+      window.renderPopupType1_1 = function (event) {
+        event.stopPropagation();
+        let popupCnt = document.querySelector('.compopup-container');
+        let html = `
+      <div class="com-popup">
+        <div class="popup-content">
+          <div class="popup-title">타입1-1</div>
+          <div class="popup-body">
+            <div>타입1</div>
+            <button onclick="closePopup(event)">닫기</button>
+          </div>
+        </div>
+      </div>
+      `
+        popupCnt.innerHTML += html;
+      },
+      window.renderPopupType2 = function () {
+        let popupCnt = document.querySelector('.compopup-container');
+        let html = `
+      <div class="com-popup">
+        <div class="popup-content">
+          <div class="popup-title">제목2</div>
+          <div class="popup-body">
+            <div>타입2</div>
+            <button onclick="closePopup(event)">닫기</button>
+          </div>
+        </div>
+      </div>
+      `
+        popupCnt.innerHTML = html;
+      },
+      window.closePopup = function (e) {
+        let target = e.target.closest(".com-popup");
+        target.classList.add("hidden")
+      }
+  });
+
   // 달력
-  function comDatePicker() {
+  function datePicker() {
     const $$datePickerbtns = document.querySelectorAll(".datepicker-button");
 
     $$datePickerbtns.forEach((btn, idx) => {
@@ -87,11 +135,12 @@
 
 
   function eventBinding() {
-    comMotion();
+    document.querySelectorAll('.cnt-wrap').forEach(el => el.classList.add("v-motion"));
+    document.querySelectorAll('.tab-contents .tab-item').forEach(el => el.classList.add("v-motion"));
     navi();
     if (document.querySelector('.com-btn')) comBtnActive();
     if (document.querySelector(".com-tab-wrap")) comTab();
-    if (document.querySelector(".com-date-range")) comDatePicker()
+    if (document.querySelector(".com-date-range")) datePicker()
   }
 
   function init() {

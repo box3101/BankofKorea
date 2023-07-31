@@ -12,7 +12,7 @@ input {
 .com-input {
   padding-left: 10px;
   box-sizing: border-box;
-  border: 1px solid #666666;
+  // border: 1px solid #666666;
   border-radius: 4px;
   width: 100%;
 
@@ -29,11 +29,13 @@ input {
   }
   // 입력란 크기 설정
   &.input-lg {
-    height: 40px;
+    height: 34px;
+    border: 1px solid #BBBBBB;
   }
 
   &.input-mid {
     height: 32px;
+    border: 1px solid #BBBBBB;
     &::placeholder {
       font: normal normal normal 12px/14px Pretendard;
       letter-spacing: 0px;
@@ -42,7 +44,9 @@ input {
   }
 
   &.input-sm {
-    height: 20px;
+    height: 28px;
+    background: #fff;
+    border: 1px solid #BBBBBB;
   }
 
   // 입력란 테두리 스타일 설정

@@ -1,0 +1,28 @@
+---
+interface Props{
+  name : string;
+  name2 : string;
+}
+const {name,name2} = Astro.props;
+---
+
+<div class="com-radio">
+  <label>
+    <input
+      type="radio"
+      class="com-input input-radio"
+      name="radio"
+      value="regular"
+    />
+    <span>{name}</span>
+  </label>
+  <label>
+    <input
+      type="radio"
+      class="com-input input-radio"
+      name="radio"
+      value="contract"
+    />
+    <span>{name2}</span>
+  </label>
+</div>

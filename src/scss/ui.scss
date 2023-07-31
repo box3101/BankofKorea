@@ -18,6 +18,7 @@
 @import "components/common.scss";
 @import "components/select.scss";
 @import "components/table.scss";
+@import "components/popup.scss";
 
 // 4. layout
 @import "layout/layout.scss";
@@ -26,5 +27,6 @@
 @import "layout/nav.scss";
 
 // 5. pages
+@import "pages/guide.scss";
 @import "pages/login.scss";
-@import "pages/_dashboard.scss";
+@import "pages/dashboard.scss";

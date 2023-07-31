@@ -9,10 +9,10 @@ const idName = 'login';
 <Layout
   pageTitle={pageTitle}
   idName={idName}
-  pageCnt = "noCnt"
+  pageCnt="noCnt"
   pageHeader="noHeader"
   pageFooter="noFooter"
-  pageNav ="noNav"
+  pageNav="noNav"
 >
   <!-- 컨텐츠가 들어갈 부분 -->
   <section class="login flex wid100">
@@ -35,6 +35,7 @@ const idName = 'login';
               type="text"
               id="id"
               name="id"
+              required
             />
           </div>
           <div class="row">
@@ -44,6 +45,7 @@ const idName = 'login';
               type="password"
               id="pwd"
               name="pwd"
+              required
             />
           </div>
           <div class="row">
