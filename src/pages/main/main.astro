@@ -18,7 +18,7 @@ const idName = 'login';
   <section class="login flex wid100">
     <article class="banner">
       <div class="banner__img">
-        <img src="../assets/img/banner.png" alt="" />
+        <img class="banner-img" src="../assets/img/banner.png" alt="" />
       </div>
     </article>
     <article class="login-form">
@@ -82,4 +82,12 @@ const idName = 'login';
     </article>
   </section>
   <!-- 컨텐츠가 들어갈 부분 eee -->
+
+  <script>
+    window.addEventListener('resize', function () {
+      const $bnrImg = document.querySelector('.banner-img');
+      if(this.window.innerWidth < 1920) $bnrImg.classList.add("on");
+      else $bnrImg.classList.remove("on");
+    });
+  </script>
 </Layout>

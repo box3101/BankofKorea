@@ -23,11 +23,11 @@ let steps = [
 let shortcuts = [
   { number: 1, desc: '목표설정' },
   { number: 2, desc: '업무실적' },
-  { number: 3, desc: '리뷰', gap: 'gap30' },
+  { number: 3, desc: '리뷰' },
   { number: 4, desc: '성과평가' },
   { number: 5, desc: '리더십리뷰' },
-  { number: 6, desc: '일하는 방식 리뷰', gap: 'gap5' },
-  { number: 7, desc: '자기신고서', gap: 'gap15' },
+  { number: 6, desc: '일하는 방식 리뷰'},
+  { number: 7, desc: '자기신고서' },
   { number: 8, desc: '평가결과' },
 ];
 ---
@@ -50,7 +50,7 @@ let shortcuts = [
     <!-- 평가현황 -->
     <section class="db-section">
       <div class="com-title">평가 현황</div>
-      <div class="db-item evaluation-status">
+      <div class="db-item small2 evaluation-status">
         <ul class="step">
           <div class="bar"></div>
           {
@@ -112,7 +112,7 @@ let shortcuts = [
         <!-- 평가일정 -->
         <article class="db-evaluation">
           <div class="com-title">평가일정</div>
-          <div class="db-item small mb20">
+          <div class="db-item small mb10">
             <div class="top-border"></div>
             <div class="evaluation">
               <p class="tit">2024 상반기 성과평가(계약직)</p>

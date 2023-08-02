@@ -1,5 +1,5 @@
 .gnb-wrap {
-  flex: 0 0 272px;
+  flex: 0 0 250px;
 }
 .gnb {
   @include make-before {
@@ -45,7 +45,7 @@
       position: absolute;
       top: 38px;
       left: 70px;
-      width: 202px;
+      width: 180px;
       z-index: 10;
       padding: 12px 0;
       box-sizing: border-box;
@@ -148,7 +148,7 @@
               color: $main-color;
               font-weight: bold;
               &::after {
-                background: $sec-color;
+                background: $main-color;
               }
             }
           }

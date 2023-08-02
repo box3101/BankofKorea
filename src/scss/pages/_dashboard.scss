@@ -2,19 +2,19 @@
   .img-wrap {
     position: relative;
     img {
-      height: 190px;
+      height: 11.875rem;
       width: 100%;
     }
     .txt-wrap {
       h2 {
-        font: normal normal bold 38px/45px Pretendard;
-        letter-spacing: 0px;
+        font: normal normal bold 2.375rem/2.8125rem Pretendard;
+        letter-spacing: 0rem;
         color: #ffffff;
       }
       p {
-        margin-top: 8px;
-        font: normal normal 300 20px/24px Pretendard;
-        letter-spacing: 0px;
+        margin-top: 0.5rem;
+        font: normal normal 300 1.25rem/1.5rem Pretendard;
+        letter-spacing: 0rem;
         color: #eeeeee;
       }
       text-align: center;
@@ -23,15 +23,18 @@
   }
 }
 .db-section {
-  margin-top: 17px;
+  margin-top: 1.0625rem;
 }
 .db-item {
   position: relative;
-  padding: 20px 45px;
+  padding: 1.25rem 2.8125rem;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+  &.small2{
+    padding: 1.25rem 1.85rem;
+  }
   &.small {
-    padding: 7px 20px;
+    padding: 0.625rem 1.25rem;
   }
   .top-border {
     @include make-before {
@@ -40,48 +43,56 @@
       left: 0;
       width: 100%;
       width: 100%;
-      height: 6px;
+      height: 0.375rem;
       background: $main-color;
-      border-radius: 10px 10px 0px 0px;
+      border-radius: 0.625rem 0.625rem 0rem 0rem;
     }
   }
 }
 
 ul.step {
   position: relative;
+  width: 100%;
   .bar {
     position: absolute;
-    top: 20px;
-    left: 25px;
-    width: calc(100% - 50px);
-    height: 3px;
+    top: 1.25rem;
+    left: 0;
+    width: 95%;
+    height: 0.1875rem;
     background: #666;
+    margin: 0 2.6rem;
+    overflow: hidden;
   }
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 60px;
   li.step__item {
-    width: 81px;
+    // width: 5.5625rem;
+    flex:1;
     position: relative;
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1.6rem;
+    &:first-of-type{
+      padding-left: 0;
+    }
     &:last-of-type {
+      padding-right: 0;
       @include make-after {
         display: none;
       }
     }
     @include make-after {
-      width: 10px;
-      height: 15px;
+      width: 0.625rem;
+      height: 0.9375rem;
       @include bg-url('img', 'step-arr.svg');
       position: absolute;
-      top: 14px;
+      top: 0.875rem;
       background-size: contain;
-      left: 115px;
+      right: -0.4375rem
     }
     &.status-in-progress .circle-number {
       background: $sec-color;
@@ -98,40 +109,40 @@ ul.step {
     }
     div.circle-number {
       position: relative;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       display: flex;
       align-items: center;
-      font: normal normal 600 20px/57px Pretendard;
-      letter-spacing: 0px;
+      font: normal normal 600 1.25rem/3.5625rem Pretendard;
+      letter-spacing: 0rem;
       color: #ffffff;
       justify-content: center;
       div.circle-small {
         position: absolute;
-        top: -2px;
-        right: -5px;
+        top: -0.125rem;
+        right: -0.3125rem;
         background: #ff0000 0% 0% no-repeat padding-box;
-        border: 1px solid #ff0000;
+        border: 0.0625rem solid #ff0000;
         border-radius: 50%;
-        width: 16px;
-        height: 16px;
+        width: 1rem;
+        height: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
         span {
-          font: normal normal normal 12px/16px Pretendard;
-          letter-spacing: 0px;
+          font: normal normal normal 0.75rem/1rem Pretendard;
+          letter-spacing: 0rem;
           color: #ffffff;
         }
       }
     }
 
     div.step-desc {
-      margin-top: 7px;
+      margin-top: 0.4375rem;
       text-align: center;
-      font: normal normal 600 15px/20px Pretendard;
-      letter-spacing: -.5px;
+      font: normal normal 600 0.9375rem/1.25rem Pretendard;
+      letter-spacing: -0.0313rem;
       color: #222222;
     }
   }
@@ -140,51 +151,50 @@ ul.step {
 div.shortcut {
   div.shortcut__list {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
     div.shortcut__item {
       display: flex;
       align-items: center;
       flex: 1;
-      // width: 164px;
-      height: 60px;
+      // width: 10.25rem;
+      height: 3.75rem;
       background: #ffffff 0% 0% no-repeat padding-box;
-      border: 3px solid $sec-color;
-      border-radius: 70px;
-      padding: 7px;
+      border: 0.1875rem solid $sec-color;
+      border-radius: 4.375rem;
+      padding: 0.4375rem;
       box-sizing: border-box;
       transition: all 0.4s ease-in-out;
       &:hover {
         flex: 1.2;
-        border: 3px solid $main-color;
+        border: 0.1875rem solid $main-color;
         .icon {
           background: $main-color;
         }
       }
       a {
         display: flex;
-        gap: 20px;
         width: 100%;
         div.icon {
-          width: 46px;
-          height: 46px;
+          width: 2.875rem;
+          height: 2.875rem;
           /* UI Properties */
           background: $sec-color 0% 0% no-repeat padding-box;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          img {
-          }
         }
 
         div.txt {
           display: flex;
           align-items: center;
-          font: normal normal 600 16px/19px Pretendard;
-          letter-spacing: 0px;
+          font: normal normal 600 1rem/1.1875rem Pretendard;
+          letter-spacing: 0rem;
           color: #222222;
           text-align: center;
           word-break: keep-all;
+          justify-content: center;
+          flex: 1;
         }
       }
     }
@@ -193,21 +203,21 @@ div.shortcut {
 
 .db-evaluation {
   .tit {
-    font: normal normal 600 18px/19px Pretendard;
-    letter-spacing: 0px;
+    font: normal normal 600 1.125rem/1.1875rem Pretendard;
+    letter-spacing: 0rem;
     color: #222222;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
   }
   .evaluation {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 }
 
 .db-noti {
   ul {
     li {
-      padding: 7px 0;
-      border-bottom: 1px solid #bbb;
+      padding: 0.4375rem 0;
+      border-bottom: 0.0625rem solid #bbb;
       display: flex;
       align-items: center;
       &:last-of-type {
@@ -219,34 +229,34 @@ div.shortcut {
         width: 100%;
         @include make-before {
           @include poy;
-          right: 10px;
+          right: 0.625rem;
           @include bg-url('img', 'arr-hover.svg');
           background-size: cover;
-          width: 34px;
-          height: 9px;
+          width: 2.125rem;
+          height: 0.5625rem;
         }
         display: flex;
         align-items: center;
         div.date {
-          width: 100px;
-          height: 54px;
+          width: 6.25rem;
+          height: 3.375rem;
           background: #fff;
-          border: 1px solid #666;
-          border-radius: 8px;
+          border: 0.0625rem solid #666;
+          border-radius: 0.5rem;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
           text-align: center;
           div.year-nomth {
-            font: normal normal normal 12px/14px Pretendard;
-            letter-spacing: 0px;
+            font: normal normal normal 0.75rem/0.875rem Pretendard;
+            letter-spacing: 0rem;
             color: #666;
           }
           div.day {
-            margin-top: 3px;
-            font: normal normal 600 20px/24px Pretendard;
-            letter-spacing: 0px;
+            margin-top: 0.1875rem;
+            font: normal normal 600 1.25rem/1.5rem Pretendard;
+            letter-spacing: 0rem;
             color: #222;
           }
         }
@@ -255,7 +265,7 @@ div.shortcut {
             @include bg-url('img', 'arr-hover-on.svg');
           }
           div.date {
-            border: 1px solid $main-color;
+            border: 0.0625rem solid $main-color;
             background: $main-color;
           }
           div.year-nomth,
@@ -274,10 +284,10 @@ div.shortcut {
       }
 
       p.desc {
-        font: normal normal normal 16px/19px Pretendard;
-        letter-spacing: 0px;
+        font: normal normal normal 1rem/1.1875rem Pretendard;
+        letter-spacing: 0rem;
         color: #222222;
-        max-width: calc(100% - 190px);
+        max-width: calc(100% - 11.875rem);
       }
     }
   }
@@ -286,34 +296,38 @@ div.shortcut {
 .db-download {
   li {
     &:first-of-type {
-      margin-bottom: 12px;
+      margin-bottom: 0.75rem;
       a {
         display: inline-flex;
         width: 100%;
         background: #ffffff 0% 0% no-repeat padding-box;
-        border: 1px solid #4bb1ff;
-        border-radius: 10px;
+        border: 0.0625rem solid #4bb1ff;
+        border-radius: 0.625rem;
       }
     }
     a {
       width: 100%;
-      height: 107px;
+      height: 6.6875rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 17px;
+      gap: 1.0625rem;
       background: #ffffff 0% 0% no-repeat padding-box;
-      border: 1px solid #004981;
-      border-radius: 10px;
+      border: 0.0625rem solid #004981;
+      border-radius: 0.625rem;
       p {
         span {
           position: relative;
-          left: 2px;
-          top: 1px;
-          font: normal normal bold 20px/24px Pretendard;
-          letter-spacing: 0px;
+          left: 0.125rem;
+          top: 0.0625rem;
+          font: normal normal bold 1.25rem/1.5rem Pretendard;
+          letter-spacing: 0rem;
         }
       }
     }
   }
+}
+
+@media (max-width: 1600px) {
+  html{font-size: 14px;}
 }

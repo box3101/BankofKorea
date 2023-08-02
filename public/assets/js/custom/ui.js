@@ -21,7 +21,7 @@
   }
 
   // 네비게이션
-  function navi() {
+  function navigator() {
     const $$gnbItem = document.querySelectorAll(".gnbItem");
     const $gnbItem = document.querySelector(".gnbItem");
     const $subMenu = document.querySelector(".subMenu li");
@@ -29,7 +29,7 @@
     // 각 첫번째 메뉴 활성화 프로젝트 진행 시 삭제해주세요.
     $gnbItem.classList.add("on");
     $subMenu.classList.add("on");
-
+    // 여기까지
 
     $$gnbItem.forEach(function (el) {
       el.addEventListener("click", function (e) {
@@ -37,7 +37,7 @@
           $$gnbItem.forEach((item) => item.classList.remove("on"));
           this.classList.add("on");
         }
-        else this.classList.remove("on");
+        // else this.classList.remove("on");
       });
     });
   }
@@ -133,14 +133,20 @@
     });
   }
 
-
-  function eventBinding() {
+  // 공통 로딩후
+  function updateOnEvt(){
     document.querySelectorAll('.cnt-wrap').forEach(el => el.classList.add("v-motion"));
     document.querySelectorAll('.tab-contents .tab-item').forEach(el => el.classList.add("v-motion"));
-    navi();
+  }
+
+  function eventBinding() {
     if (document.querySelector('.com-btn')) comBtnActive();
     if (document.querySelector(".com-tab-wrap")) comTab();
-    if (document.querySelector(".com-date-range")) datePicker()
+    if (document.querySelector(".com-date-range")) datePicker();
+
+    // 공통
+    navigator();
+    updateOnEvt();
   }
 
   function init() {

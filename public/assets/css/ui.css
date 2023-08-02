@@ -13366,9 +13366,9 @@ html::-webkit-scrollbar-thumb {
 .circle-list li {
   position: relative;
   display: flex;
-  margin-bottom: 6px;
-  font: normal normal normal 16px/19px Pretendard;
-  letter-spacing: 0px;
+  margin-bottom: 0.375rem;
+  font: normal normal normal 1rem/1.1875rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
 }
 .circle-list li:last-of-type {
@@ -13378,11 +13378,11 @@ html::-webkit-scrollbar-thumb {
   content: "";
   display: block;
   position: relative;
-  top: 8px;
-  margin-right: 5px;
-  font-size: 6px;
-  width: 4px;
-  height: 4px;
+  top: 0.5rem;
+  margin-right: 0.3125rem;
+  font-size: 0.375rem;
+  width: 0.25rem;
+  height: 0.25rem;
   border-radius: 50%;
   background: #004884;
 }
@@ -13419,12 +13419,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 .com-title {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 5px;
-  font: normal normal 600 20px/24px Pretendard;
-  letter-spacing: 0px;
+  gap: 0.3125rem;
+  font: normal normal 600 1.25rem/1.5rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
 }
 .com-title:before {
@@ -13567,7 +13567,7 @@ html::-webkit-scrollbar-thumb {
   background: #0559AE;
   color: #fff;
   height: 40px;
-  border: 0.5px solid #BBBBBB;
+  border: 0.5008px solid #BBBBBB;
   box-sizing: border-box;
   margin-left: -1px;
   font-weight: bold;
@@ -13666,7 +13666,7 @@ html::-webkit-scrollbar-thumb {
   background-color: #b2ddff;
 }
 .com-table-type2 table td {
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 .com-popup {
@@ -13723,7 +13723,7 @@ html::-webkit-scrollbar-thumb {
 
 #wrap {
   display: flex;
-  min-width: 1600px;
+  min-width: 1590px;
   min-height: 100vh;
 }
 #wrap > section {
@@ -13740,16 +13740,12 @@ html::-webkit-scrollbar-thumb {
   position: relative;
 }
 
-.header, .footer {
-  min-width: 1910px;
-}
-
 .sub-cnt {
   padding: 20px 30px;
 }
 
 .cnt-wrap {
-  flex: 1;
+  flex: 0 0 calc(100% - 250px);
   padding: 20px 30px;
   background: #eeeeee;
   box-sizing: border-box;
@@ -13784,7 +13780,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 .wid100 {
-  width: 100%;
+  width: 100% !important;
+}
+
+.minWid100 {
+  min-width: 100% !important;
 }
 
 .com-label {
@@ -13802,8 +13802,10 @@ html::-webkit-scrollbar-thumb {
   border: 1px solid #5bb8ff;
   border-radius: 4px;
   box-sizing: border-box;
+  gap: 20px;
 }
 .search-area .lef {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -13815,6 +13817,11 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 1;
+  max-width: 297px;
+}
+.search-area .lef .row .com-select {
+  width: 100%;
 }
 
 .com-date-range {
@@ -13842,6 +13849,19 @@ html::-webkit-scrollbar-thumb {
   display: block;
 }
 
+@media (max-width: 1600px) {
+  .search-area .lef .row {
+    max-width: 220px;
+  }
+  .search-area .lef .row .com-select, .search-area .lef .row .com-input {
+    width: 128px !important;
+    flex: 1 1 128px !important;
+  }
+  .search-area .lef .row .com-select select, .search-area .lef .row .com-input select {
+    width: 128px !important;
+    flex: 1 1 128px !important;
+  }
+}
 footer#footer.footer {
   padding-left: 30px;
   background: #BBBBBB 0% 0% no-repeat padding-box;
@@ -13862,39 +13882,39 @@ footer#footer.footer div.flex.gap60 p {
 
 .header {
   position: relative;
-  padding: 0 30px;
+  padding-left: 20px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   background: #333;
   box-sizing: border-box;
 }
 .header__inner {
   display: flex;
   align-items: center;
-  gap: 59px;
+  gap: 3.6875rem;
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 0.4375rem;
 }
 .breadcrumb img {
   position: relative;
-  top: -1px;
+  top: -0.0625rem;
 }
 .breadcrumb span {
   display: inline-block;
-  font: normal normal 300 14px/16px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal 300 0.875rem/1rem Pretendard;
+  letter-spacing: 0rem;
   color: #ffffff;
 }
 .breadcrumb span::after {
   content: ">";
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 .breadcrumb span:last-of-type::after {
   display: none;
@@ -13906,7 +13926,7 @@ div.user-info {
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  right: 188px;
+  right: 11.75rem;
 }
 div.user-info div.name {
   display: flex;
@@ -13914,28 +13934,28 @@ div.user-info div.name {
 }
 div.user-info div.name div.img-wrap {
   opacity: 1;
-  padding: 6px 8px;
+  padding: 0.375rem 0.5rem;
   background: #fff;
-  border-radius: 30px;
-  margin-right: 20px;
+  border-radius: 1.875rem;
+  margin-right: 1.25rem;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
 }
 div.user-info div.name div.img-wrap div.img {
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.375rem;
   background-size: cover !important;
 }
 div.user-info div.name div.img-wrap div.txt {
-  letter-spacing: 0px;
-  font: normal normal 600 17px/20px Pretendard;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
+  font: normal normal 600 1.0625rem/1.25rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
 }
 div.user-info div.welcome-msg {
-  font: normal normal 300 14px/16px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal 300 0.875rem/1rem Pretendard;
+  letter-spacing: 0rem;
   color: #ffffff;
 }
 
@@ -13944,32 +13964,32 @@ div.user-info div.welcome-msg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 30px;
+  right: 2.2rem;
 }
 .login-wrap a {
   display: inline-block;
-  width: 90px;
-  height: 30px;
+  width: 5.625rem;
+  height: 1.875rem;
   background: #ffffff;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #333;
-  font: normal normal 600 14px/16px Pretendard;
+  font: normal normal 600 0.875rem/1rem Pretendard;
 }
 .login-wrap a:after {
   content: "";
   display: block;
-  margin-left: 6px;
-  width: 10px;
-  height: 11px;
+  margin-left: 0.375rem;
+  width: 0.625rem;
+  height: 0.6875rem;
   background-image: url("../../assets/img/logout.svg");
   background-size: cover;
 }
 
 .gnb-wrap {
-  flex: 0 0 272px;
+  flex: 0 0 250px;
 }
 
 .gnb:before {
@@ -14020,7 +14040,7 @@ div.user-info div.welcome-msg {
   position: absolute;
   top: 38px;
   left: 70px;
-  width: 202px;
+  width: 180px;
   z-index: 10;
   padding: 12px 0;
   box-sizing: border-box;
@@ -14118,7 +14138,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(1).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(2) {
@@ -14195,7 +14215,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(2).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(3) {
@@ -14272,7 +14292,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(3).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(4) {
@@ -14349,7 +14369,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(4).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(5) {
@@ -14426,7 +14446,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(5).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(6) {
@@ -14503,7 +14523,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(6).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(7) {
@@ -14580,7 +14600,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(7).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(8) {
@@ -14657,7 +14677,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(8).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .gnbItem:nth-child(9) {
@@ -14734,7 +14754,7 @@ div.user-info div.welcome-msg {
   font-weight: bold;
 }
 .gnbItem:nth-child(9).on:not(:first-child) .subSubMenu > li a:hover::after {
-  background: #00A8ff;
+  background: #004884;
 }
 
 .tbl-list {
@@ -14828,18 +14848,22 @@ div.user-info div.welcome-msg {
 }
 
 .login .banner {
-  flex: 1;
+  width: 65.416667%; /* 1256px/1920 */
 }
 .login .banner__img {
   height: 100%;
 }
 .login .banner__img img {
   width: 100%;
-  max-height: 929px;
-  min-height: 929px;
+  min-width: 940px;
+  height: 100vh;
+}
+.login .banner__img img.on {
+  height: 100%;
 }
 .login .login-form {
-  width: 664px; /* 664px/1920 */
+  width: 34.583333%; /* 664/1920 */
+  min-width: 660px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14906,7 +14930,7 @@ div.user-info div.welcome-msg {
   position: relative;
 }
 .db-logo .img-wrap img {
-  height: 190px;
+  height: 11.875rem;
   width: 100%;
 }
 .db-logo .img-wrap .txt-wrap {
@@ -14917,29 +14941,32 @@ div.user-info div.welcome-msg {
   transform: translate(-50%, -50%);
 }
 .db-logo .img-wrap .txt-wrap h2 {
-  font: normal normal bold 38px/45px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal bold 2.375rem/2.8125rem Pretendard;
+  letter-spacing: 0rem;
   color: #ffffff;
 }
 .db-logo .img-wrap .txt-wrap p {
-  margin-top: 8px;
-  font: normal normal 300 20px/24px Pretendard;
-  letter-spacing: 0px;
+  margin-top: 0.5rem;
+  font: normal normal 300 1.25rem/1.5rem Pretendard;
+  letter-spacing: 0rem;
   color: #eeeeee;
 }
 
 .db-section {
-  margin-top: 17px;
+  margin-top: 1.0625rem;
 }
 
 .db-item {
   position: relative;
-  padding: 20px 45px;
+  padding: 1.25rem 2.8125rem;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+}
+.db-item.small2 {
+  padding: 1.25rem 1.85rem;
 }
 .db-item.small {
-  padding: 7px 20px;
+  padding: 0.625rem 1.25rem;
 }
 .db-item .top-border:before {
   content: "";
@@ -14949,34 +14976,43 @@ div.user-info div.welcome-msg {
   left: 0;
   width: 100%;
   width: 100%;
-  height: 6px;
+  height: 0.375rem;
   background: #004884;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
 }
 
 ul.step {
   position: relative;
+  width: 100%;
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 60px;
 }
 ul.step .bar {
   position: absolute;
-  top: 20px;
-  left: 25px;
-  width: calc(100% - 50px);
-  height: 3px;
+  top: 1.25rem;
+  left: 0;
+  width: 95%;
+  height: 0.1875rem;
   background: #666;
+  margin: 0 2.6rem;
+  overflow: hidden;
 }
 ul.step li.step__item {
-  width: 81px;
+  flex: 1;
   position: relative;
   z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1.6rem;
+}
+ul.step li.step__item:first-of-type {
+  padding-left: 0;
+}
+ul.step li.step__item:last-of-type {
+  padding-right: 0;
 }
 ul.step li.step__item:last-of-type:after {
   content: "";
@@ -14986,13 +15022,13 @@ ul.step li.step__item:last-of-type:after {
 ul.step li.step__item:after {
   content: "";
   display: block;
-  width: 10px;
-  height: 15px;
+  width: 0.625rem;
+  height: 0.9375rem;
   background-image: url("../../assets/img/step-arr.svg");
   position: absolute;
-  top: 14px;
+  top: 0.875rem;
   background-size: contain;
-  left: 115px;
+  right: -0.4375rem;
 }
 ul.step li.step__item.status-in-progress .circle-number {
   background: #00A8ff;
@@ -15009,73 +15045,72 @@ ul.step li.step__item.status-default .circle-number + .step-desc {
 }
 ul.step li.step__item div.circle-number {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  font: normal normal 600 20px/57px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal 600 1.25rem/3.5625rem Pretendard;
+  letter-spacing: 0rem;
   color: #ffffff;
   justify-content: center;
 }
 ul.step li.step__item div.circle-number div.circle-small {
   position: absolute;
-  top: -2px;
-  right: -5px;
+  top: -0.125rem;
+  right: -0.3125rem;
   background: #ff0000 0% 0% no-repeat padding-box;
-  border: 1px solid #ff0000;
+  border: 0.0625rem solid #ff0000;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 ul.step li.step__item div.circle-number div.circle-small span {
-  font: normal normal normal 12px/16px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal normal 0.75rem/1rem Pretendard;
+  letter-spacing: 0rem;
   color: #ffffff;
 }
 ul.step li.step__item div.step-desc {
-  margin-top: 7px;
+  margin-top: 0.4375rem;
   text-align: center;
-  font: normal normal 600 15px/20px Pretendard;
-  letter-spacing: -0.5px;
+  font: normal normal 600 0.9375rem/1.25rem Pretendard;
+  letter-spacing: -0.0313rem;
   color: #222222;
 }
 
 div.shortcut div.shortcut__list {
   display: flex;
-  gap: 32px;
+  gap: 2rem;
 }
 div.shortcut div.shortcut__list div.shortcut__item {
   display: flex;
   align-items: center;
   flex: 1;
-  height: 60px;
+  height: 3.75rem;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border: 3px solid #00A8ff;
-  border-radius: 70px;
-  padding: 7px;
+  border: 0.1875rem solid #00A8ff;
+  border-radius: 4.375rem;
+  padding: 0.4375rem;
   box-sizing: border-box;
   transition: all 0.4s ease-in-out;
 }
 div.shortcut div.shortcut__list div.shortcut__item:hover {
   flex: 1.2;
-  border: 3px solid #004884;
+  border: 0.1875rem solid #004884;
 }
 div.shortcut div.shortcut__list div.shortcut__item:hover .icon {
   background: #004884;
 }
 div.shortcut div.shortcut__list div.shortcut__item a {
   display: flex;
-  gap: 20px;
   width: 100%;
 }
 div.shortcut div.shortcut__list div.shortcut__item a div.icon {
-  width: 46px;
-  height: 46px;
+  width: 2.875rem;
+  height: 2.875rem;
   /* UI Properties */
   background: #00A8ff 0% 0% no-repeat padding-box;
   border-radius: 50%;
@@ -15086,26 +15121,28 @@ div.shortcut div.shortcut__list div.shortcut__item a div.icon {
 div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   display: flex;
   align-items: center;
-  font: normal normal 600 16px/19px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal 600 1rem/1.1875rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
   text-align: center;
   word-break: keep-all;
+  justify-content: center;
+  flex: 1;
 }
 
 .db-evaluation .tit {
-  font: normal normal 600 18px/19px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal 600 1.125rem/1.1875rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .db-evaluation .evaluation {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .db-noti ul li {
-  padding: 7px 0;
-  border-bottom: 1px solid #bbb;
+  padding: 0.4375rem 0;
+  border-bottom: 0.0625rem solid #bbb;
   display: flex;
   align-items: center;
 }
@@ -15125,18 +15162,18 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
+  right: 0.625rem;
   background-image: url("../../assets/img/arr-hover.svg");
   background-size: cover;
-  width: 34px;
-  height: 9px;
+  width: 2.125rem;
+  height: 0.5625rem;
 }
 .db-noti ul li a.flex.aic.gap20 div.date {
-  width: 100px;
-  height: 54px;
+  width: 6.25rem;
+  height: 3.375rem;
   background: #fff;
-  border: 1px solid #666;
-  border-radius: 8px;
+  border: 0.0625rem solid #666;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15144,14 +15181,14 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   text-align: center;
 }
 .db-noti ul li a.flex.aic.gap20 div.date div.year-nomth {
-  font: normal normal normal 12px/14px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal normal 0.75rem/0.875rem Pretendard;
+  letter-spacing: 0rem;
   color: #666;
 }
 .db-noti ul li a.flex.aic.gap20 div.date div.day {
-  margin-top: 3px;
-  font: normal normal 600 20px/24px Pretendard;
-  letter-spacing: 0px;
+  margin-top: 0.1875rem;
+  font: normal normal 600 1.25rem/1.5rem Pretendard;
+  letter-spacing: 0rem;
   color: #222;
 }
 .db-noti ul li a.flex.aic.gap20:hover:before {
@@ -15160,7 +15197,7 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   background-image: url("../../assets/img/arr-hover-on.svg");
 }
 .db-noti ul li a.flex.aic.gap20:hover div.date {
-  border: 1px solid #004884;
+  border: 0.0625rem solid #004884;
   background: #004884;
 }
 .db-noti ul li a.flex.aic.gap20:hover div.year-nomth,
@@ -15176,39 +15213,45 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   font-weight: bold;
 }
 .db-noti ul li p.desc {
-  font: normal normal normal 16px/19px Pretendard;
-  letter-spacing: 0px;
+  font: normal normal normal 1rem/1.1875rem Pretendard;
+  letter-spacing: 0rem;
   color: #222222;
-  max-width: calc(100% - 190px);
+  max-width: calc(100% - 11.875rem);
 }
 
 .db-download li:first-of-type {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .db-download li:first-of-type a {
   display: inline-flex;
   width: 100%;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #4bb1ff;
-  border-radius: 10px;
+  border: 0.0625rem solid #4bb1ff;
+  border-radius: 0.625rem;
 }
 .db-download li a {
   width: 100%;
-  height: 107px;
+  height: 6.6875rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 17px;
+  gap: 1.0625rem;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #004981;
-  border-radius: 10px;
+  border: 0.0625rem solid #004981;
+  border-radius: 0.625rem;
 }
 .db-download li a p span {
   position: relative;
-  left: 2px;
-  top: 1px;
-  font: normal normal bold 20px/24px Pretendard;
-  letter-spacing: 0px;
+  left: 0.125rem;
+  top: 0.0625rem;
+  font: normal normal bold 1.25rem/1.5rem Pretendard;
+  letter-spacing: 0rem;
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=ui.css.map */
