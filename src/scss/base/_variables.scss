@@ -1,11 +1,45 @@
-$main-color: #004884;
-$sec-color: #00A8ff;
-$gray : #666;
-$gray2 : #999;
+$main-color: #0060AA;
+$sec-color: #b2ddff;
+$third-color: #4bb1ff;
+
+// R: (178-91)/255 = 약 34.1%
+// G: (221-184)/255 = 약 14.5%
+// 대략 24.3%
+$adjusted-color: darken($sec-color, 24.3%);
+$gray: #666;
+$gray2: #999;
+
+body {
+  --main-color: #0060AA;
+  --sec-color: #B2DDFF;
+  --third-color: #4BB1FF;
+  $adjusted-color: darken($sec-color, 24.3%);
+  &.green {
+    --main-color: #008f85;
+    --sec-color: #a8f5e5;
+    --third-color: #00d1ca;
+    --adjusted-color: darken($sec-color, 24.3%);
+  }
+}
 
 $path-set: (
-  icon: "../../assets/img/icon/",
-  img: "../../assets/img/",
-  logo: "../../assets/img/logo/",
-  object: "../../assets/img/object/",
+  icon: '../../assets/img/icon/',
+  img: '../../assets/img/',
+  logo: '../../assets/img/logo/',
+  object: '../../assets/img/object/',
+);
+
+$b-web: 1200px;
+$b-tab: 900px;
+$b-mo: 600px;
+$b-sm-mo: 360px;
+
+$zIndex-set: (
+  popup: 100,
+  fixed: 20,
+  header: 10,
+  double: 2,
+  default: 1,
+  zero: 0,
+  minus: -1,
 );

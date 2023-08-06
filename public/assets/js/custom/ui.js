@@ -92,10 +92,6 @@
     });
   }
 
-
-
-  // btnSel이 on이고 e.target이 listMeber가 아닐땐 
-
   // 공통 팝업
   document.addEventListener('DOMContentLoaded', function () {
     window.renderPopupType1 = function () {
@@ -156,6 +152,8 @@
     document.querySelectorAll('.cnt-wrap').forEach(el => el.classList.add("v-motion"));
     document.querySelectorAll('.tab-contents .tab-item').forEach(el => el.classList.add("v-motion"));
   }
+
+  
 
   function eventBinding() {
     comBtnActive();

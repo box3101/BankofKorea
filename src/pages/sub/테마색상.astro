@@ -5,13 +5,27 @@ const title = '대시보드';
 const pageTitle = `Home > ${title}`;
 const idName = 'dashboard';
 
-
 let steps = [
-  {number: 1,smallNumber: 2,status: 'status-in-progress',desc: '목표라인 확인',},
+  {
+    number: 1,
+    smallNumber: 2,
+    status: 'status-in-progress',
+    desc: '목표라인 확인',
+  },
   { number: 2, smallNumber: 3, status: 'status-in-progress', desc: '목표설정' },
   { number: 3, smallNumber: 3, status: 'status-in-progress', desc: '중간면담' },
-  {number: 4,smallNumber: 3,status: 'status-in-progress',desc: '업무실적 제출',},
-  {number: 5,smallNumber: 3,status: 'status-current',desc: '평가라인 확인',},
+  {
+    number: 4,
+    smallNumber: 3,
+    status: 'status-in-progress',
+    desc: '업무실적 제출',
+  },
+  {
+    number: 5,
+    smallNumber: 3,
+    status: 'status-current',
+    desc: '평가라인 확인',
+  },
   { number: 6, smallNumber: 3, status: 'status-default', desc: '다면리뷰' },
   { number: 7, smallNumber: 3, status: 'status-default', desc: '평가자 평가' },
   { number: 8, smallNumber: 3, status: 'status-default', desc: '조정회의' },
@@ -26,7 +40,7 @@ let shortcuts = [
   { number: 3, desc: '리뷰' },
   { number: 4, desc: '성과평가' },
   { number: 5, desc: '리더십리뷰' },
-  { number: 6, desc: '일하는 방식 리뷰'},
+  { number: 6, desc: '일하는 방식 리뷰' },
   { number: 7, desc: '자기신고서' },
   { number: 8, desc: '평가결과' },
 ];
@@ -34,6 +48,27 @@ let shortcuts = [
 
 <Layout pageTitle={pageTitle} idName={idName}>
   <!-- 컨텐츠가 들어갈 부분 -->
+
+  <div class="color-selector">
+    <button class="color-button" data-color="green">Green</button>
+    <button class="color-button" data-color="blue">Blue</button>
+    <button class="color-button" data-color="orange">Orange</button>
+  </div>
+
+  <script>
+    document.querySelectorAll('.color-button').forEach((button) => {
+      button.addEventListener('click', function () {
+        let selectedColor = this.getAttribute('data-color');
+
+        // body의 기존 색상 클래스를 제거
+        document.body.classList.remove('green', 'blue', 'orange');
+
+        // 선택한 색상의 클래스를 body에 추가
+        document.body.classList.add(selectedColor);
+      });
+    });
+  </script>
+
   <div class="cnt-wrap">
     <!-- 로고 -->
     <section class="db-logo">
@@ -152,7 +187,9 @@ let shortcuts = [
                     <div class="year-nomth">2024.03</div>
                     <div class="day">21</div>
                   </div>
-                  <p class="desc one-line">글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</p>
+                  <p class="desc one-line">
+                    글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트
+                  </p>
                 </a>
               </li>
               <li>

@@ -41,7 +41,7 @@
     margin-bottom: 20px;
   
     .cnt__head {
-      background: #0060aa 0% 0% no-repeat padding-box;
+      background:  var(--main-color) 0% 0% no-repeat padding-box;
       border-radius: 10px 10px 0px 0px;
       height: 54px;
       display: flex;
@@ -83,8 +83,8 @@
 }
 .search-area {
   padding: 1rem 2.5rem;
-  background: #b2ddff 0% 0% no-repeat padding-box;
-  border: 1px solid #5bb8ff;
+  background: var(--sec-color);
+  border: 1px solid var(--adjusted-color);
   border-radius: 4px;
   box-sizing: border-box;
   gap:20px;

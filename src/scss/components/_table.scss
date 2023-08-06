@@ -1,11 +1,10 @@
 .com-table {
   position: relative;
-  /* 테이블의 너비와 레이아웃을 설정합니다. */
   table{
     position: relative;
     width: 100%;
-    table-layout: fixed; /* 각 셀의 너비를 고정합니다. */
-    border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
+    table-layout: fixed; 
+    border-collapse: collapse;
   }
 }
 .com-table tr{
@@ -15,12 +14,15 @@
 }
 .com-table th,
 .com-table td {
-  /* 헤더와 데이터 셀에 패딩을 추가합니다. */
-  padding: 7px 0!important;
+  padding: 10px 0!important;
   height: auto!important;
-  text-align: center; /* 텍스트 정렬을 설정합니다. */
-  border: 1px solid #aaa; /* 셀 경계선 스타일을 설정합니다. */
+  text-align: center; 
+  border: 1px solid #aaa; 
   font-size: 14px;
+}
+.com-table td {
+  padding:0!important;
+  height: 36px!important;
 }
 .com-table th{
   font-size: 16px;
@@ -28,13 +30,12 @@
 .com-table thead{
   position: sticky;
   top: -1px;
-  background: #b2ddff;
+  background: var(--sec-color);
   z-index: 10;
 }
 .com-table th {
-  /* 테이블 헤더 스타일링 */
-  background-color: #b2ddff; /* 헤더 배경색을 설정합니다. */
-  color: #000; /* 헤더 텍스트 색상을 설정합니다. */
+  background-color: var(--sec-color); 
+  color: #000; 
   border-bottom: 1px solid #aaa;
   box-shadow: 0px 2px 2px #aaa;
   backface-visibility: hidden;
@@ -43,7 +44,6 @@
 }
 
 .com-table tr:nth-child(even) {
-  /* 짝수 줄 배경색을 설정합니다. */
   background-color: #f9f9f9;
 }
 
@@ -61,13 +61,13 @@
       font: normal normal 600 16px/41px Pretendard;
       letter-spacing: 0px;
       color: #222222;
-      background-color: #b2ddff;
+      background-color: var(--sec-color);
       font-weight: bold;
       label{
         font: normal normal 600 16px/41px Pretendard;
       letter-spacing: 0px;
       color: #222222;
-      background-color: #b2ddff;
+      background-color: var(--sec-color);
       font-weight: bold;
       }
     }

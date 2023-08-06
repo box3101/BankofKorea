@@ -2,7 +2,7 @@
 @import '../base/variables.scss';
 
 button {
-  background-color: $main-color;
+  background-color: var(--main-color);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -27,8 +27,8 @@ button {
   &:hover,&:active{
     box-shadow: 0 0 10px rgba(0,0,0,0.25);  /* 마우스를 올리면 그림자가 보이게 함 */
     filter: brightness(95%); /* 마우스를 올렸을 때의 효과 */
-    // border: 1px solid $main-color !important;
-    // outline: 1px solid $main-color !important;
+    // border: 1px solid var(--main-color);  !important;
+    // outline: 1px solid var(--main-color);  !important;
   }
   &.disabled {
     opacity: 0.5; // 투명도 조절
@@ -47,7 +47,7 @@ button {
 
   &.btn-sm {
     min-width: 82px;
-    height: 30px;
+    height: 28px;
     border: none;
     font-weight: bold;
   }
@@ -81,7 +81,7 @@ button {
 
   // 배경색 설정
   &.bg-main {
-    background-color: $main-color;
+    background-color: var(--main-color);
     color: #fff;
   }
   &.bg-gray {
@@ -168,7 +168,7 @@ button {
   width: 80px;
   height: 100%;
   display: inline-block;
-  background: #0559ae 0% 0% no-repeat padding-box;
+  background: var(--main-color)  0% 0% no-repeat padding-box;
   border-radius: 2px;
   font: normal normal 600 14px/16px Pretendard;
   letter-spacing: 0px;
@@ -193,6 +193,7 @@ button {
   border: 1px solid #00a100;
   border-radius: 2px;
   font: normal normal 600 14px/16px Pretendard;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #00a100;
 }
@@ -222,9 +223,9 @@ button {
   width: 80px;
   height: 28px;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #0559ae;
+  border: 1px solid var(--main-color);
   border-radius: 2px;
   font: normal normal 600 14px/16px Pretendard;
   letter-spacing: 0px;
-  color: #0559ae;
+  color: var(--main-color);
 }

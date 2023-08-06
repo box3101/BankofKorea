@@ -44,7 +44,7 @@
       width: 100%;
       width: 100%;
       height: 0.375rem;
-      background: $main-color;
+      background: var(--main-color);
       border-radius: 0.625rem 0.625rem 0rem 0rem;
     }
   }
@@ -96,10 +96,10 @@ ul.step {
       right: -0.4375rem
     }
     &.status-in-progress .circle-number {
-      background: $sec-color;
+      background: var(--third-color);
     }
     &.status-current .circle-number {
-      background: $main-color;
+      background: var(--main-color);
     }
     &.status-default .circle-number {
       background: #bbb;
@@ -160,16 +160,16 @@ div.shortcut {
       // width: 10.25rem;
       height: 3.75rem;
       background: #ffffff 0% 0% no-repeat padding-box;
-      border: 0.1875rem solid $sec-color;
+      border: 0.1875rem solid var(--third-color);
       border-radius: 4.375rem;
       padding: 0.4375rem;
       box-sizing: border-box;
       transition: all 0.4s ease-in-out;
       &:hover {
         flex: 1.2;
-        border: 0.1875rem solid $main-color;
+        border: 0.1875rem solid var(--main-color);
         .icon {
-          background: $main-color;
+          background: var(--main-color);
         }
       }
       a {
@@ -180,7 +180,7 @@ div.shortcut {
           width: 2.875rem;
           height: 2.875rem;
           /* UI Properties */
-          background: $sec-color 0% 0% no-repeat padding-box;
+          background: var(--third-color) 0% 0% no-repeat padding-box;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -254,6 +254,7 @@ div.shortcut {
           text-align: center;
           div.year-nomth {
             font: normal normal normal 0.75rem/0.875rem Pretendard;
+            font-weight: 500;
             letter-spacing: 0rem;
             color: #666;
           }
@@ -269,19 +270,19 @@ div.shortcut {
             @include bg-url('img', 'arr-hover-on.svg');
           }
           div.date {
-            border: 0.0625rem solid $main-color;
-            background: $main-color;
+            border: 0.0625rem solid var(--main-color);
+            background: var(--main-color);
           }
           div.year-nomth,
           div.day {
             color: #fff !important;
           }
           p.cnt {
-            color: $main-color !important;
+            color: var(--main-color) !important;
             font-weight: bold;
           }
           p.desc{
-            color: $main-color!important;
+            color: var(--main-color) important;
             font-weight: bold;
           }
         }
@@ -305,8 +306,13 @@ div.shortcut {
         display: inline-flex;
         width: 100%;
         background: #ffffff 0% 0% no-repeat padding-box;
-        border: 0.0625rem solid #4bb1ff;
+        border: 0.0625rem solid var(--third-color);
         border-radius: 0.625rem;
+        p{
+          span{
+            color: var(--third-color);
+          }
+        }
       }
     }
     a {
@@ -317,7 +323,7 @@ div.shortcut {
       justify-content: center;
       gap: 1.0625rem;
       background: #ffffff 0% 0% no-repeat padding-box;
-      border: 0.0625rem solid #004981;
+      border: 0.0625rem solid var(--main-color);
       border-radius: 0.625rem;
       p {
         span {
@@ -326,6 +332,7 @@ div.shortcut {
           top: 0.0625rem;
           font: normal normal bold 1.25rem/1.5rem Pretendard;
           letter-spacing: 0rem;
+          color: var(--main-color);
         }
       }
     }
