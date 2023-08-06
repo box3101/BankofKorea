@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>평가대상자 관리</title>
+    <link rel="stylesheet" href="../assets/css/ui.css" />
+    <link rel="stylesheet" href="../assets/css/jqGrid.css" />
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/jquery.jqGrid.min.js"></script>
+    <script src="../assets/js/vendor/jquery.jqGrid.src.js"></script>
+  </head>
+
+  <body>
+    <main id="LR" class="LR">
+      <div id="wrap" class="undefined">
+        <div class="content-body">
+          <!-- header -->
+          <header id="header" class="header">
+            <div class="header__inner">
+              <div class="logo">
+                <h1>
+                  <img src="../assets/img/nav-logo.png" alt="" />
+                </h1>
+              </div>
+              <div class="breadcrumb">
+                <span>
+                  <a href="../main/main.html">
+                    <img src="../assets/img/home.svg" alt="" />
+                  </a>
+                </span>
+                <span>평가관리</span>
+                <span>목표·면담 설정</span>
+                <span>목표마스터 설정</span>
+              </div>
+              <div class="user-info">
+                <div class="name">
+                  <div class="img-wrap">
+                    <div
+                      class="img"
+                      style="background: url('../assets/img/user-img.svg')"
+                    ></div>
+                    <div class="txt">dev01</div>
+                  </div>
+                </div>
+                <div class="welcome-msg">
+                  님 직원평가시스템 접속을 환영합니다.
+                </div>
+              </div>
+              <div class="login-wrap">
+                <a href="#" class="logout-link"> 로그아웃</a>
+              </div>
+            </div>
+          </header>
+          <!-- header eee -->
+          <div class="container">
+            <div class="gnb-wrap">
+              <ul class="gnb" id="gnb" tabindex="0">
+                <div class="all-menu">
+                  <a href="#">
+                    <span>전체메뉴</span>
+                  </a>
+                </div>
+                <li class="gnbItem on">
+                  <a href="#none" class="gnbLink">
+                    <span>대시보드</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li class="on">
+                      <a href="../sub/대시보드.html">개인대시보드</a>
+                    </li>
+                    <li>
+                      <a href="../sub/타임라인.html">타임라인</a>
+                    </li>
+                    <li>
+                      <a href="../sub/TotalAlign.html">Total Align</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>평가설정</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/근무경력.html">근무경력</a>
+                    </li>
+                    <li>
+                      <a href="../sub/임원부서장연계.html">임원부서장연계</a>
+                    </li>
+                    <li>
+                      <a href="../sub/평가조직관리.html">평가조직관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/평가직책관리.html">평가직책관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/평가군관리.html">평가군관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/평가등급배분표.html">평가등급 배분표</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>평가관리</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/목표면담설정.html">목표·면담 설정</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/목표마스터설정.html"
+                            >목표마스터 설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/목표라인설정.html">목표라인 설정</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/개인성과평점.html">개인성과평점</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/성과평가마스터설정.html"
+                            >성과평가 마스터 설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/성과평가라인설정.html"
+                            >성과평가 라인 설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/평가조정회의설정.html"
+                            >평가조정회의 설정</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/리더십리뷰설정.html">리더십리뷰 설정</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/리더십리뷰마스터설정.html"
+                            >리더십리뷰 마스터 설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/리더십리뷰라인설정.html"
+                            >리더십리뷰 라인설정</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/개인성과평점.html">개인성과평점</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/성과평가마스터설정.html"
+                            >성과평가 마스터 설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/성과평가라인설정.html"
+                            >성과평가 라인 설정</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>평가운영</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/개인성과평가운영.html"
+                        >개인성과평가 운영</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/리더십리뷰운영.html">리더십리뷰 운영</a>
+                    </li>
+                    <li>
+                      <a href="../sub/일하는방식리뷰 운영.html"
+                        >일하는방식리뷰운영</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/목표및면담운영.html">목표 및 면담운영</a>
+                    </li>
+                    <li>
+                      <a href="../sub/이의신청관리.html">이의신청관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/라인오류신고.html">라인오류신고</a>
+                    </li>
+                    <li>
+                      <a href="../sub/업무이력조회.html">업무이력조회</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>평가결과</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/개인성과평가 결과.html"
+                        >개인성과평가결과</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/리더십리뷰결과.html">리더십리뷰 결과</a>
+                    </li>
+                    <li>
+                      <a href="../sub/일하는방식리뷰결과.html"
+                        >일하는방식리뷰 결과</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/목표및면담조회.html">목표 및 면담조회</a>
+                    </li>
+                    <li>
+                      <a href="../sub/평가결과출력.html">평가결과출력</a>
+                    </li>
+                    <li>
+                      <a href="../sub/과거결과보기.html">과거결과보기</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/과거근무성적평가결과.html"
+                            >과거근무성적평가결과</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/과거관리능력조사결과.html"
+                            >과거관리능력조사결과</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/과거동료평가결과.html"
+                            >과거동료평가 결과</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>승진관리</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/승진이동마스터설정정.html"
+                        >승진·이동마스터설정정</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/자기신고서관리.html">자기신고서관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/자기신고서통합검색.html"
+                        >자기신고서통합검색</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/보임희망현황.html">보임희망현황</a>
+                    </li>
+                    <li>
+                      <a href="../sub/자기신고서부서코드.html"
+                        >자기신고서 부서코드</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/전입희망서권한관리.html"
+                        >전입희망서 권한관리</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../sub/전입희망서관리.html">전입희망서 관리</a>
+                    </li>
+                    <li>
+                      <a href="../sub/승진관리.html">승진 관리</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/승진대상자 설정.html"
+                            >승진대상자설정</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/자기추천서관리.html"
+                            >자기추천서 관리</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/리더추천서관리.html"
+                            >리더추천서 관리</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="gnbItem">
+                  <a href="#none" class="gnbLink">
+                    <span>시스템관리</span>
+                  </a>
+                  <ul class="subMenu">
+                    <li>
+                      <a href="../sub/사용자관리.html">사용자관리</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/사용자관리.html">사용자 관리</a>
+                        </li>
+                        <li>
+                          <a href="../sub/사용자그룹관리.html"
+                            >사용자그룹 관리</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/메뉴권한관리.html">메뉴권한 관리</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/코드관리.html">코드관리</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/공통코드.html">공통코드</a>
+                        </li>
+                        <li>
+                          <a href="../sub/ms코드.html">MS코드</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/로그관리.html">로그관리</a>
+                      <ul class="subSubMenu">
+                        <li>
+                          <a href="../sub/사용자접속통계.html"
+                            >사용자접속통계</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/사용자접속이력.html"
+                            >사용자접속이력</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/메뉴접속통계.html">메뉴접속통계</a>
+                        </li>
+                        <li>
+                          <a href="../sub/관리자계정로그.html"
+                            >관리자계정로그</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../sub/MIS연동로그.html">MIS연동로그</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="../sub/메뉴관리.html">메뉴관리</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cnt-wrap v-motion">
+              <section class="cnt">
+                <div class="cnt__head">
+                  <h3 class="com-title-lg">리더십리뷰 운영</h3>
+                </div>
+                <div class="cnt__body">
+                  <div class="search-area flex jcb">
+                    <div class="lef">
+                      <section class="flex three-item type2">
+                        <article class="row">
+                          <label class="com-label" for="a1">리뷰년도</label>
+                          <article class="cont-select w180">
+                            <button class="btn-select">옵션</button>
+                            <ul class="list-member">
+                              <li>
+                                <button type="button" class="list-item">
+                                  Python
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  Java
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  JavaScript
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C#
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C/C++
+                                </button>
+                              </li>
+                            </ul>
+                          </article>
+                        </article>
+                        <article class="row">
+                          <label class="com-label" for="a2">리뷰차수</label>
+                          <article class="cont-select w180">
+                            <button class="btn-select">옵션</button>
+                            <ul class="list-member">
+                              <li>
+                                <button type="button" class="list-item">
+                                  Python
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  Java
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  JavaScript
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C#
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C/C++
+                                </button>
+                              </li>
+                            </ul>
+                          </article>
+                        </article>
+                        <article class="row">
+                          <label class="com-label" for="a3">리뷰대상</label>
+                          <article class="cont-select w180">
+                            <button class="btn-select">옵션</button>
+                            <ul class="list-member">
+                              <li>
+                                <button type="button" class="list-item">
+                                  Python
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  Java
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  JavaScript
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C#
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C/C++
+                                </button>
+                              </li>
+                            </ul>
+                          </article>
+                        </article>
+                      </section>
+                      <section class="flex four-item type2">
+                        <article class="row">
+                          <label class="com-label" for="a4">부서명</label>
+                          <article class="cont-select w180">
+                            <button class="btn-select">옵션</button>
+                            <ul class="list-member">
+                              <li>
+                                <button type="button" class="list-item">
+                                  Python
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  Java
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  JavaScript
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C#
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C/C++
+                                </button>
+                              </li>
+                            </ul>
+                          </article>
+                        </article>
+                        <article class="row">
+                          <label class="com-label" for="a5">행번</label>
+                          <div class="com-input-wrap">
+                            <input
+                              type="text"
+                              id="a5"
+                              class="com-input w180 input-sm"
+                            />
+                          </div>
+                        </article>
+                        <article class="row">
+                          <label class="com-label" for="a6">이름</label>
+                          <div class="com-input-wrap">
+                            <input
+                              type="text"
+                              id="a6"
+                              class="com-input w180 input-sm"
+                            />
+                          </div>
+                        </article>
+                        <article class="row">
+                          <label class="com-label" for="a7">진행단계</label>
+                          <article class="cont-select w180">
+                            <button class="btn-select">옵션</button>
+                            <ul class="list-member">
+                              <li>
+                                <button type="button" class="list-item">
+                                  Python
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  Java
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  JavaScript
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C#
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="list-item">
+                                  C/C++
+                                </button>
+                              </li>
+                            </ul>
+                          </article>
+                        </article>
+                      </section>
+                    </div>
+                    <div class="ref">
+                      <button type="submit" class="com-btn search-btn">
+                        검색
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="com-div-table-wrap type-1">
+                    <div class="flex-container">
+                      <div class="flex-item">리뷰대기</div>
+                      <div class="flex-column">
+                        <div class="flex-item">역량</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                      <div class="flex-column">
+                        <div class="flex-item">위험요소</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-container">
+                      <div class="flex-item">리뷰대기</div>
+                      <div class="flex-column">
+                        <div class="flex-item">역량</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                      <div class="flex-column">
+                        <div class="flex-item">위험요소</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-container">
+                      <div class="flex-item">리뷰대기</div>
+                      <div class="flex-column">
+                        <div class="flex-item">역량</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                      <div class="flex-column">
+                        <div class="flex-item">위험요소</div>
+                        <div class="flex-item bg-white">
+                          <span>200</span>/<span class="allNum">300</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- mt40 -> margin-top:40px 이처럼 여백조절 해주세요. -->
+                  <div class="com-table-wrap mt40">
+                    <div class="com-table">
+                      <div class="gridContainer">
+                        <!-- 데이터 뿌려질공간 -->
+                        <table id="list"></table>
+                        <div id="pager"></div>
+                        <!-- 데이터 뿌려질공간 eee -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 컨텐츠가 들어갈 부분 eee -->
+            </div>
+          </div>
+          <!-- footer -->
+          <footer id="footer" class="footer">
+            <div class="flex gap60">
+              <div class="fot-logo">
+                <img src="../assets/img/fot-logo.png" alt="" />
+              </div>
+              <p>
+                [04531] 서울 특별시 중구 남대문로 93 (남대문로3가) 대표전화 :
+                02-759-4114 <br />
+                Copyright Bank of Korea. All night reserved
+              </p>
+            </div>
+          </footer>
+          <!-- footer eee -->
+        </div>
+      </div>
+    </main>
+
+    <!-- 스크립트 -->
+    <script defer="" src="../assets/js/custom/ui.js"></script>
+    <!-- 스크립트 eee -->
+
+    <script>
+      $(function () {
+        var data = [
+          {
+            test2: '홍길동',
+            test3: 'IT기획팀1',
+            test4: '001',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+          {
+            test2: '라길동',
+            test3: 'IT기획팀2',
+            test4: '002',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+          {
+            test2: '고길동',
+            test3: 'IT기획팀3',
+            test4: '003',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+          {
+            test2: '허길동',
+            test3: 'IT기획팀4',
+            test4: '004',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+          {
+            test2: '박길동',
+            test3: 'IT기획팀5',
+            test4: '005',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+          {
+            test2: '김길동',
+            test3: 'IT기획팀6',
+            test4: '006',
+            test5: '0002',
+            test6: '0002',
+            test7: '0002',
+            test8: '-',
+            test9: '홍길동',
+            test10: '홍길동',
+            test11: '홍길동',
+            test12: '1차평가',
+          },
+        ];
+
+        $('#list').jqGrid({
+          data: data,
+          datatype: 'local',
+          colModel: [
+            {
+              name: 'test4',
+              index: 'test4',
+              align: 'center',
+              width: '134px',
+              label: '행번',
+            },
+            {
+              name: 'test2',
+              index: 'test2',
+              align: 'center',
+              width: '134px',
+              label: '이름',
+            },
+            {
+              name: 'test3',
+              index: 'test3',
+              align: 'center',
+              width: '134px',
+              label: '소속',
+            },
+            {
+              name: 'test5',
+              index: 'test5',
+              align: 'center',
+              width: '134px',
+              label: '평가군',
+            },
+            {
+              name: 'test6',
+              index: 'test6',
+              align: 'center',
+              width: '134px',
+              label: '1차평가자',
+            },
+            {
+              name: 'test7',
+              index: 'test7',
+              align: 'center',
+              width: '134px',
+              label: '2차평가자',
+            },
+            {
+              name: 'test8',
+              index: 'test8',
+              align: 'center',
+              width: '134px',
+              label: '1차조정위',
+            },
+            {
+              name: 'test9',
+              index: 'test9',
+              align: 'center',
+              width: '134px',
+              label: '2차조정위',
+            },
+            {
+              name: 'test10',
+              index: 'test10',
+              align: 'center',
+              width: '134px',
+              label: '3차조정위',
+            },
+            {
+              name: 'test11',
+              index: 'test11',
+              align: 'center',
+              width: '134px',
+              label: '4차조정위',
+            },
+            {
+              name: 'test12',
+              index: 'test12',
+              align: 'center',
+              width: '134px',
+              label: '진행단계',
+            },
+          ],
+          rowNum: 10,
+          multiselect: false,
+          cellEdit: true,
+          cellSubmit: 'clientArray',
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -16,7 +16,7 @@ const idName = 'LR';
         <h3 class="com-title-lg">{title}</h3>
       </div>
       <div class="cnt__body">
-        <div class="search-area flex aic jcb">
+        <div class="search-area flex jcb">
           <div class="lef">
             <section class="flex three-item type2">
               <article class="row">
@@ -32,7 +32,7 @@ const idName = 'LR';
                 <ComSelect id="a3" wid="180" />
               </article>
             </section>
-            <section class="flex three-item type2">
+            <section class="flex four-item type2">
               <article class="row">
                 <label class="com-label" for="a4">부서명</label>
                 <ComSelect id="a4" wid="180" />
@@ -61,41 +61,315 @@ const idName = 'LR';
             <div class="flex-item">리뷰대기</div>
             <div class="flex-column">
               <div class="flex-item">역량</div>
-              <div class="flex-item bg-white">200/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
             <div class="flex-column">
               <div class="flex-item">위험요소</div>
-              <div class="flex-item bg-white">250/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
           </div>
           <div class="flex-container">
             <div class="flex-item">리뷰대기</div>
             <div class="flex-column">
               <div class="flex-item">역량</div>
-              <div class="flex-item bg-white">200/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
             <div class="flex-column">
               <div class="flex-item">위험요소</div>
-              <div class="flex-item bg-white">250/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
           </div>
           <div class="flex-container">
             <div class="flex-item">리뷰대기</div>
             <div class="flex-column">
               <div class="flex-item">역량</div>
-              <div class="flex-item bg-white">200/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
             <div class="flex-column">
               <div class="flex-item">위험요소</div>
-              <div class="flex-item bg-white">250/300</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="com-table-wrap">
-          <div class="tbl-scroll mt10" style="max-height:305px;">
+          <div class="tbl-scroll mt40" style="max-height:362px;">
             <div class="com-table">
-
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="4">리뷰대상자</th>
+                    <th colspan="4">리뷰어</th>
+                    <th colspan="2">진행단계</th>
+                  </tr>
+                  <tr>
+                    <th>행번</th>
+                    <th>이름</th>
+                    <th>소속</th>
+                    <th>직책</th>
+                    <th>행번</th>
+                    <th>이름</th>
+                    <th>소속</th>
+                    <th>직책</th>
+                    <th>역량</th>
+                    <th>위험요소</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>
+                      <div class="flex gap5 aic jcc">
+                        <span class="c-blue">완료</span>
+                        /
+                        <a href="#" class="com-btn cancel-btn">완료취소</a>
+                      </div>
+                    </td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>어디어디팀</td>
+                    <td>팀원</td>
+                    <td>완료</td>
+                    <td>대기</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -104,4 +378,6 @@ const idName = 'LR';
 
     <!-- 컨텐츠가 들어갈 부분 eee -->
   </div>
+
+  <script></script>
 </Layout>

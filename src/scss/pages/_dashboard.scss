@@ -57,15 +57,16 @@ ul.step {
     position: absolute;
     top: 1.25rem;
     left: 0;
-    width: 95%;
+    width: 93%;
     height: 0.1875rem;
     background: #666;
     margin: 0 2.6rem;
     overflow: hidden;
   }
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   li.step__item {
     // width: 5.5625rem;
     flex:1;
@@ -75,7 +76,7 @@ ul.step {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1.6rem;
+    padding: 0 1rem;
     &:first-of-type{
       padding-left: 0;
     }
@@ -88,7 +89,7 @@ ul.step {
     @include make-after {
       width: 0.625rem;
       height: 0.9375rem;
-      @include bg-url('img', 'step-arr.svg');
+      @include bg-url('img', 'step-arr.svg',"cover");
       position: absolute;
       top: 0.875rem;
       background-size: contain;
@@ -174,6 +175,7 @@ div.shortcut {
       a {
         display: flex;
         width: 100%;
+        gap:5px;
         div.icon {
           width: 2.875rem;
           height: 2.875rem;
@@ -195,6 +197,7 @@ div.shortcut {
           word-break: keep-all;
           justify-content: center;
           flex: 1;
+     
         }
       }
     }
@@ -234,6 +237,7 @@ div.shortcut {
           background-size: cover;
           width: 2.125rem;
           height: 0.5625rem;
+          transition: all 0.3s ease-in-out;
         }
         display: flex;
         align-items: center;
@@ -330,4 +334,5 @@ div.shortcut {
 
 @media (max-width: 1600px) {
   html{font-size: 14px;}
+  div.shortcut div.shortcut__list{gap:1rem}
 }

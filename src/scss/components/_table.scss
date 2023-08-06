@@ -1,26 +1,45 @@
 .com-table {
   position: relative;
   /* 테이블의 너비와 레이아웃을 설정합니다. */
-  width: 100%;
-  table-layout: fixed; /* 각 셀의 너비를 고정합니다. */
-  border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
+  table{
+    position: relative;
+    width: 100%;
+    table-layout: fixed; /* 각 셀의 너비를 고정합니다. */
+    border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
+  }
 }
-
+.com-table tr{
+  &:hover{
+    background-color: rgba(178,221,255,0.5)!important;
+  }
+}
 .com-table th,
 .com-table td {
   /* 헤더와 데이터 셀에 패딩을 추가합니다. */
-  padding: 8px;
+  padding: 7px 0!important;
+  height: auto!important;
   text-align: center; /* 텍스트 정렬을 설정합니다. */
   border: 1px solid #aaa; /* 셀 경계선 스타일을 설정합니다. */
+  font-size: 14px;
 }
-
+.com-table th{
+  font-size: 16px;
+}
+.com-table thead{
+  position: sticky;
+  top: -1px;
+  background: #b2ddff;
+  z-index: 10;
+}
 .com-table th {
   /* 테이블 헤더 스타일링 */
   background-color: #b2ddff; /* 헤더 배경색을 설정합니다. */
   color: #000; /* 헤더 텍스트 색상을 설정합니다. */
-  position: sticky;
-  top: -1px;
   border-bottom: 1px solid #aaa;
+  box-shadow: 0px 2px 2px #aaa;
+  backface-visibility: hidden;
+  font-weight: bold;
+
 }
 
 .com-table tr:nth-child(even) {
@@ -43,9 +62,43 @@
       letter-spacing: 0px;
       color: #222222;
       background-color: #b2ddff;
+      font-weight: bold;
+      label{
+        font: normal normal 600 16px/41px Pretendard;
+      letter-spacing: 0px;
+      color: #222222;
+      background-color: #b2ddff;
+      font-weight: bold;
+      }
     }
     td{
       padding: 0 20px;
     }
   }
 }
+
+
+.ui-jqgrid .ui-jqgrid-htable th div{
+  font-size: 16px;
+  font-weight: bold;
+}
+.ui-jqgrid .ui-jqgrid-htable th{
+  border: 1px solid #aaa;
+}
+.ui-jqgrid tr.ui-row-ltr td{
+  font-size: 14px;
+  font-weight: 500!important;
+  color:#222;
+}
+// .ui-jqgrid-bdiv::-webkit-scrollbar {
+//   width: 10px;
+//   height: 10px;
+// }
+// .ui-jqgrid-bdiv::-webkit-scrollbar-track {
+//   background-color: transparent;
+// }
+
+// .ui-jqgrid-bdiv::-webkit-scrollbar-thumb {
+//   border-radius: 5px;
+//   background: #BBBBBB;
+// }

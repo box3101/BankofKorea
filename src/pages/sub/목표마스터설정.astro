@@ -7,7 +7,6 @@ import ComRadio from '../../components/ComRadio.astro';
 const title = '목표마스터 설정';
 const pageTitle = `Home > ${title}`;
 const idName = 'GoalMaster';
-
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
@@ -18,24 +17,24 @@ const idName = 'GoalMaster';
         <h3 class="com-title-lg">목표마스터 설정</h3>
       </div>
       <div class="cnt__body">
-        <div class="search-area flex aic jcb">
+        <div class="search-area flex jcb">
           <div class="lef">
             <section class="flex three-item type2">
               <article class="row">
                 <label class="com-label" for="goal-year-select">목표년도</label>
-                <ComSelect id="goal-year-select" />
+                <ComSelect id="goal-year-select" wid="180" />
               </article>
               <article class="row">
                 <label class="com-label" for="goal-times-select"
                   >전체 목표차수</label
                 >
-                <ComSelect id="goal-times-select" />
+                <ComSelect id="goal-times-select" wid="180" />
               </article>
               <article class="row">
                 <label class="com-label" for="goal-target-select"
                   >목표대상</label
                 >
-                <ComSelect id="goal-target-select" />
+                <ComSelect id="goal-target-select" wid="180" />
               </article>
             </section>
           </div>
@@ -52,18 +51,20 @@ const idName = 'GoalMaster';
           <div class="tbl-scroll mt10" style="max-height:305px;">
             <div class="com-table">
               <table>
-                <tr>
-                  <th>No.</th>
-                  <th>목표년도</th>
-                  <th>목표차수</th>
-                  <th>목표구분</th>
-                  <th>목표설정시작일</th>
-                  <th>목표설정종료일</th>
-                  <th>진행상태</th>
-                  <th>등록자명</th>
-                  <th>등록자 ID</th>
-                  <th>등록일자</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>목표년도</th>
+                    <th>목표차수</th>
+                    <th>목표구분</th>
+                    <th>목표설정시작일</th>
+                    <th>목표설정종료일</th>
+                    <th>진행상태</th>
+                    <th>등록자명</th>
+                    <th>등록자 ID</th>
+                    <th>등록일자</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>10</td>
@@ -198,13 +199,13 @@ const idName = 'GoalMaster';
         <div class="com-tab-wrap">
           <ul class="head">
             <li class="on">
-              <a href="javascript:void(0)">목표마스터 상세</a>
+              <button type="button">목표마스터 상세</button>
             </li>
             <li>
-              <a href="javascript:void(0)">목표라인 설정</a>
+              <button type="button">목표라인 설정</button>
             </li>
             <li>
-              <a href="javascript:void(0)">목표작성 현황</a>
+              <button type="button">목표작성 현황</button>
             </li>
           </ul>
         </div>
@@ -253,7 +254,7 @@ const idName = 'GoalMaster';
                 <tr>
                   <th>목표구분</th>
                   <td>
-                    <ComRadio name="일반직" name2="계약직"></ComRadio>
+                    <ComRadio name="일반직" name2="계약직">
                   </td>
                   <th><label for="a11">목표차수</label></th>
                   <td>
@@ -263,10 +264,8 @@ const idName = 'GoalMaster';
                 <tr>
                   <th>등록자명</th>
                   <td>홍길동</td>
-                  <th><label for="a12">목표차수</label></th>
-                  <td>
-                    <ComSelect id="a12" wid="297" />
-                  </td>
+                  <th><label for="a12">등록자 ID</label></th>
+                  <td> dev01</td>
                 </tr>
                 <tr>
                   <th>등록일</th>

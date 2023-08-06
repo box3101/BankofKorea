@@ -6,8 +6,13 @@ interface Props{
 const {id,wid} = Astro.props;
 ---
 
-<div class=`com-select w${wid}`>
-  <select name="" id={id}>
-    <option value="">옵션</option>
-  </select>
-</div>
+<article class=`cont-select w${wid}`>
+  <button class="btn-select">옵션</button>
+  <ul class="list-member">
+      <li><button type="button" class="list-item">Python</button></li>
+      <li><button type="button" class="list-item">Java</button></li>
+      <li><button type="button" class="list-item">JavaScript</button></li>
+      <li><button type="button" class="list-item">C#</button></li>
+      <li><button type="button" class="list-item">C/C++</button></li>
+  </ul>
+</article>

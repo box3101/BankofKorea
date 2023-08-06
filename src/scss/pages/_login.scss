@@ -3,9 +3,9 @@
     width: 65.416667%; /* 1256px/1920 */
     &__img {
       height: 100%;
+      // overflow: hidden;
       img {
         width: 100%;
-        min-width:940px;
         height: 100vh;
         &.on{
           height: 100%;

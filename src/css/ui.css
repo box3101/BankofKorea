@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 /* Reset */
 html,
 body,
@@ -48,7 +47,8 @@ figure,
 figcaption {
   margin: 0;
   padding: 0;
-  font-family: "Pretendard", sans-serif !important;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 500; /* Regular */
   color: #222;
   letter-spacing: -0.3px;
   line-height: 1.3;
@@ -104,6 +104,10 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.ofHidden {
+  overflow-x: hidden;
 }
 
 /* Normalize */
@@ -261,6 +265,60 @@ legend,
   }
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../assets/fonts/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
 input {
   /* 기본 스타일 초기화 */
   margin: 0;
@@ -280,7 +338,10 @@ input {
   width: 100%;
 }
 .com-input:hover {
-  border: 1px solid #000;
+  border: 1px solid #004884;
+  outline: 1px solid #004884;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .com-input:focus {
   border: 1px solid #004884;
@@ -302,7 +363,7 @@ input {
   color: #222222;
 }
 .com-input.input-sm {
-  height: 28px;
+  height: 30px;
   background: #fff;
   border: 1px solid #BBBBBB;
 }
@@ -387,36 +448,15 @@ button {
   position: relative;
   z-index: 1;
   top: 0;
-  transition: 0.25s ease-in-out;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: filter 0.3s; /* 호버 효과의 부드러운 전환을 위해 transition 추가 */
 }
-.com-btn::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 0.3125rem;
-  background-color: #000;
-  /* background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%); */
-  box-shadow: -0.4375rem -0.4375rem 1.25rem 0rem rgba(255, 255, 255, 0.6), -0.25rem -0.25rem 0.3125rem 0rem rgba(255, 255, 255, 0.6), 0.4375rem 0.4375rem 1.25rem 0rem rgba(0, 0, 0, 0.1333333333), 0.25rem 0.25rem 0.3125rem 0rem rgba(0, 0, 0, 0.0666666667);
-  transition: all 0.3s ease;
-  opacity: 0.1;
-}
-.com-btn.after-none::after {
-  display: none;
-}
-.com-btn:hover, .com-btn.hover {
-  top: -0.3125rem;
-}
-.com-btn:hover::after {
-  top: 0;
-  height: 100%;
+.com-btn:hover, .com-btn:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* 마우스를 올리면 그림자가 보이게 함 */
+  filter: brightness(95%); /* 마우스를 올렸을 때의 효과 */
 }
 .com-btn.disabled {
   opacity: 0.5;
@@ -433,6 +473,7 @@ button {
   min-width: 82px;
   height: 30px;
   border: none;
+  font-weight: bold;
 }
 .com-btn.font-lg {
   font-size: 24px;
@@ -579,6 +620,21 @@ button {
   height: 16px;
 }
 
+.cancel-btn {
+  width: 54px;
+  height: 22px;
+  background: #F50000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #F50000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
 .add-btn {
   padding-right: 15px;
   width: 80px;
@@ -705,7 +761,7 @@ button {
   width: 20%; /* 290/1600 */
 }
 .flex.three-item.type2 {
-  gap: 40px;
+  gap: 20px;
 }
 .flex.four-item {
   display: flex;
@@ -717,7 +773,7 @@ button {
   justify-content: center;
 }
 
-.flex.alc {
+.flex.aic {
   align-items: center;
 }
 
@@ -13335,7 +13391,7 @@ button {
 
 /* =================== scroll =================== */
 html::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   height: 10px;
 }
 
@@ -13344,12 +13400,12 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: #c9c9c9;
+  border-radius: 10px;
+  background: #BBBBBB;
 }
 
 .tbl-scroll::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   height: 10px;
 }
 
@@ -13359,7 +13415,7 @@ html::-webkit-scrollbar-thumb {
 
 .tbl-scroll::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #c9c9c9;
+  background: #BBBBBB;
 }
 
 /* =================== 공통 첨자. =================== */
@@ -13467,27 +13523,28 @@ html::-webkit-scrollbar-thumb {
 .com-tab-wrap ul.head li {
   height: 100%;
 }
-.com-tab-wrap ul.head li a {
+.com-tab-wrap ul.head li button {
   display: inline-flex;
   align-items: center;
   height: 100%;
   font: normal normal normal 20px/24px Pretendard;
   letter-spacing: 0px;
   color: #666666;
+  background: none;
 }
-.com-tab-wrap ul.head li a:after {
+.com-tab-wrap ul.head li button:after {
   content: "";
   display: block;
   width: 0%;
 }
-.com-tab-wrap ul.head li.on a, .com-tab-wrap ul.head li:hover a {
+.com-tab-wrap ul.head li.on button, .com-tab-wrap ul.head li:hover button {
   position: relative;
   font: normal normal bold 20px/24px Pretendard;
   letter-spacing: 0px;
   color: #0559ae;
   box-sizing: border-box;
 }
-.com-tab-wrap ul.head li.on a:after, .com-tab-wrap ul.head li:hover a:after {
+.com-tab-wrap ul.head li.on button:after, .com-tab-wrap ul.head li:hover button:after {
   content: "";
   display: block;
   position: absolute;
@@ -13503,7 +13560,7 @@ html::-webkit-scrollbar-thumb {
 .com-radio {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .com-radio label {
@@ -13535,14 +13592,17 @@ html::-webkit-scrollbar-thumb {
   margin: 0 auto;
   margin-top: 40px;
 }
+.com-div-table-wrap.type-2 {
+  gap: 14px;
+}
 
 .flex-container {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   height: 80px;
-  background: #0559AE;
-  border-bottom: 2px solid #0559AE;
+  background: #0559ae;
+  border-bottom: 2px solid #0559ae;
   box-sizing: content-box;
 }
 .flex-container > div {
@@ -13564,84 +13624,197 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0559AE;
+  background: #0559ae;
   color: #fff;
   height: 40px;
-  border: 0.5008px solid #BBBBBB;
+  border: 0.5px solid #bbbbbb;
+  border-top: none;
   box-sizing: border-box;
   margin-left: -1px;
   font-weight: bold;
+  font-weight: 400;
 }
 .flex-item.bg-white {
   background: #fff;
   font-size: 14px;
   color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.flex-item .allNum {
+  font-weight: bold;
 }
 
-.com-select select {
-  /* 셀렉트 박스의 기본 스타일 */
+.com-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.com-name .img-wrap {
+  width: 80px;
+  height: 26px;
+  background: #fff;
+  border-radius: 1.875rem;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+}
+.com-name .img-wrap .img {
+  width: 1.375rem;
+  height: 1.375rem;
+  background-size: cover !important;
+  background-image: url("../../assets/img/user-img2.svg");
+}
+.com-name .img-wrap .txt {
+  font-size: 14px;
+  color: #222;
+}
+
+.com-table tr:hover .img {
+  background-image: url("../../assets/img/user-img2-hover.svg");
+}
+.com-table tr:hover .img-wrap {
+  background: #004884;
+}
+.com-table tr:hover .img-wrap .txt {
+  color: #fff;
+}
+
+.cont-select {
   position: relative;
-  display: block;
+}
+
+.btn-select {
   width: 100%;
-  height: 28px;
-  padding: 0 10px;
-  font: normal normal normal 14px/16px Pretendard;
-  letter-spacing: 0px;
-  color: #222222;
-  color: #495057;
+  height: 30px;
   background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  appearance: none; /* 셀렉트 박스의 기본 모양을 제거 */
-}
-
-.com-select {
+  color: #000;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 10px;
   position: relative;
-  border: 1px solid #BBBBBB;
-  border-radius: 4px;
 }
-
-.com-select::after {
-  /* 화살표 아이콘을 가상 요소로 추가 */
-  content: "▼";
+.btn-select:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  background-image: url("../../assets/img/sel-arr.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  pointer-events: none; /* 클릭 이벤트를 무시 */
+  pointer-events: none;
 }
 
-.com-select:focus {
-  /* 셀렉트 박스에 포커스가 있을 때의 스타일 */
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.btn-select:hover,
+.btn-select:focus {
+  border: 1px solid #004884;
+  outline: 1px solid #004884;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.list-member {
+  display: none;
+  position: absolute;
+  width: 99%;
+  top: 31px;
+  left: 1px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.35);
+  background: #fff;
+  z-index: 11;
+  border-radius: 5px;
+}
+
+.btn-select.on {
+  background: #eee;
+}
+
+.btn-select.on + .list-member {
+  display: block;
+}
+
+.list-member li {
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.list-member li button {
+  width: 100%;
+  padding: 10px 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+}
+
+.list-member li button:hover,
+.list-member li button:focus {
+  background-color: #eee;
 }
 
 .com-table {
   position: relative;
   /* 테이블의 너비와 레이아웃을 설정합니다. */
+}
+.com-table table {
+  position: relative;
   width: 100%;
   table-layout: fixed; /* 각 셀의 너비를 고정합니다. */
   border-collapse: collapse; /* 셀 사이의 경계선을 합칩니다. */
 }
 
+.com-table tr:hover {
+  background-color: rgba(178, 221, 255, 0.5) !important;
+}
+
 .com-table th,
 .com-table td {
   /* 헤더와 데이터 셀에 패딩을 추가합니다. */
-  padding: 8px;
+  padding: 7px 0 !important;
+  height: auto !important;
   text-align: center; /* 텍스트 정렬을 설정합니다. */
   border: 1px solid #aaa; /* 셀 경계선 스타일을 설정합니다. */
+  font-size: 14px;
+}
+
+.com-table th {
+  font-size: 16px;
+}
+
+.com-table thead {
+  position: sticky;
+  top: -1px;
+  background: #b2ddff;
+  z-index: 10;
 }
 
 .com-table th {
   /* 테이블 헤더 스타일링 */
   background-color: #b2ddff; /* 헤더 배경색을 설정합니다. */
   color: #000; /* 헤더 텍스트 색상을 설정합니다. */
-  position: sticky;
-  top: -1px;
   border-bottom: 1px solid #aaa;
+  box-shadow: 0px 2px 2px #aaa;
+  backface-visibility: hidden;
+  font-weight: bold;
 }
 
 .com-table tr:nth-child(even) {
@@ -13664,9 +13837,32 @@ html::-webkit-scrollbar-thumb {
   letter-spacing: 0px;
   color: #222222;
   background-color: #b2ddff;
+  font-weight: bold;
+}
+.com-table-type2 table th label {
+  font: normal normal 600 16px/41px Pretendard;
+  letter-spacing: 0px;
+  color: #222222;
+  background-color: #b2ddff;
+  font-weight: bold;
 }
 .com-table-type2 table td {
   padding: 0 20px;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th {
+  border: 1px solid #aaa;
+}
+
+.ui-jqgrid tr.ui-row-ltr td {
+  font-size: 14px;
+  font-weight: 500 !important;
+  color: #222;
 }
 
 .com-popup {
@@ -13723,7 +13919,7 @@ html::-webkit-scrollbar-thumb {
 
 #wrap {
   display: flex;
-  min-width: 1590px;
+  min-width: 1400px;
   min-height: 100vh;
 }
 #wrap > section {
@@ -13792,12 +13988,12 @@ html::-webkit-scrollbar-thumb {
   font: normal normal 600 16px/19px Pretendard;
   letter-spacing: 0px;
   color: #222222;
-  min-width: 70px;
+  min-width: 72px;
   text-align: right;
 }
 
 .search-area {
-  padding: 16px 40px;
+  padding: 1rem 2.5rem;
   background: #b2ddff 0% 0% no-repeat padding-box;
   border: 1px solid #5bb8ff;
   border-radius: 4px;
@@ -13853,13 +14049,16 @@ html::-webkit-scrollbar-thumb {
   .search-area .lef .row {
     max-width: 220px;
   }
-  .search-area .lef .row .com-select, .search-area .lef .row .com-input {
+  .search-area .lef .row .cont-select, .search-area .lef .row .com-input {
     width: 128px !important;
     flex: 1 1 128px !important;
   }
-  .search-area .lef .row .com-select select, .search-area .lef .row .com-input select {
+  .search-area .lef .row .cont-select select, .search-area .lef .row .com-input select {
     width: 128px !important;
     flex: 1 1 128px !important;
+  }
+  .search-area {
+    padding: 1rem !important;
   }
 }
 footer#footer.footer {
@@ -14118,7 +14317,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(1).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14195,7 +14393,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(2).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14272,7 +14469,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(3).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14349,7 +14545,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(4).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14426,7 +14621,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(5).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14503,7 +14697,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(6).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14580,7 +14773,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(7).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14657,7 +14849,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(8).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14734,7 +14925,6 @@ div.user-info div.welcome-msg {
   font: normal normal normal 14px/1.6 Pretendard;
   letter-spacing: 0px;
   color: #999999;
-  transition: all 0.2s;
 }
 .gnbItem:nth-child(9).on:not(:first-child) .subSubMenu > li a:after {
   content: "";
@@ -14855,7 +15045,6 @@ div.user-info div.welcome-msg {
 }
 .login .banner__img img {
   width: 100%;
-  min-width: 940px;
   height: 100vh;
 }
 .login .banner__img img.on {
@@ -14985,14 +15174,15 @@ ul.step {
   position: relative;
   width: 100%;
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 ul.step .bar {
   position: absolute;
   top: 1.25rem;
   left: 0;
-  width: 95%;
+  width: 93%;
   height: 0.1875rem;
   background: #666;
   margin: 0 2.6rem;
@@ -15006,7 +15196,7 @@ ul.step li.step__item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1.6rem;
+  padding: 0 1rem;
 }
 ul.step li.step__item:first-of-type {
   padding-left: 0;
@@ -15025,6 +15215,9 @@ ul.step li.step__item:after {
   width: 0.625rem;
   height: 0.9375rem;
   background-image: url("../../assets/img/step-arr.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0.875rem;
   background-size: contain;
@@ -15107,6 +15300,7 @@ div.shortcut div.shortcut__list div.shortcut__item:hover .icon {
 div.shortcut div.shortcut__list div.shortcut__item a {
   display: flex;
   width: 100%;
+  gap: 5px;
 }
 div.shortcut div.shortcut__list div.shortcut__item a div.icon {
   width: 2.875rem;
@@ -15167,6 +15361,7 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   background-size: cover;
   width: 2.125rem;
   height: 0.5625rem;
+  transition: all 0.3s ease-in-out;
 }
 .db-noti ul li a.flex.aic.gap20 div.date {
   width: 6.25rem;
@@ -15252,6 +15447,59 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   html {
     font-size: 14px;
   }
+  div.shortcut div.shortcut__list {
+    gap: 1rem;
+  }
+}
+.employee-wrap {
+  padding-top: 25px;
+  border-top: 1px solid #B2DDFF;
+}
+.employee-wrap .row {
+  margin-top: 20px;
+}
+
+.employee-tit {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.employee-tit p {
+  opacity: 1;
+}
+.employee-tit p:last-of-type span::after, .employee-tit p:first-of-type span::after {
+  display: none;
+}
+.employee-tit p span {
+  position: relative;
+}
+.employee-tit p span::after {
+  content: "/";
+  display: inline-block;
+  margin: 0 5px;
+  margin-left: 8px;
+  margin-right: 0;
+}
+.employee-tit p span.name {
+  font: normal normal bold 20px/24px Pretendard;
+  letter-spacing: 0px;
+  color: #222222;
+}
+.employee-tit p span.name::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 10px;
+  position: relative;
+  top: -3px;
+}
+.employee-tit p .id,
+.employee-tit p .department,
+.employee-tit p .rank {
+  font: normal normal normal 14px/16px Pretendard;
+  letter-spacing: 0px;
+  color: #222222;
 }
 
 /*# sourceMappingURL=ui.css.map */

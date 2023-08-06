@@ -1,0 +1,51 @@
+.employee-wrap{
+  padding-top: 25px;
+  border-top: 1px solid #B2DDFF;
+  .row{
+    margin-top: 20px;
+  }
+}
+.employee-tit {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  p {
+    &:last-of-type,&:first-of-type{
+      span::after{
+        display: none;
+      }
+    }
+    opacity: 1;
+    span{
+      position: relative;
+      &::after{
+        content: '/';
+        display: inline-block;
+        margin: 0 5px;
+        margin-left: 8px;
+        margin-right: 0;
+      }
+    }
+    span.name {
+      &::before{
+        content: '▶';
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 10px;
+        position: relative;
+        top:-3px;
+      }
+      font: normal normal bold 20px/24px Pretendard;
+      letter-spacing: 0px;
+      color: #222222;
+    }
+    .id,
+    .department,
+    .rank {
+      font: normal normal normal 14px/16px Pretendard;
+      letter-spacing: 0px;
+      color: #222222;
+    }
+  }
+}

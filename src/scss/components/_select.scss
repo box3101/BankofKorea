@@ -1,37 +1,84 @@
-.com-select select{
-   /* 셀렉트 박스의 기본 스타일 */
-   position: relative;
-   display: block;
-   width: 100%;
-   height: 28px;
-   padding: 0 10px;
-   font: normal normal normal 14px/16px Pretendard;
-   letter-spacing: 0px;
-   color: #222222;
-   color: #495057;
-   background-color: #fff;
-   background-clip: padding-box;
-   border: 1px solid #ced4da;
-   border-radius: 4px;
-   appearance: none; /* 셀렉트 박스의 기본 모양을 제거 */
-}
-.com-select{
+.cont-select {
   position: relative;
-  border: 1px solid #BBBBBB;
-  border-radius: 4px;
+  // width: 200px;
 }
-.com-select::after {
-  /* 화살표 아이콘을 가상 요소로 추가 */
-  content: "▼";
+
+.btn-select {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 10px;
+  position: relative;
+  @include make-after {
+    width: 10px;
+    height: 5px;
+    @include bg-url('img', 'sel-arr.svg', 'cover');
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.btn-select:hover,
+.btn-select:focus {
+  border: 1px solid $main-color;
+  outline: 1px solid $main-color;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.list-member {
+  display: none;
   position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none; /* 클릭 이벤트를 무시 */
+  width: 99%;
+  top: 31px;
+  left: 1px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.35);
+  background: #fff;
+  z-index: 11;
+  border-radius: 5px;
 }
-.com-select:focus {
-  /* 셀렉트 박스에 포커스가 있을 때의 스타일 */
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+.btn-select.on {
+  background:#eee;
+}
+
+.btn-select.on + .list-member {
+  display: block;
+}
+
+.list-member li {
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.list-member li button {
+  width: 100%;
+  padding: 10px 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+  /* 말줄임 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+}
+
+.list-member li button:hover,
+.list-member li button:focus {
+  background-color: #eee;
 }

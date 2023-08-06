@@ -47,7 +47,8 @@ figure,
 figcaption {
 	margin: 0;
 	padding: 0;
-	font-family: "Pretendard", sans-serif!important;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 500; /* Regular */
 	color: #222;
 	letter-spacing: -0.3px;
 	line-height: 1.3;
@@ -98,7 +99,9 @@ button {
 	cursor: pointer;
 }
 // p,h4,h1,h2,h3{word-break: keep-all;}
-
+.ofHidden{
+	overflow-x: hidden;
+}
 /* Normalize */
 // select { appearance:none;}
 // select::-ms-expand { display:none;}

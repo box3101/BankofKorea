@@ -1,0 +1,551 @@
+---
+import ComInput from '../../components/ComInput.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const title = '개인성과평가 운영';
+const pageTitle = `Home > ${title}`;
+const idName = 'PR';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">{title}</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="a1">평가년도</label>
+                <ComSelect id="a1" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="a2">평가차수</label>
+                <ComSelect id="a2" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="a3">평가대상</label>
+                <ComSelect id="a3" wid="180" />
+              </article>
+            </section>
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="a4">평가군</label>
+                <ComSelect id="a4" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="a5">진행단계</label>
+                <ComSelect id="a5" wid="180" />
+              </article>
+            </section>
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="a6">부서명</label>
+                <ComInput id="a6" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="a7">행번</label>
+                <ComInput id="a7" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="a8">이름</label>
+                <ComInput id="a8" wid="180" />
+              </article>
+            </section>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+
+        <div class="com-div-table-wrap type-2">
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">라인확인</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">업무실적</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">1차 평가</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">2차 평가</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">1차 조정위</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">2차 조정위</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">3차 조정위</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">4차 조정위</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-column">
+              <div class="flex-item">평가완료</div>
+              <div class="flex-item bg-white">
+                <span>200</span>/<span class="allNum">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="com-table-wrap">
+          <div class="tbl-scroll mt30" style="max-height:362px;">
+            <div class="com-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th colspan="4">리뷰대상자</th>
+                    <th rowspan="2">1차 평가자</th>
+                    <th rowspan="2">2차 평가자</th>
+                    <th rowspan="2">1차 조정위</th>
+                    <th rowspan="2">2차 조정위</th>
+                    <th rowspan="2">3차 조정위</th>
+                    <th rowspan="2">4차 조정위</th>
+                    <th rowspan="2">진행단계</th>
+                  </tr>
+                  <tr>
+                    <th>행번</th>
+                    <th>이름</th>
+                    <th>소속</th>
+                    <th>평가군</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                  <tr>
+                    <td>00001</td>
+                    <td>
+                      <div class="com-name">
+                        <div class="img-wrap">
+                          <div class="img"></div>
+                          <div class="txt">홍길동</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>IT기획팀</td>
+                    <td>팀장</td>
+                    <td>00002</td>
+                    <td>홍길동</td>
+                    <td>-</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>홍길동</td>
+                    <td>1차평가</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <section class="employee-wrap">
+          <article class="row">
+            <div class="employee-tit">
+              <p><span class="name">홍길동</span></p>
+              [
+              <p><span class="id">00001</span></p>
+              <p><span class="department">IT기획팀</span></p>
+              <p><span class="rank">팀원(4급)</span></p>
+              ]
+            </div>
+            <div class="employee-table">
+              <div class="com-table-wrap mt10">
+                <div class="com-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>라인확인</th>
+                        <th>업무실적작성</th>
+                        <th>1차평가</th>
+                        <th>2차평가</th>
+                        <th>1차 조정위</th>
+                        <th>2차 조정위</th>
+                        <th>3차 조정위</th>
+                        <th>4차 조정위</th>
+                        <th>진행단계</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="c-blue">완료</div>
+                        </td>
+                        <td>
+                          <div class="c-blue">완료</div>
+                          <a href="#none" class="com-btn cancel-btn mt3"
+                            >완료취소</a
+                          >
+                        </td>
+                        <td>진행중</td>
+                        <td>-</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>-</td>
+                        <td>1차평가</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="row">
+            <div class="employee-tit">
+              <p><span class="name">홍길동</span></p>
+              [
+              <p><span class="id">00001</span></p>
+              <p><span class="department">IT기획팀</span></p>
+              <p><span class="rank">팀원(4급)</span></p>
+              ]
+            </div>
+            <div class="employee-table">
+              <div class="com-table-wrap mt10">
+                <div class="com-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>라인확인</th>
+                        <th>업무실적작성</th>
+                        <th>1차평가</th>
+                        <th>2차평가</th>
+                        <th>1차 조정위</th>
+                        <th>2차 조정위</th>
+                        <th>3차 조정위</th>
+                        <th>4차 조정위</th>
+                        <th>진행단계</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="c-blue">완료</div>
+                        </td>
+                        <td>
+                          <div class="c-blue">완료</div>
+                          <a href="#none" class="com-btn cancel-btn mt3"
+                            >완료취소</a
+                          >
+                        </td>
+                        <td>진행중</td>
+                        <td>-</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>-</td>
+                        <td>1차평가</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="row">
+            <div class="employee-tit">
+              <p><span class="name">홍길동</span></p>
+              [
+              <p><span class="id">00001</span></p>
+              <p><span class="department">IT기획팀</span></p>
+              <p><span class="rank">팀원(4급)</span></p>
+              ]
+            </div>
+            <div class="employee-table">
+              <div class="com-table-wrap mt10">
+                <div class="com-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>라인확인</th>
+                        <th>업무실적작성</th>
+                        <th>1차평가</th>
+                        <th>2차평가</th>
+                        <th>1차 조정위</th>
+                        <th>2차 조정위</th>
+                        <th>3차 조정위</th>
+                        <th>4차 조정위</th>
+                        <th>진행단계</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="c-blue">완료</div>
+                        </td>
+                        <td>
+                          <div class="c-blue">완료</div>
+                          <a href="#none" class="com-btn cancel-btn mt3"
+                            >완료취소</a
+                          >
+                        </td>
+                        <td>진행중</td>
+                        <td>-</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>대기</td>
+                        <td>-</td>
+                        <td>1차평가</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+
+  <script></script>
+</Layout>
