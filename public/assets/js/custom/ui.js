@@ -92,68 +92,80 @@
     });
   }
 
+  // 공통 전체메뉴
+  function allMenu() {
+    const $menuToggle = document.getElementById('menuToggle');
+    if ($menuToggle) {
+      $menuToggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        const menuContent = document.getElementById('menuContent');
+        if (menuContent.style.display === 'none' || menuContent.style.display === '') menuContent.style.display = 'block';
+        else menuContent.style.display = 'none';
+      });
+    }
+  }
+
   // 공통 팝업
-  document.addEventListener('DOMContentLoaded', function () {
-    window.renderPopupType1 = function () {
-      let popupCnt = document.querySelector('.compopup-container');
-      let html = `
-      <div class="com-popup">
-        <div class="popup-content">
-          <div class="popup-title">제목</div>
-          <div class="popup-body">
-            <div>타입1</div>
-            <button onclick="renderPopupType1_1(event)">팝업 타입1-1</button>
-            <button onclick="closePopup(event)">닫기</button>
-          </div>
-        </div>
-      </div>
-      `
-      popupCnt.innerHTML = html;
-    },
-      window.renderPopupType1_1 = function (event) {
-        event.stopPropagation();
-        let popupCnt = document.querySelector('.compopup-container');
-        let html = `
-      <div class="com-popup">
-        <div class="popup-content">
-          <div class="popup-title">타입1-1</div>
-          <div class="popup-body">
-            <div>타입1</div>
-            <button onclick="closePopup(event)">닫기</button>
-          </div>
-        </div>
-      </div>
-      `
-        popupCnt.innerHTML += html;
-      },
-      window.renderPopupType2 = function () {
-        let popupCnt = document.querySelector('.compopup-container');
-        let html = `
-      <div class="com-popup">
-        <div class="popup-content">
-          <div class="popup-title">제목2</div>
-          <div class="popup-body">
-            <div>타입2</div>
-            <button onclick="closePopup(event)">닫기</button>
-          </div>
-        </div>
-      </div>
-      `
-        popupCnt.innerHTML = html;
-      },
-      window.closePopup = function (e) {
-        let target = e.target.closest(".com-popup");
-        target.classList.add("hidden")
+  window.openPop = function (element) {
+    const popupElement = document.querySelector(`#${element}`);
+    popupElement.classList.add("on");
+    setTimeout(() => {
+      popupElement.style.opacity = "1";
+      popupElement.querySelector(".popup-content").style.transform = "scale(1)";
+
+      //20230825 추가 팝업 스크롤바를 조건부로 표시
+      const contentWrapper = document.querySelectorAll('.popup-body');
+      if (contentWrapper) {
+        contentWrapper.forEach((item) => {
+          if (item.scrollHeight <= window.innerHeight - 100) {
+            item.classList.remove("scroll")  // 스크롤이 필요 없으면 overflow-y를 hidden으로 설정
+          } else {
+            item.classList.add("scroll")  // 스크롤이 필요하면 overflow-y를 scroll로 설정
+          }
+        })
       }
-  });
+    }, 50)
+  };
+
+  window.closePop = function () {
+    const closePopBtns = document.querySelectorAll('.closePopBtn');
+    closePopBtns.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        el.closest(".com-popup").classList.remove("on");
+        setTimeout(() => {
+          el.closest(".popup-content").style.transform = "scale(0.7)";
+          el.closest(".com-popup").style.opacity = "0";
+        }, 50)
+
+      })
+    })
+  }
 
   // 공통 모션
   function updateOnEvt() {
-    document.querySelectorAll('.cnt-wrap').forEach(el => el.classList.add("v-motion"));
+    document.querySelectorAll('.gnb-wrap + .cnt-wrap').forEach(el => el.classList.add("v-motion"));
     document.querySelectorAll('.tab-contents .tab-item').forEach(el => el.classList.add("v-motion"));
   }
 
-  
+
+  //20230829 추가 기간선택 버튼
+  function comPerioBtnActive() {
+    const perioBtns = document.querySelectorAll('.perioBtns button');
+    if (perioBtns) {
+      perioBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          let target = e.target;
+
+          perioBtns.forEach((btn) => btn.classList.remove("on"));
+          target.classList.add("on");
+        });
+      })
+    }
+
+  }
+  //20230829 추가 기간선택 버튼 eee
+
 
   function eventBinding() {
     comBtnActive();
@@ -161,6 +173,9 @@
     navigator();
     updateOnEvt();
     comSelect();
+    allMenu();
+    closePop();
+    comPerioBtnActive();
   }
 
   function init() {

@@ -1,23 +1,84 @@
 .com-popup {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &.on {
+    display: flex;
+  }
+  &.size-x-sm .popup-content {
+    min-width: 320px;
+    width: auto;
+  }
+  &.size-xs-sm .popup-content {
+    min-width: 430px;
+    width: auto;
+  }
+  &.size-sm .popup-content {
+    min-width: 740px;
+    width: auto;
+  }
+  &.size-mid .popup-content {
+    width: 1138px;
+  }
+  &.type2 {
+    transition: 0s;
+    .popup-content {
+      padding: 0;
+      background: transparent;
+      .popup-title {
+        margin-bottom: 0;
+      }
+      .popup-body {
+        background: #fff;
+        padding: 30px 40px;
+        padding-bottom: 30px;
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &.cnt-wrap {
+      background-color: rgba(0, 0, 0, 0.5);
+      .com-title-lg:before {
+        top: 0px;
+        height: 20px;
+      }
+      h3 {
+        font-size: 20px !important;
+      }
+    }
+    .cross-line {
+      background: #fff;
+    }
+    .close-btn {
+      top: 16px;
+      width: 20px;
+      height: 20px;
+      &:hover {
+        .cross-line {
+          background: #fff;
+        }
+      }
+    }
+  }
 }
 
 .popup-content {
+  position: relative;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px 70px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  max-width: 500px;
-  width: 80%;
+  transform: scale(0.7); /* 초기 상태에서 약간 축소된 상태 */
+  transition: opacity 0.3s, transform 0.3s; /* opacity와 transform에 대한 효과 동시 적용 */
 }
 
 .popup-title {
@@ -26,19 +87,83 @@
 }
 
 .popup-body {
-  font-size: 1em;
+  &.scroll{
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
+  }
+  p.txt {
+    margin-top: 10px;
+    // font: normal normal normal 16px/20px Pretendard;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #222222;
+    text-align: center;
+  }
+  ul.list {
+    li {
+    }
+  }
+  .formType1 {
+    margin-top: 30px;
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      label {
+        flex: none;
+        min-width: 102px;
+        margin-right: 19px;
+        text-align: right;
+        // font: Pretendard Pretendard 600 16px/19px Pretendard;
+        font-weight: 600;
+      }
+      input {
+        height: 28px;
+        border: 1px solid #bbbbbb;
+      }
+    }
+  }
 }
-
-.popup-close {
-  display: block;
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #ccc;
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s;
 }
 
-.hidden {
-  display: none;
+.close-btn:hover {
+  transform: rotate(90deg); /* 회전 효과 */
+}
+
+.cross-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333; /* 선 색상 */
+  top: 50%;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+.close-btn:hover .cross-line {
+  background-color: $main-color; /* hover 시 색상 변경 */
+}
+
+.close-btn .cross-line:nth-child(1) {
+  transform: rotate(45deg); /* 대각선 방향 */
+}
+
+.close-btn .cross-line:nth-child(2) {
+  transform: rotate(-45deg); /* 반대 대각선 방향 */
+}
+.popDesc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
 }

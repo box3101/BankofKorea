@@ -1,0 +1,313 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '업무실적작성';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">업무실적작성</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="com-title">
+          <div class="info">평가년도 : 2023년</div>
+          <div class="info">평가차수 : 차수없음</div>
+          <div class="info">대상구분 : 일반직</div>
+        </div>
+        <div class="flex w-50 gap15 mt20">
+          <div class="left">
+            <p class="com-title type-3">목표확인 및 면담내용 작성</p>
+            <div class="search-area flex jcb">
+              <div class="lef">
+                <section class="flex three-item type2">
+                  <article class="row">
+                    <label class="com-label" for="goal-year-select"
+                      >목표년도</label
+                    >
+                    <div class="com-date-range type-2">
+                      <input
+                        type="text"
+                        id="a2"
+                        class="com-input input-mid border-gray w120 datepicker-input"
+                        placeholder="YYYY.MM.DD"
+                      />
+                      <img
+                        class="calendar-icon datepicker-button"
+                        src="../assets/img/date-icon.svg"
+                        alt="calendar-icon"
+                      />
+                      <span>~</span>
+                      <input
+                        type="text"
+                        id="a3"
+                        class="com-input input-mid border-gray w120 datepicker-input"
+                        placeholder="YYYY.MM.DD"
+                      />
+                      <img
+                        class="calendar-icon datepicker-button"
+                        src="../assets/img/date-icon.svg"
+                        alt="calendar-icon"
+                      />
+                    </div>
+                  </article>
+                </section>
+              </div>
+              <div class="ref">
+                <button type="submit" class="com-btn search-btn">검색</button>
+              </div>
+            </div>
+            <div class="flex flex-end">
+              <button
+                type="button"
+                class="com-btn btn-mid bg-white border-main text-main btn-sm mt20"
+                >내용불러오기</button
+              >
+            </div>
+            <div class="tbl-scroll mt10" style="max-height:305px;">
+              <div class="com-table">
+                <table>
+                  <colgroup>
+                    <col width="7%" />
+                    <col width="30%" />
+                    <col width="15%" />
+                    <col width="15%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></th
+                      >
+                      <th>제목</th>
+                      <th>작성일</th>
+                      <th>내용보기</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        ><div class="com-checkbox-wrap center">
+                          <div class="item">
+                            <input
+                              type="checkbox"
+                              id="b1"
+                              class="com-checkbox"
+                            />
+                          </div>
+                        </div></td
+                      >
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="com-btn btn-x-sm">보기</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="flex aic jcb">
+              <div class="left">
+                <p class="com-title type-3 mb3">업무실적작성</p>
+                <p class="com-title type-4">
+                  ※ 작성기간 : 2024.02.16 ~ 2024.02.28
+                </p>
+              </div>
+              <div class="right">
+                <div class="btn-set">
+                  <button type="button" class="com-btn btn-sm bg-main">저장</button>
+                  <button type="button" class="com-btn btn-sm bg-white border-main text-main">제출</button>
+                </div>
+              </div>
+            </div>
+            <textarea style="height:600px" class="com-textarea" name="" id="" cols="30" rows="10"></textarea>
+            <div class="footer-text-sm">
+              0/4,000 Byte
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

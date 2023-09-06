@@ -63,7 +63,7 @@
   .all-menu {
     padding-top: 30px;
     margin-bottom: 20px;
-    a {
+    >a {
       display: block;
       background-image: url('../../assets/img/nav1.svg');
       background-repeat: no-repeat;
@@ -159,3 +159,99 @@
     // &:hover:not(:first-child)
   }
 }
+
+
+.all-menu {
+  position: relative;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  z-index: 999;
+}
+
+/* 최상위 메뉴 항목 */
+.menu-content > ul {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  width: 1250px;
+  padding-top: 13px;
+  padding-bottom: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.menu-content > ul > li {
+  flex:auto;
+}
+.menu-content > ul > li > a {
+  position: relative;
+  display: block;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  font-weight: bold;
+  @include make-before{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 4px;
+    height: 19px;
+    background: #0092E5;
+    margin-right: 1px;
+    top: 2px;
+  }
+}
+
+.menu-content > ul > li > a:hover {
+  color: $main-color;
+}
+
+/* 하위 메뉴 항목 */
+.menu-content ul ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.menu-content ul ul li > a::before{
+  content: '-';
+  display: inline-block;
+  margin-right: 3px;
+}
+.menu-content > ul ul > li a {
+  display: block;
+  padding: 14px 20px;
+  padding-left: 0px;
+  padding-right: 0;
+  color: #666;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.menu-content ul ul li a:hover {
+  color: $main-color;
+}
+
+/* 더 깊은 하위 메뉴 항목 */
+.menu-content ul ul ul {
+  padding-left: 20px;
+}
+.menu-content ul ul ul li  > a::before{
+  content: '·';
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.menu-content ul ul ul li a {
+  color: #888;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 0px;
+}
+

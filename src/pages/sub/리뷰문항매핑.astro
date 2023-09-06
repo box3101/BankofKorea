@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '리뷰문항매핑';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">리뷰문항매핑</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="goal-year-select">목표년도</label>
+                <ComSelect id="goal-year-select" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-times-select"
+                  >전체 목표차수</label
+                >
+                <ComSelect id="goal-times-select" wid="180" />
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-target-select"
+                  >목표대상</label
+                >
+                <ComSelect id="goal-target-select" wid="180" />
+              </article>
+            </section>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic jcb">
+            <button type="button" class="com-btn excel-btn-down">엑셀 내리기</button>
+            <button type="button" class="com-btn add-btn">추가</button>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:305px;">
+            <div class="com-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>목표년도</th>
+                    <th>목표차수</th>
+                    <th>목표구분</th>
+                    <th>목표설정시작일</th>
+                    <th>순번</th>
+                    <th>선택여부</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2022.12.12</td>
+                    <td>
+                      <div class="com-border-sm">1</div>
+                    </td>
+                    <td>
+                      <a href="#" class="com-btn bg-red btn-x-sm font-x-sm"
+                        >문항삭제</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2022.12.12</td>
+                    <td>
+                      <div class="com-border-sm">1</div>
+                    </td>
+                    <td>
+                      <a href="#" class="com-btn bg-red btn-x-sm font-x-sm"
+                        >문항삭제</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

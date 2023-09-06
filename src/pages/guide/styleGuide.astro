@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가이드</title>
+    <link rel="stylesheet" href="../assets/css/ui.css" />
+  </head>
+
+  <body>
+    <div class="content-wrapper" id="content">
+      <h1 class="section-header">Colors</h1>
+      <div class="row">
+        <div class="col-xs-6 col-md-3 color color-primary">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : primary</p>
+              <p class="label">RGB : #004071</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-secondary">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : secondary</p>
+              <p class="label">RGB : #0060AA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-tertiary">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : accent</p>
+              <p class="label">RGB : #4BB1FF</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-accent">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : tertiary</p>
+              <p class="label">RGB : #B2DDFF</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-green">
+          <div class="swatch"></div>
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : green</p>
+              <p class="label">RGB : #00a100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-red">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : red</p>
+              <p class="label">RGB : #f50000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 color color-orange">
+          <div class="swatch"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-3">
+              <p class="name">NAME : orange</p>
+              <p class="label">RGB : #F37200</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="section-header">Button</h1>
+      <h3 class="mb20 mt10">
+        이 스타일 가이드에서는 클래스를 활용하여 버튼의 크기, 폰트, 배경색 등
+        다양한 속성을 관리할 수 있습니다. 원하는 스타일의 조합을 클래스로
+        추가하여 사용하세요.
+      </h3>
+      <div class="info">
+        <ul>
+          <li>
+            크기 조절: <code>btn-lg</code>, <code>btn-mid</code>, <code
+              >btn-sm</code
+            >, <code>btn-x-sm</code>
+          </li>
+          <li>
+            폰트 크기: <code>font-lg</code>, <code>font-md</code>, <code
+              >font-sm</code
+            >, <code>font-x-sm</code>
+          </li>
+          <li>
+            배경색: <code>bg-main</code>, <code>bg-red</code>, <code
+              >bg-gray</code
+            >, <code>bg-orange</code>, <code>bg-white</code>
+          </li>
+          <!-- ... 다른 클래스 설명들 ... -->
+        </ul>
+        <p>
+          예시: 큰 버튼에 메인 색상 배경과 큰 폰트를 적용하려면 <code
+            >&lt;button class="com-btn btn-lg bg-main
+            font-lg"&gt;버튼&lt;/button&gt;</code
+          >와 같이 사용하세요.
+        </p>
+      </div>
+      <h2 class="section-subheader mt10">기본버튼</h2>
+      <button type="button">기본 버튼</button>
+
+      <h2>커스텀 버튼</h2>
+      <button type="button" class="com-btn btn-mid">커스텀 버튼</button>
+      <button type="button" class="com-btn btn-mid disabled"
+        >비활성화 버튼</button
+      >
+
+      <h2>버튼 크기</h2>
+      <button type="button" class="com-btn btn-mid btn-lg">큰 버튼</button>
+      <button type="button" class="com-btn btn-mid btn-mid">중간 버튼</button>
+      <button type="button" class="com-btn btn-mid btn-sm">작은 버튼</button>
+      <button type="button" class="com-btn btn-mid btn-x-sm"
+        >아주 작은 버튼</button
+      >
+
+      <h2>폰트 크기</h2>
+      <button type="button" class="com-btn btn-mid font-lg">큰 폰트</button>
+      <button type="button" class="com-btn btn-mid font-md">중간 폰트</button>
+      <button type="button" class="com-btn btn-mid font-sm">작은 폰트</button>
+      <button type="button" class="com-btn btn-mid font-x-sm"
+        >아주 작은 폰트</button
+      >
+
+      <h2>반지름 설정</h2>
+      <button type="button" class="com-btn btn-mid radius-lg">큰 반지름</button>
+      <button type="button" class="com-btn btn-mid radius-md"
+        >중간 반지름</button
+      >
+      <button type="button" class="com-btn btn-mid radius-sm"
+        >작은 반지름</button
+      >
+
+      <h2>배경색</h2>
+      <button type="button" class="com-btn btn-mid bg-main">메인 색상</button>
+      <button type="button" class="com-btn btn-mid bg-red">빨간색</button>
+      <button type="button" class="com-btn btn-mid bg-gray">회색</button>
+      <button type="button" class="com-btn btn-mid bg-orange">오렌지색</button>
+      <button type="button" class="com-btn btn-mid bg-white">하얀색</button>
+
+      <h2>글자색</h2>
+      <button type="button" class="com-btn btn-mid text-white"
+        >하얀색 글자</button
+      >
+      <button type="button" class="com-btn btn-mid text-black"
+        >검은색 글자</button
+      >
+      <button type="button" class="com-btn btn-mid text-main"
+        >메인 색상 글자</button
+      >
+      <button type="button" class="com-btn btn-mid text-gray">회색 글자</button>
+
+      <h2>테두리 설정</h2>
+      <button type="button" class="com-btn btn-mid bg-orange border"
+        >기본 테두리</button
+      >
+      <button type="button" class="com-btn btn-mid bg-orange border-gray"
+        >회색 테두리</button
+      >
+      <button type="button" class="com-btn btn-mid border-main"
+        >메인 색상 테두리</button
+      >
+
+      <h2>기타 버튼</h2>
+      <button type="submit" class="com-btn search-btn">검색</button>
+      <button type="button" class="com-btn excel-btn-up">엑셀 올리기</button>
+      <button type="button" class="com-btn excel-btn-down">엑셀 내리기</button>
+      <button type="button" class="com-btn cancel-btn">완료 취소</button>
+      <button type="button" class="com-btn add-btn">추가 버튼</button>
+      <button type="button" class="com-btn load-attend-btn"
+        >참석자 불러오기</button
+      >
+
+      <h1 class="section-header">Input , Select, Textarea</h1>
+      <h3 class="mb20 mt10">
+        이 스타일 가이드에서는 클래스를 활용하여 input의 크기, 폰트, 배경색 등
+        다양한 속성을 관리할 수 있습니다. 원하는 스타일의 조합을 클래스로
+        추가하여 사용하세요.
+      </h3>
+
+      <h2>넓이 및 간격 설정 방법</h2>
+      <p>
+        `input`, `select` 등의 태그는 `w` 클래스를 사용하여 넓이를 설정할 수
+        있습니다. 또한 `mt`, `mb` 클래스를 사용하여 상단 및 하단 간격을 조절할
+        수 있습니다.
+      </p>
+      <p>
+        예시: - 넓이를 300px로 설정하고 상단 간격을 10px, 하단 간격을 20px로
+        조절하려면 다음과 같이 사용합니다:<br />
+      </p>
+
+      <!-- 실제 적용 예시 -->
+      <input
+        type="text"
+        class="com-input input-sm w300 mt10 mb20"
+        placeholder="넓이 300px, 상단 간격 10px, 하단 간격 20px"
+      />
+      <div class="cont-select w150">
+        <button class="btn-select">넓이 150</button>
+        <ul class="list-member">
+          <li><button type="button" class="list-item">Python</button></li>
+          <li><button type="button" class="list-item">Java</button></li>
+          <li><button type="button" class="list-item">JavaScript</button></li>
+          <li><button type="button" class="list-item">C#</button></li>
+          <li><button type="button" class="list-item">C/C++</button></li>
+        </ul>
+      </div>
+      <!-- 기본 스타일 -->
+      <input type="text" class="com-input" placeholder="기본 스타일" />
+
+      <!-- 다양한 클래스 조합으로 스타일 적용 -->
+      <div class="com-input-wrap">
+        <input
+          type="text"
+          id="a5"
+          class="com-input w180 input-sm"
+          placeholder="공통"
+        />
+      </div>
+
+      <input
+        type="text"
+        class="com-input input-mid border-solid bg-lightgray text-center"
+        placeholder="중간 크기, 실선, 그레이 배경, 텍스트 중앙"
+      />
+
+      <input
+        type="text"
+        class="com-input input-sm border-dotted border-red text-right"
+        placeholder="작은 크기, 점선, 빨간 테두리, 텍스트 오른쪽"
+      />
+
+      <input
+        type="text"
+        class="com-input input-lg bg-lightgreen text-left"
+        placeholder="큰 크기, 녹색 배경, 텍스트 왼쪽"
+      />
+
+      <!-- .com-checkbox-wrap 예시 -->
+      <div class="com-checkbox-wrap">
+        <div class="item">
+          <input type="checkbox" id="b1" class="com-checkbox" />
+          <label for="b1">임원</label>
+        </div>
+      </div>
+      <div class="com-checkbox-wrap">
+        <div class="item">
+          <input type="checkbox" id="b1" class="com-checkbox" />
+          <label for="b1">임원</label>
+        </div><div class="item">
+          <input type="checkbox" id="b2" class="com-checkbox" />
+          <label for="b2">특급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b3" class="com-checkbox" />
+          <label for="b3">1급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b4" class="com-checkbox" />
+          <label for="b4">2급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b5" class="com-checkbox" />
+          <label for="b5">3급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b6" class="com-checkbox" />
+          <label for="b6">4급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b7" class="com-checkbox" />
+          <label for="b7">5급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b8" class="com-checkbox" />
+          <label for="b8">6급</label>
+        </div><div class="item">
+          <input type="checkbox" id="b9" class="com-checkbox" />
+          <label for="b9">C1</label>
+        </div><div class="item">
+          <input type="checkbox" id="b10" class="com-checkbox" />
+          <label for="b10">C2</label>
+        </div><div class="item">
+          <input type="checkbox" id="b11" class="com-checkbox" />
+          <label for="b11">C3</label>
+        </div><div class="item">
+          <input type="checkbox" id="b12" class="com-checkbox" />
+          <label for="b12">전문</label>
+        </div><div class="item">
+          <input type="checkbox" id="b13" class="com-checkbox" />
+          <label for="b13">서부</label>
+        </div><div class="item">
+          <input type="checkbox" id="b14" class="com-checkbox" />
+          <label for="b14">청경</label>
+        </div><div class="item">
+          <input type="checkbox" id="b15" class="com-checkbox" />
+          <label for="b15">기능(서무)</label>
+        </div><div class="item">
+          <input type="checkbox" id="b16" class="com-checkbox" />
+          <label for="b16">기능(청경)</label>
+        </div><div class="item">
+          <input type="checkbox" id="b17" class="com-checkbox" />
+          <label for="b17">기능(화폐관리)</label>
+        </div><div class="item">
+          <input type="checkbox" id="b18" class="com-checkbox" />
+          <label for="b18">기능(계약)</label>
+        </div>
+      </div>
+
+      <!-- 라디오 -->
+      <div class="com-radio">
+        <label>
+          <input type="radio" class="com-input input-radio" />
+          <span>일반직</span>
+        </label><label>
+          <input type="radio" class="com-input input-radio" />
+          <span>계약직</span>
+        </label>
+      </div>
+
+      <!-- 데이터피커 -->
+      <div class="com-date-range">
+        <input
+          type="text"
+          id="a2"
+          class="com-input input-mid border-gray w120 datepicker-input"
+          placeholder="YYYY.MM.DD"
+        />
+        <img
+          class="calendar-icon datepicker-button"
+          src="../assets/img/date-icon.svg"
+          alt="calendar-icon"
+        />
+        <span>~</span>
+        <input
+          type="text"
+          id="a3"
+          class="com-input input-mid border-gray w120 datepicker-input"
+          placeholder="YYYY.MM.DD"
+        />
+        <img
+          class="calendar-icon datepicker-button"
+          src="../assets/img/date-icon.svg"
+          alt="calendar-icon"
+        />
+      </div>
+
+      <div class="com-date-range type-2">
+        <input
+          type="text"
+          id="a2"
+          class="com-input input-mid border-gray w120 datepicker-input"
+          placeholder="YYYY.MM.DD"
+        />
+        <img
+          class="calendar-icon datepicker-button"
+          src="../assets/img/date-icon.svg"
+          alt="calendar-icon"
+        />
+        <span>~</span>
+        <input
+          type="text"
+          id="a3"
+          class="com-input input-mid border-gray w120 datepicker-input"
+          placeholder="YYYY.MM.DD"
+        />
+        <img
+          class="calendar-icon datepicker-button"
+          src="../assets/img/date-icon.svg"
+          alt="calendar-icon"
+        />
+      </div>
+
+      <textarea
+        style="height:100px"
+        class="com-textarea"
+        name=""
+        id=""
+        cols="30"
+        rows="10"></textarea>
+
+      <!-- select -->
+      <div class="cont-select w297">
+        <button class="btn-select">옵션</button>
+        <ul class="list-member">
+          <li><button type="button" class="list-item">Python</button></li>
+          <li><button type="button" class="list-item">Java</button></li>
+          <li><button type="button" class="list-item">JavaScript</button></li>
+          <li><button type="button" class="list-item">C#</button></li>
+          <li><button type="button" class="list-item">C/C++</button></li>
+        </ul>
+
+        <div class="pagination">
+          <button class="paging-button first-page"
+            ><span class="hidden">맨앞으로</span></button
+          >
+          <button class="paging-button prev-page"
+            ><span class="hidden">전으로</span></button
+          >
+          <button class="paging-button page-number on">1</button>
+          <button class="paging-button page-number">2</button>
+          <button class="paging-button page-number">3</button>
+          <button class="paging-button page-number">4</button>
+          <button class="paging-button page-number">5</button>
+          <button class="paging-button next-page"
+            ><span class="hidden">다음으로</span></button
+          >
+          <button class="paging-button last-page"
+            ><span class="hidden">맨뒤로</span></button
+          >
+        </div>
+      </div>
+
+      <!-- Vuetify 클래스 예시 -->
+      <div class="v-motion">애니메이션 효과가 적용된 텍스트</div>
+
+      <h1 class="section-header">Popup</h1>
+      size-sm: 작은 크기의 팝업을 나타냅니다. 일반적인 팝업 <br />
+      size-x-sm: 제일 작은 컨펌팝업 <br />
+      size-xs-sm: 더 작은 컨펌팝업 <br />
+      size-mid: 중간 크기의 팝업 table 나타낼때
+
+      <br /><br /><br />
+      type: 기본 타입의 팝업
+
+      <br />
+      type2: 제목이 있는 팝업
+    </div>
+  </body>
+</html>

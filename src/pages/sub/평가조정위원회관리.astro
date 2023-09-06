@@ -1,0 +1,350 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '평가조정위원회관리';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">평가조정위원회관리</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="goal-year-select">목표년도</label>
+                <div class="cont-select w180">
+                  <button class="btn-select">옵션</button>
+                  <ul class="list-member">
+                    <li>
+                      <button type="button" class="list-item">Python</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">Java</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item"
+                        >JavaScript</button>
+                    </li>
+                    <li><button type="button" class="list-item">C#</button></li>
+                    <li>
+                      <button type="button" class="list-item">C/C++</button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-times-select"
+                  >전체 목표차수</label
+                >
+                <div class="cont-select w180">
+                  <button class="btn-select">옵션</button>
+                  <ul class="list-member">
+                    <li>
+                      <button type="button" class="list-item">Python</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">Java</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item"
+                        >JavaScript</button>
+                    </li>
+                    <li><button type="button" class="list-item">C#</button></li>
+                    <li>
+                      <button type="button" class="list-item">C/C++</button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-target-select"
+                  >목표대상</label
+                >
+                <div class="cont-select w180">
+                  <button class="btn-select">옵션</button>
+                  <ul class="list-member">
+                    <li>
+                      <button type="button" class="list-item">Python</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">Java</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item"
+                        >JavaScript</button>
+                    </li>
+                    <li><button type="button" class="list-item">C#</button></li>
+                    <li>
+                      <button type="button" class="list-item">C/C++</button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </section>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic end">
+            <div class="btn-set gap5">
+              <button
+                type="button"
+                class="com-btn load-attend-btn"
+                >참석자 불러오기</button
+              >
+              <button type="button" class="com-btn add-btn"
+                >추가</button
+              >
+            </div>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:305px;">
+            <div class="com-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>목표년도</th>
+                    <th>목표차수</th>
+                    <th>목표구분</th>
+                    <th>목표설정시작일</th>
+                    <th>목표설정종료일</th>
+                    <th>진행상태</th>
+                    <th>등록자명</th>
+                    <th>등록자 ID</th>
+                    <th>등록일자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td><span class="c-blue">진행중</span></td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td><span class="c-red">마감</span></td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>2023년</td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.04.21</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cnt">
+      <div class="cnt__head type1">
+        <div class="com-tab-wrap">
+          <ul class="head">
+            <li class="on">
+              <button type="button">목표마스터 상세</button>
+            </li>
+            <li>
+              <button type="button">목표라인 설정</button>
+            </li>
+            <li>
+              <button type="button">목표작성 현황</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-contents">
+        <div class="tab-item cnt__body">
+          <div class="com-table-wrap">
+            <div class="head flex aic jcb">
+              <button type="button" class="com-btn bg-orange btn-sm"
+                >마감</button
+              >
+              <div class="btn-wrap flex gap5">
+                <button type="button" class="com-btn btn-sm">저장</button>
+                <button type="button" class="com-btn btn-sm bg-white border"
+                  >삭제</button
+                >
+              </div>
+            </div>
+            <div class="com-table-type2">
+              <table>
+                <colgroup>
+                  <col width="15%" />
+                  <col width="35%" />
+                  <col width="15%" />
+                  <col width="35%" />
+                </colgroup>
+                <tr>
+                  <th><label for="a1">목표년도</label></th>
+                  <td>
+                    <ComSelect id="a1" wid="297" />
+                  </td>
+                  <th>진행상태</th>
+                  <td><span class="main-color font-bold">진행중</span></td>
+                </tr>
+                <tr>
+                  <th
+                    ><label for="a2">설정기간 시작</label><label
+                      for="a3"
+                      class="hidden">설정기간 끝</label
+                    ></th
+                  >
+                  <td colspan="3">
+                    <DateRange id="a2" id2="a3" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>목표구분</th>
+                  <td>
+                    <ComRadio
+                      options={[{ label: '일반직' }, { label: '계약직' }]}
+                    />
+                  </td>
+                  <th><label for="a11">목표차수</label></th>
+                  <td>
+                    <ComSelect id="a11" wid="297" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>등록자명</th>
+                  <td>홍길동</td>
+                  <th><label for="a12">등록자 ID</label></th>
+                  <td> dev01</td>
+                </tr>
+                <tr>
+                  <th>등록일</th>
+                  <td>2023.07.04</td>
+                  <th>수정일</th>
+                  <td> 20203.07.07</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-item cnt__body">2</div>
+        <div class="tab-item cnt__body">3</div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

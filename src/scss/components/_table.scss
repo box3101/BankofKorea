@@ -1,46 +1,54 @@
 .com-table {
   position: relative;
-  table{
+  border-top: 2px solid $main-color;
+  border-bottom: 2px solid $sec-color;
+  tr:last-of-type td {
+    border-bottom: none;
+  }
+  table {
     position: relative;
-    width: 100%;
-    table-layout: fixed; 
+    width: 100% !important;
+    table-layout: fixed;
     border-collapse: collapse;
   }
 }
-.com-table tr{
-  &:hover{
-    background-color: rgba(178,221,255,0.5)!important;
+.com-table tr {
+  &:hover {
+    background-color: rgba(178, 221, 255, 0.5) !important;
   }
 }
 .com-table th,
 .com-table td {
-  padding: 10px 0!important;
-  height: auto!important;
-  text-align: center; 
-  border: 1px solid #aaa; 
+  padding: 8px 0 !important;
+  height: auto !important;
+  text-align: center;
+  border: 1px solid #ccc;
   font-size: 14px;
 }
 .com-table td {
-  padding:0!important;
-  height: 36px!important;
+  padding: 0 !important;
+  height: 36px !important;
 }
-.com-table th{
+.com-table .text-left{
+  text-align: left!important;
+  padding-left: 15px!important;
+}
+.com-table th {
   font-size: 16px;
 }
-.com-table thead{
+.com-table thead {
   position: sticky;
   top: -1px;
   background: var(--sec-color);
   z-index: 10;
 }
 .com-table th {
-  background-color: var(--sec-color); 
-  color: #000; 
-  border-bottom: 1px solid #aaa;
-  box-shadow: 0px 2px 2px #aaa;
+  background-color: var(--sec-color);
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 2px 2px #ccc;
   backface-visibility: hidden;
   font-weight: bold;
-
 }
 
 .com-table tr:nth-child(even) {
@@ -53,9 +61,14 @@
 
 .com-table-type2 {
   margin-top: 10px;
+  textarea{
+    margin: 10px 0;
+
+  }
   table {
-    th,td{
-      border: 1px solid #aaa;
+    th,
+    td {
+      border: 1px solid #ccc;
     }
     th {
       font: normal normal 600 16px/41px Pretendard;
@@ -63,42 +76,90 @@
       color: #222222;
       background-color: var(--sec-color);
       font-weight: bold;
-      label{
+      label {
+        position: relative; padding-left: 10px;
         font: normal normal 600 16px/41px Pretendard;
-      letter-spacing: 0px;
-      color: #222222;
-      background-color: var(--sec-color);
-      font-weight: bold;
+        letter-spacing: 0px;
+        color: #222222;
+        background-color: var(--sec-color);
+        font-weight: bold;
+        &.required-mark {
+          @include make-before {
+            position: absolute;
+            left: 0;
+            top: 40%;
+            transform: translateY(-50%);
+            content: '*';
+            color: #f50000;
+            font-size: 14px;
+          }
+        }
       }
     }
-    td{
+    td {
       padding: 0 20px;
+      font-size: 15px;
     }
   }
 }
 
-
-.ui-jqgrid .ui-jqgrid-htable th div{
+.ui-jqgrid {
+  min-width: 100% !important;
+}
+.ui-jqgrid .ui-jqgrid-view,
+.ui-jqgrid .ui-jqgrid-hdiv,
+.ui-jqgrid-bdiv {
+  min-width: 100% !important;
+}
+.gridContainer {
+  overflow-x: auto;
+  min-width: 100%;
+  max-width: 800px;
+}
+.ui-jqgrid .ui-jqgrid-htable th div {
   font-size: 16px;
   font-weight: bold;
 }
-.ui-jqgrid .ui-jqgrid-htable th{
-  border: 1px solid #aaa;
+.ui-jqgrid .ui-jqgrid-hbox {
+  padding-right: 0px;
 }
-.ui-jqgrid tr.ui-row-ltr td{
+.ui-jqgrid .ui-jqgrid-htable th {
+  height: 36px !important;
+  padding: 0 5px !important;
+}
+.ui-jqgrid tr.ui-row-ltr td {
   font-size: 14px;
-  font-weight: 500!important;
-  color:#222;
+  font-weight: 500 !important;
+  color: #222;
 }
-// .ui-jqgrid-bdiv::-webkit-scrollbar {
-//   width: 10px;
-//   height: 10px;
-// }
-// .ui-jqgrid-bdiv::-webkit-scrollbar-track {
-//   background-color: transparent;
-// }
+.ui-jqgrid th,
+.ui-jqgrid td {
+  border-width: 1px;
+}
+.jqgfirstrow {
+  display: none;
+}
+.ui-jqgrid tr.ui-row-ltr td {
+  border-right-color: #ccc;
+  border-bottom-color: #ccc;
+  border-left: none;
+}
+.ui-th-ltr,
+.ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {
+  border-left-color: #ccc;
+}
+.ui-jqgrid-bdiv::-webkit-scrollbar,
+.gridContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.ui-jqgrid-bdiv::-webkit-scrollbar-track,
+.gridContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 
-// .ui-jqgrid-bdiv::-webkit-scrollbar-thumb {
-//   border-radius: 5px;
-//   background: #BBBBBB;
-// }
+.ui-jqgrid-bdiv::-webkit-scrollbar-thumb,
+.gridContainer::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #bbbbbb;
+}

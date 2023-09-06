@@ -96,7 +96,7 @@ ul.step {
       right: -0.4375rem
     }
     &.status-in-progress .circle-number {
-      background: var(--third-color);
+      background: $third-color;
     }
     &.status-current .circle-number {
       background: var(--main-color);
@@ -160,7 +160,7 @@ div.shortcut {
       // width: 10.25rem;
       height: 3.75rem;
       background: #ffffff 0% 0% no-repeat padding-box;
-      border: 0.1875rem solid var(--third-color);
+      border: 0.1875rem solid $third-color;
       border-radius: 4.375rem;
       padding: 0.4375rem;
       box-sizing: border-box;
@@ -180,7 +180,7 @@ div.shortcut {
           width: 2.875rem;
           height: 2.875rem;
           /* UI Properties */
-          background: var(--third-color) 0% 0% no-repeat padding-box;
+          background: $third-color 0% 0% no-repeat padding-box;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -306,7 +306,7 @@ div.shortcut {
         display: inline-flex;
         width: 100%;
         background: #ffffff 0% 0% no-repeat padding-box;
-        border: 0.0625rem solid var(--third-color);
+        border: 0.0625rem solid $third-color;
         border-radius: 0.625rem;
         p{
           span{

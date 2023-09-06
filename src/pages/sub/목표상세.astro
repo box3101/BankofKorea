@@ -1,0 +1,308 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '나의 목표';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">나의 목표</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label class="com-label" for="goal-year-select">목표년도</label>
+                <div class="cont-select w180">
+                  <button class="btn-select">옵션</button>
+                  <ul class="list-member">
+                    <li>
+                      <button type="button" class="list-item">Python</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">Java</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">JavaScript</button
+                      >
+                    </li>
+                    <li><button type="button" class="list-item">C#</button></li>
+                    <li>
+                      <button type="button" class="list-item">C/C++</button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="row">
+                <label class="com-label" for="goal-times-select">목표차수</label
+                >
+                <div class="cont-select w180">
+                  <button class="btn-select">옵션</button>
+                  <ul class="list-member">
+                    <li>
+                      <button type="button" class="list-item">Python</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">Java</button>
+                    </li>
+                    <li>
+                      <button type="button" class="list-item">JavaScript</button
+                      >
+                    </li>
+                    <li><button type="button" class="list-item">C#</button></li>
+                    <li>
+                      <button type="button" class="list-item">C/C++</button>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </section>
+          </div>
+          <div class="ref">
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic end">
+            <div class="btn-set gap5">
+              <button type="button" class="com-btn add-btn">목표추가</button>
+            </div>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:150px;">
+            <div class="com-table">
+              <table>
+                <colgroup>
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="20%" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>목표년도</th>
+                    <th>목표차수</th>
+                    <th>대상구분</th>
+                    <th>목표부서</th>
+                    <th>목표기간</th>
+                    <th>작성상태</th>
+                    <th>합의상태</th>
+                    <th>합의자</th>
+                    <th>합의일자</th>
+                    <th>수정일자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2</td>
+                    <td>2023년</td>
+                    <td>상반기</td>
+                    <td>계약직</td>
+                    <td>IT기획팀</td>
+                    <td class="text-left">
+                      <div class="flex aic gap10">
+                        2025.04.21~2025.04.21 <a
+                          href="#"
+                          class="com-btn btn-x-sm border-main bg-white text-main font-x-sm"
+                          >기간변경</a
+                        >
+                      </div>
+                    </td>
+                    <td><span class="c-blue">작성완료</span></td>
+                    <td><span class="c-blue">합의완료</span></td>
+                    <td>장길산</td>
+                    <td>2023.03.12</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2023년</td>
+                    <td>상반기</td>
+                    <td>계약직</td>
+                    <td>IT기획팀</td>
+                    <td class="text-left"> 2025.04.21~2025.04.21</td>
+                    <td><span class="c-blue">작성완료</span></td>
+                    <td><span class="c-blue">합의완료</span></td>
+                    <td>장길산</td>
+                    <td>2023.03.12</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2023년</td>
+                    <td>상반기</td>
+                    <td>계약직</td>
+                    <td>IT기획팀</td>
+                    <td class="text-left">
+                      <div class="flex aic gap10">
+                        2025.04.21~2025.04.21 <a
+                          href="#"
+                          class="com-btn btn-x-sm border-main bg-white text-main font-x-sm"
+                          >기간변경</a
+                        >
+                      </div>
+                    </td>
+                    <td><span class="c-blue">작성완료</span></td>
+                    <td><span class="c-blue">합의완료</span></td>
+                    <td>장길산</td>
+                    <td>2023.03.12</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2023년</td>
+                    <td>상반기</td>
+                    <td>계약직</td>
+                    <td>IT기획팀</td>
+                    <td class="text-left">
+                      <div class="flex aic gap10">
+                        2025.04.21~2025.04.21 <a
+                          href="#"
+                          class="com-btn btn-x-sm border-main bg-white text-main font-x-sm"
+                          >기간변경</a
+                        >
+                      </div>
+                    </td>
+                    <td><span class="c-blue">작성완료</span></td>
+                    <td><span class="c-blue">합의완료</span></td>
+                    <td>장길산</td>
+                    <td>2023.03.12</td>
+                    <td>2023.03.12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cnt">
+      <div class="cnt__body">
+        <div class="com-title type2">목표 상세</div>
+        <div class="flex aic jcb mt20">
+          <div class="left">
+            <button type="button" class="com-btn btn-sm bg-gray"
+              >상급자 목표 조회</button
+            >
+            <button type="button" class="com-btn btn-sm bg-red"
+              >반려사유 조회</button
+            >
+            <button
+              type="button"
+              class="com-btn btn-sm bg-white border-main text-main"
+              >합의된 목표 조회</button
+            >
+          </div>
+          <div class="right">
+            <button
+              type="button"
+              class="com-btn btn-sm bg-white border-main text-main"
+              >합의요청</button
+            >
+            <button type="button" class="com-btn btn-sm">저장</button>
+            <button type="button" class="com-btn btn-sm bg-white border-gray"
+              >삭제</button
+            >
+          </div>
+        </div>
+        <div class="com-table-type2">
+          <table>
+            <colgroup>
+              <col width="15%" />
+              <col width="35%" />
+              <col width="15%" />
+              <col width="35%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><label for="a1" class="required-mark">목표부서</label></th>
+                <td>
+                  <div class="cont-select w297">
+                    <button class="btn-select">옵션</button>
+                    <ul class="list-member">
+                      <li>
+                        <button type="button" class="list-item">Python</button>
+                      </li>
+                      <li>
+                        <button type="button" class="list-item">Java</button>
+                      </li>
+                      <li>
+                        <button type="button" class="list-item"
+                          >JavaScript</button
+                        >
+                      </li>
+                      <li>
+                        <button type="button" class="list-item">C#</button>
+                      </li>
+                      <li>
+                        <button type="button" class="list-item">C/C++</button>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <th><label for="a2" class="required-mark">목표기간</label></th>
+                <td>
+                  <div class="com-date-range">
+                    <input
+                      type="text"
+                      id="a2"
+                      class="com-input input-mid border-gray w120 datepicker-input"
+                      placeholder="YYYY.MM.DD"
+                    />
+                    <img
+                      class="calendar-icon datepicker-button"
+                      src="../assets/img/date-icon.svg"
+                      alt="calendar-icon"
+                    />
+                    <span>~</span>
+                    <input
+                      type="text"
+                      id="a3"
+                      class="com-input input-mid border-gray w120 datepicker-input"
+                      placeholder="YYYY.MM.DD"
+                    />
+                    <img
+                      class="calendar-icon datepicker-button"
+                      src="../assets/img/date-icon.svg"
+                      alt="calendar-icon"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="com-card mt30">
+          <div class="flex jcb gap10">
+            <div class="left">
+              <span class="fwb mt10">비고</span>
+            </div>
+            <div class="right flex gap10 aic" style="flex:1">
+              <textarea style="height:100px" class="com-textarea" name="" id="" cols="30" rows="10"></textarea>
+              <button type="submit" class="com-btn search-btn before-none">비고저장</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

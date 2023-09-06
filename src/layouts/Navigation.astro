@@ -1,15 +1,50 @@
 ---
-import  menu from '../menu.js';
-
-let subItems = true;
+import menu from '../menu.js';
 ---
 
 <div class="gnb-wrap">
   <ul class="gnb" id="gnb" tabindex="0">
     <div class="all-menu">
-      <a href="#">
+      <a href="#" id="menuToggle">
         <span>전체메뉴</span>
       </a>
+      <div class="menu-content" id="menuContent">
+        <ul>
+          {
+            menu.map(function ({ category, title, items }) {
+              return (
+                <li>
+                  <a href="#none">
+                    <span>{title}</span>
+                  </a>
+                  <ul>
+                    {items.map(function ({ url, title, subItems }) {
+                      return (
+                        <li>
+                          <a href={`../${category}/${url}.html`}>{title}</a>
+                          {subItems && (
+                            <ul>
+                              {subItems.map(function ({ url, title }) {
+                                return (
+                                  <li>
+                                    <a href={`../${category}/${url}.html`}>
+                                      {title}
+                                    </a>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
     </div>
     {
       menu.map(function ({ category, title, items }) {

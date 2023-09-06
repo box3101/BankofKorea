@@ -7,5 +7,6 @@ const {id,wid} = Astro.props;
 ---
 
 <div class=`com-input-wrap`>
+  <label for={id}></label>
   <input type="text" id={id} class={`com-input w${wid} input-sm`}>
 </div>

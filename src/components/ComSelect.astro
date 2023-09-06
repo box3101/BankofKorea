@@ -6,7 +6,7 @@ interface Props{
 const {id,wid} = Astro.props;
 ---
 
-<article class=`cont-select w${wid}`>
+<div class=`cont-select w${wid}`>
   <button class="btn-select">옵션</button>
   <ul class="list-member">
       <li><button type="button" class="list-item">Python</button></li>
@@ -15,4 +15,4 @@ const {id,wid} = Astro.props;
       <li><button type="button" class="list-item">C#</button></li>
       <li><button type="button" class="list-item">C/C++</button></li>
   </ul>
-</article>
+</div>

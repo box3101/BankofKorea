@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>평가대상자 관리</title>
-    <link rel="stylesheet" href="../assets/css/ui.css" />
     <link rel="stylesheet" href="../assets/css/jqGrid.css" />
+    <link rel="stylesheet" href="../assets/css/ui.css" />
     <script src="../assets/js/vendor/jquery.js"></script>
     <script src="../assets/js/vendor/jquery.jqGrid.min.js"></script>
     <script src="../assets/js/vendor/jquery.jqGrid.src.js"></script>
@@ -12,7 +12,7 @@
 
   <body>
     <main id="LR" class="LR">
-      <div id="wrap" class="undefined">
+      <div id="wrap">
         <div class="content-body">
           <!-- header -->
           <header id="header" class="header">
@@ -635,6 +635,28 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="com-table-wrap mt40">
+                    <div class="com-table">
+                      <div class="gridContainer">
+                        <!-- 데이터 뿌려질공간 -->
+                        <table id="list3"></table>
+                        <div id="pager"></div>
+                        <!-- 데이터 뿌려질공간 eee -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="com-table-wrap mt40">
+                    <div class="com-table">
+                      <div class="gridContainer">
+                        <!-- 데이터 뿌려질공간 -->
+                        <table id="list2"></table>
+                        <div id="pager"></div>
+                        <!-- 데이터 뿌려질공간 eee -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -664,10 +686,13 @@
     <!-- 스크립트 eee -->
 
     <script>
-      $(function () {
+      // 공통 스크롤 생겼을때 thead 제목 부분 padding-right 스크롤 값 적용
+
+      $(document).ready(function () {
         var data = [
           {
-            test2: '홍길동',
+            test2:
+              '<span class="one-line">홍길동홍길동홍길동홍길동홍길동></span>',
             test3: 'IT기획팀1',
             test4: '001',
             test5: '0002',
@@ -749,82 +774,83 @@
         $('#list').jqGrid({
           data: data,
           datatype: 'local',
+          height: '150',
           colModel: [
             {
               name: 'test4',
               index: 'test4',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '행번',
             },
             {
               name: 'test2',
               index: 'test2',
               align: 'center',
-              width: '134px',
+              width: '100',
               label: '이름',
             },
             {
               name: 'test3',
               index: 'test3',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '소속',
             },
             {
               name: 'test5',
               index: 'test5',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '평가군',
             },
             {
               name: 'test6',
               index: 'test6',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '1차평가자',
             },
             {
               name: 'test7',
               index: 'test7',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '2차평가자',
             },
             {
               name: 'test8',
               index: 'test8',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '1차조정위',
             },
             {
               name: 'test9',
               index: 'test9',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '2차조정위',
             },
             {
               name: 'test10',
               index: 'test10',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '3차조정위',
             },
             {
               name: 'test11',
               index: 'test11',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '4차조정위',
             },
             {
               name: 'test12',
               index: 'test12',
               align: 'center',
-              width: '134px',
+              width: 'auto',
               label: '진행단계',
             },
           ],
@@ -832,7 +858,255 @@
           multiselect: false,
           cellEdit: true,
           cellSubmit: 'clientArray',
+          autowidth: false,
+          width: '100%', // 전체 넓이 설정
+          shrinkToFit: false,
         });
+      });
+
+      var data = [
+        {
+          test4: '00001',
+          test2: '홍길동',
+          test3: 'IT기획팀',
+          test5: '팀장',
+          test6: '00002',
+          test7: '홍길동',
+          test8: '-',
+          test9: '홍길동',
+          test10: '홍길동',
+          test11: '홍길동',
+          test12: '1차평가',
+        },
+      ];
+
+      $('#list2').jqGrid({
+        data: data,
+        datatype: 'local',
+        height: 'auto',
+        colModel: [
+          {
+            name: 'test4',
+            width: '234',
+            index: 'test4',
+            align: 'center',
+            label: '행번',
+          },
+          {
+            name: 'test2',
+            width: '234',
+            index: 'test2',
+            align: 'center',
+            label: '이름',
+          },
+          {
+            name: 'test3',
+            width: '234',
+            index: 'test3',
+            align: 'center',
+            label: '소속',
+          },
+          {
+            name: 'test5',
+            width: '234',
+            index: 'test5',
+            align: 'center',
+            label: '평가군',
+          },
+          {
+            name: 'test6',
+            width: '234',
+            index: 'test6',
+            align: 'center',
+            label: '1차 평가자',
+          },
+          {
+            name: 'test7',
+            width: '234',
+            index: 'test7',
+            align: 'center',
+            label: '2차 평가자',
+          },
+          {
+            name: 'test8',
+            width: '234',
+            index: 'test8',
+            align: 'center',
+            label: '1차 조정위',
+          },
+          {
+            name: 'test9',
+            width: '234',
+            index: 'test9',
+            align: 'center',
+            label: '2차 조정위',
+          },
+          {
+            name: 'test10',
+            width: '234',
+            index: 'test10',
+            align: 'center',
+            label: '3차 조정위',
+          },
+          {
+            name: 'test11',
+            width: '234',
+            index: 'test11',
+            align: 'center',
+            label: '4차 조정위',
+          },
+          {
+            name: 'test12',
+            width: '234',
+            index: 'test12',
+            align: 'center',
+            label: '진행단계',
+          },
+        ],
+        rowNum: 10,
+        multiselect: false,
+        cellEdit: true,
+        cellSubmit: 'clientArray',
+        autowidth: false, // 그리드의 너비가 자동으로 조정 x
+        width: '100%', // 전체 넓이 설정
+        shrinkToFit: false, // 열의 너비가 줄어들지 않고 원래의 크기를 유지
+      });
+
+      var data3 = [
+        {
+          test4: '00001',
+          test2: '홍길동',
+          test3: 'IT기획팀',
+          test5: '팀장',
+          test6: '00002',
+          test7: '홍길동',
+          test8: '-',
+          test9: '홍길동',
+          test10: '홍길동',
+          test11: '홍길동',
+          test12: '1차평가',
+        },
+        // ... 다른 데이터도 이와 같은 형식으로 추가합니다.
+      ];
+
+      $('#list3').jqGrid({
+        data: data3,
+        datatype: 'local',
+        height: 'auto',
+        colModel: [
+          {
+            name: 'test4',
+            width: 'auto',
+            index: 'test4',
+            align: 'center',
+            label: '행번',
+          },
+          {
+            name: 'test2',
+            width: 'auto',
+            index: 'test2',
+            align: 'center',
+            label: '이름',
+          },
+          {
+            name: 'test3',
+            width: 'auto',
+            index: 'test3',
+            align: 'center',
+            label: '소속',
+          },
+          {
+            name: 'test5',
+            width: 'auto',
+            index: 'test5',
+            align: 'center',
+            label: '평가군',
+          },
+          {
+            name: 'test6',
+            width: 'auto',
+            index: 'test6',
+            align: 'center',
+            label: '1차 평가자',
+          },
+          {
+            name: 'test7',
+            width: 'auto',
+            index: 'test7',
+            align: 'center',
+            label: '2차 평가자',
+          },
+          {
+            name: 'test8',
+            width: 'auto',
+            index: 'test8',
+            align: 'center',
+            label: '1차 조정위',
+          },
+          {
+            name: 'test9',
+            width: 'auto',
+            index: 'test9',
+            align: 'center',
+            label: '2차 조정위',
+          },
+          {
+            name: 'test10',
+            width: 'auto',
+            index: 'test10',
+            align: 'center',
+            label: '3차 조정위',
+          },
+          {
+            name: 'test11',
+            width: 'auto',
+            index: 'test11',
+            align: 'center',
+            label: '4차 조정위',
+          },
+          {
+            name: 'test12',
+            width: 'auto',
+            index: 'test12',
+            align: 'center',
+            label: '진행단계',
+          },
+        ],
+        rowNum: 10,
+        multiselect: false,
+        cellEdit: true,
+        cellSubmit: 'clientArray',
+        autowidth: false,
+        width: '100%', // 전체 넓이 설정
+        shrinkToFit: false,
+      });
+
+      $(document).ready(function () {
+        adjustHeaderPadding('list');
+        // adjustHeaderPadding('list1');
+        // adjustHeaderPadding('list2');
+        // adjustHeaderPadding('list3');
+
+        $(window).resize(function () {
+          adjustHeaderPadding('list');
+          // adjustHeaderPadding('list1');
+          // adjustHeaderPadding('list2');
+          // adjustHeaderPadding('list3');
+        });
+
+        function adjustHeaderPadding(listId) {
+          let grid = $('#' + listId);
+          let gview = grid.closest('.ui-jqgrid-view');
+          let bdiv = gview.find('.ui-jqgrid-bdiv');
+          let hdiv = gview.find('.ui-jqgrid-hdiv');
+
+          if (bdiv[0].scrollHeight > bdiv[0].clientHeight) {
+            let scrollbarWidth = bdiv[0].offsetWidth - bdiv[0].clientWidth;
+            hdiv.css('padding-right', scrollbarWidth + 'px');
+          } else {
+            hdiv.css('padding-right', '0px');
+          }
+        }
       });
     </script>
   </body>

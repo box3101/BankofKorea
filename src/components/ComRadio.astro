@@ -1,28 +1,28 @@
 ---
-interface Props{
-  name : string;
-  name2 : string;
+// 인터페이스 정의
+interface Props {
+  label: string;
+  value: string;
+  name: string;
 }
-const {name,name2} = Astro.props;
+
+// 옵션 가져오기
+const options = Astro.props.options;
+const {name} = Astro.props;
 ---
 
+<!-- 라디오 버튼 그리기 -->
 <div class="com-radio">
-  <label>
-    <input
-      type="radio"
-      class="com-input input-radio"
-      name="radio"
-      value="regular"
-    />
-    <span>{name}</span>
-  </label>
-  <label>
-    <input
-      type="radio"
-      class="com-input input-radio"
-      name="radio"
-      value="contract"
-    />
-    <span>{name2}</span>
-  </label>
+  {
+    options.map((option) => (
+      <label>
+        <input
+          type="radio"
+          class="com-input input-radio"
+          name={name}
+        />
+        <span>{option.label}</span>
+      </label>
+    ))
+  }
 </div>

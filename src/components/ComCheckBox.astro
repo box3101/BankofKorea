@@ -1,0 +1,30 @@
+---
+interface Props {
+  id: string;
+  name: string;
+}
+const { id, name } = Astro.props;
+const list = Astro.props.lists;
+---
+
+<div class="com-checkbox-wrap">
+  {
+    list ? (
+      list.map(function (item) {
+        return (
+          <div class="item">
+            <input type="checkbox" id={item.id} class="com-checkbox" />
+            <label for={item.id}>{item.name}</label>
+          </div>
+        );
+      })
+    ) : (
+      <>
+        <div class="item2">
+          <label for={id} style="display: none;" />
+          <input type="checkbox" id={id} class="com-checkbox" />
+        </div>
+      </>
+    )
+  }
+</div>

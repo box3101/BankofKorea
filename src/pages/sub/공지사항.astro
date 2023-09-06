@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComInput from '../../components/ComInput.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '공지사항';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">공지사항</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="search-area flex jcb">
+          <div class="lef">
+            <section class="flex three-item type2">
+              <article class="row">
+                <label
+                  class="com-label"
+                  for="goal-year-select"
+                  style="min-width:auto">기간</label
+                >
+                <div class="perioBtns flex aic gap10">
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">1일</button
+                  >
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">3일</button
+                  >
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">6일</button
+                  >
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">1개월</button
+                  >
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">3개월</button
+                  >
+                  <button
+                    type="button"
+                    class="com-btn btn-sm bg-white border-gray">6개월</button
+                  >
+                </div>
+              </article>
+            </section>
+          </div>
+          <div class="ref flex gap15">
+            <ComSelect id="a1" wid="120" />
+            <ComInput id="a8" wid="320" />
+            <button type="submit" class="com-btn search-btn">검색</button>
+          </div>
+        </div>
+        <div class="com-table-wrap mt20">
+          <div class="head flex aic end">
+            <div class="btn-set gap5">
+              <button type="button" class="com-btn btn-sm bg-main">등록</button>
+            </div>
+          </div>
+          <div class="tbl-scroll mt10" style="max-height:550px;">
+            <div class="com-table">
+              <table>
+                <colgroup>
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="20%" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                  <col width="auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>선택</th>
+                    <th>목표차수</th>
+                    <th>목표구분</th>
+                    <th>목표설정시작일</th>
+                    <th>목표설정종료일</th>
+                    <th>진행상태</th>
+                    <th>등록자명</th>
+                    <th>등록자ID</th>
+                    <th>등록일자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.07.14</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.07.14</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.07.14</td>
+                    <td>준비중</td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.07.14</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.07.14</td>
+                    <td><span class="color-primary fwb">진행중</span></td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.07.14</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td>차수없음</td>
+                    <td>일반직</td>
+                    <td>2023.07.14</td>
+                    <td>2025.07.14</td>
+                    <td><span class="color-red fwb">마감</span></td>
+                    <td>김한국</td>
+                    <td>Korea_01</td>
+                    <td>2023.07.14</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination">
+              <button class="paging-button first-page"
+                ><span class="hidden">맨앞으로</span></button
+              >
+              <button class="paging-button prev-page"><span class="hidden">전으로</span></button>
+              <button class="paging-button page-number on">1</button>
+              <button class="paging-button page-number">2</button>
+              <button class="paging-button page-number">3</button>
+              <button class="paging-button page-number">4</button>
+              <button class="paging-button page-number">5</button>
+              <button class="paging-button next-page"><span class="hidden">다음으로</span></button
+              >
+              <button class="paging-button last-page"><span class="hidden">맨뒤로</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>
