@@ -14694,10 +14694,6 @@ h1.section-header {
   border-width: 1px;
 }
 
-.jqgfirstrow {
-  display: none;
-}
-
 .ui-jqgrid tr.ui-row-ltr td {
   border-right-color: #ccc;
   border-bottom-color: #ccc;
@@ -16342,16 +16338,13 @@ ul.step li.step__item.status-in-progress .circle-number {
   background: #4bb1ff;
 }
 ul.step li.step__item.status-current .circle-number {
-  background: var(--main-color);
+  background: var(--main-color) !important;
+  color: #fff !important;
+  border: var(--main-color) !important;
 }
 ul.step li.step__item.status-default .circle-number {
   background: #ccc;
   opacity: 1;
-}
-ul.step li.step__item.status-default .circle-number:before {
-  content: "";
-  display: block;
-  display: none;
 }
 ul.step li.step__item.status-default .circle-number + .step-desc {
   opacity: 0.4;

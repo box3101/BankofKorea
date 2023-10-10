@@ -106,14 +106,16 @@ ul.step {
       background: $third-color;
     }
     &.status-current .circle-number {
-      background: var(--main-color);
+      background: var(--main-color)!important;
+      color:#fff!important;
+      border: var(--main-color)!important;
     }
     &.status-default .circle-number {
       background: #ccc;
       opacity: 1;
-      @include make-before{
-        display: none;
-      }
+      // @include make-before{
+      //   display: none;
+      // }
       + .step-desc {
         opacity: 0.4;
       }
