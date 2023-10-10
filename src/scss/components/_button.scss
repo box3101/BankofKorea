@@ -55,6 +55,7 @@ button {
     border: none;
     font-weight: bold;
   }
+
   &.btn-x-sm {
     min-width: 54px;
     height: 24px;
@@ -185,6 +186,8 @@ button {
 /*=====  End of 버튼 클릭시 효과  ======*/
 
 .search-btn {
+
+
   position: relative;
   padding-right: 15px;
   &.before-none {
@@ -212,7 +215,9 @@ button {
   letter-spacing: 0px;
   color: #ffffff;
   border: none;
+
 }
+
 
 .excel-btn-up,
 .excel-btn-down {
@@ -247,6 +252,13 @@ button {
   font-weight: bold;
   letter-spacing: 0px;
   color: #00a100;
+}
+
+
+.excel-btn-up:hover{
+  @at-root .section-header{
+    font-size: 10rem;
+  }
 }
 
 .excel-btn-down {

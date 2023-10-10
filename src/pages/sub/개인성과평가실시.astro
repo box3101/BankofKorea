@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '개인성과평가실시';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+
+  <div class="cnt-wrap">
+    <div class="db-item small2 evaluation-status mb20">
+      <ul class="step">
+        <div class="bar type-2"></div>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            1
+          </div>
+          <div class="step-desc">이전부서 평가</div>
+        </li>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            2
+          </div>
+          <div class="step-desc">관련평가</div>
+        </li>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            3
+          </div>
+          <div class="step-desc">1차 평가</div>
+        </li>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            4
+          </div>
+          <div class="step-desc">2차 평가</div>
+        </li>
+
+        <li class="step__item status-current">
+          <div class="circle-number">
+            5
+          </div>
+          <div class="step-desc">1차 조정회의</div>
+        </li>
+
+        <li class="step__item status-in-progress">
+          <div class="circle-number">
+            6
+          </div>
+          <div class="step-desc">2차 조정회의</div>
+        </li>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            7
+          </div>
+          <div class="step-desc">3차 조정회의</div>
+        </li>
+
+        <li class="step__item status-default">
+          <div class="circle-number">
+            8
+          </div>
+          <div class="step-desc">조정회의</div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">개인성과평가실시 (2차평가)</h3>
+      </div>
+
+      <div class="cnt__body">
+      </div>
+    </section>
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

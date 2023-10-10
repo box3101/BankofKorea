@@ -1,0 +1,301 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '리더십리뷰결과';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">리더십리뷰결과</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="com-title type-2 mb10">
+          <div class="flex gap15">
+            <div class="info">리뷰년도 : 2023년</div>
+            <div class="info">리뷰차수 : 차수없음</div>
+            <div class="info">리뷰구분 : 일반직</div>
+          </div>
+        </div>
+        <div class="com-title type-2">
+          <div class="flex gap15">
+            <div class="info">리뷰대상자 : 홍길동 (1042366)</div>
+          </div>
+        </div>
+
+        <section class="cnt mt20">
+          <div class="cnt__head type1">
+            <div class="com-tab-wrap">
+              <ul class="head">
+                <li class="on">
+                  <button type="button">집계결과</button>
+                </li>
+                <li>
+                  <button type="button">개별상세</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-contents mt20">
+            <div class="tab-item cnt__body">
+              <div class="com-table-wrap">
+                <div class="head flex aic flex-end">
+                  <div class="btn-wrap flex gap5">
+                    <button type="button" class="com-btn btn-sm">목록</button>
+                    <button type="button" class="com-btn btn-sm bg-white border"
+                      >수정</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-item cnt__body">
+              <div class="flex w30-70 gap15 mt20">
+                <div class="left">
+                  <div class="tbl-scroll mt10" style="max-height:305px;">
+                    <div class="com-table">
+                      <table>
+                        <colgroup> </colgroup>
+                        <thead>
+                          <tr>
+                            <th>리뷰어</th>
+                            <th>소속</th>
+                            <th>직급</th>
+                            <th>직책</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="tbl-scroll mt10" style="max-height:305px;">
+                    <div class="com-table">
+                      <table>
+                        <colgroup> </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>평가영역</th>
+                            <th>문항순번</th>
+                            <th>문항아이디</th>
+                            <th>답변</th>
+                            <th>점수</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td ></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tbl-scroll mt10" style="max-height:305px;">
+                    <div class="com-table">
+                      <table>
+                        <colgroup> </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>평가영역</th>
+                            <th>문항순번</th>
+                            <th>문항아이디</th>
+                            <th>답변</th>
+                            <th>점수</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

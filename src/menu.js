@@ -43,7 +43,7 @@ const menu = [
 				url: "리더십리뷰설정", title: "리더십리뷰 설정",
 				subItems: [
 					{ url: "리더십리뷰마스터설정", title: "리더십리뷰 마스터 설정" },
-					{ url: "리더십리뷰라인설정", title: "리더십리뷰 라인설정" },
+					{ url: "리더십리뷰라인설정222", title: "리더십리뷰 라인설정" },
 				]
 			},
 			{
@@ -108,16 +108,6 @@ const menu = [
 			},
 		],
 	},
-	// {
-	// 	category: "sub",
-	// 	title: "알림관리",
-	// 	items: [
-	// 		{ url: "공지사항", title: "공지사항" },
-	// 		{ url: "faq", title: "FAQ" },
-	// 		{ url: "자료실", title: "자료실" },
-	// 		{ url: "알림메시지", title: "알림메시지" },
-	// 	],
-	// },
 	{
 		category: "sub",
 		title: "시스템관리",
@@ -153,7 +143,54 @@ const menu = [
 			{ url: "메뉴관리", title: "메뉴관리" },
 		],
 	},
-
+	{
+		category: "sub",
+		title: "기초설정",
+		items: [
+			{ url: "근무경력", title: "근무경력" },
+			{ url: "임원부서장연계", title: "임원부서장연계" },
+			{ url: "평가조직관리", title: "평가조직관리" },
+			{ url: "평가직책관리", title: "평가직책관리" },
+			{ url: "평가군관리", title: "평가군관리" },
+			{ url: "평가등급배분표", title: "평가등급 배분표" },
+		],
+	},
+	{
+		category: "sub",
+		title: "알림관리",
+		items: [
+			{ url: "근무경력", title: "근무경력" },
+			{ url: "임원부서장연계", title: "임원부서장연계" },
+			{ url: "평가조직관리", title: "평가조직관리" },
+			{ url: "평가직책관리", title: "평가직책관리" },
+			{ url: "평가군관리", title: "평가군관리" },
+			{ url: "평가등급배분표", title: "평가등급 배분표" },
+		],
+	},
+	{
+		category: "sub",
+		title: "목표관리",
+		items: [
+			{ url: "근무경력", title: "근무경력" },
+			{ url: "임원부서장연계", title: "임원부서장연계" },
+			{ url: "평가조직관리", title: "평가조직관리" },
+			{ url: "평가직책관리", title: "평가직책관리" },
+			{ url: "평가군관리", title: "평가군관리" },
+			{ url: "평가등급배분표", title: "평가등급 배분표" },
+		],
+	},
+	{
+		category: "sub",
+		title: "면담관리",
+		items: [
+			{ url: "근무경력", title: "근무경력" },
+			{ url: "임원부서장연계", title: "임원부서장연계" },
+			{ url: "평가조직관리", title: "평가조직관리" },
+			{ url: "평가직책관리", title: "평가직책관리" },
+			{ url: "평가군관리", title: "평가군관리" },
+			{ url: "평가등급배분표", title: "평가등급 배분표" },
+		],
+	},
 ];
 
 export default menu

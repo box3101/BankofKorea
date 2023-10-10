@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '개인성과평가실시';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+
+  <div class="cnt-wrap">
+    <div class="db-item small2 evaluation-status mb20 pb60">
+      <ul class="step type2">
+        <div class="step__item after2">
+          <div class="flex aic">
+            <li class="step__item status-current pr0 after-none">
+              <a href="#">
+                <div class="circle-number">이전부서 평가</div>
+                <div class="balloon">
+                  <span class="content">0/2</span>
+                </div>
+              </a>
+            </li>
+            <li class="step__item status-default pl0 after-none">
+              <a href="#">
+                <div class="circle-number">관련평가</div>
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <li class="step__item status-in-progress">
+          <a href="#">
+            <div class="circle-number">1차평가</div>
+            <div class="balloon">
+              <span class="content">0/2</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="step__item status-in-progress">
+          <a href="#">
+            <div class="circle-number">
+              1차조정 <br />
+              <span class="font-sm">(부장주관)</span>
+            </div>
+            <div class="balloon">
+              <span class="content">0/113</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="step__item status-in-progress">
+          <a href="#">
+            <div class="circle-number">
+              2차조정 <br />
+              <span class="font-sm">(부서장주관)</span>
+            </div>
+            <div class="balloon">
+              <span class="content">0/113</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="step__item status-default">
+          <a href="#">
+            <div class="circle-number">
+              3차조정 <br />
+              (임원주관)
+            </div>
+          </a>
+        </li>
+
+        <li class="step__item status-default">
+          <a href="#">
+            <div class="circle-number">
+              4차조정 <br />
+              (부총재주관)
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">개인성과평가실시 (2차평가)</h3>
+      </div>
+
+      <div class="cnt__body"></div>
+    </section>
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>

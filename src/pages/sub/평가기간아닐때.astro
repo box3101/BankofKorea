@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '평가기간아닐때';
+const pageTitle = `Home > ${title}`;
+const idName = 'dashboard';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <div class="shadow img-wrap">
+      <img
+        src="../assets/img/refresh-banner.png"
+        alt="평가기간이아닙니다"
+        style="width:100%;"
+      />
+      <div class="position">
+        <div class="txt-wrap">
+        현재는 아닙니다.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

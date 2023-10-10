@@ -1,3 +1,29 @@
+---
+const tableCnt = [
+  { number: 0, dapth1: '스타일가이드', htmlLink: 'styleGuide.html', linkTarget: 'guide' },
+  { number: 0, dapth1: 'jqgrid', htmlLink: 'jqgrid.html', linkTarget: 'sub' },
+  { number: 0, dapth1: '공통팝업', htmlLink: '공통팝업.html', linkTarget: 'popup' },
+  { number: 1, dapth1: '로그인', htmlLink: 'main.html', linkTarget: 'main' },
+  { number: 2, dapth1: '대시보드', htmlLink: '대시보드.html', linkTarget: 'sub' },
+  { number: 3, dapth1: '평가관리', dapth2: '목표·면담 설정', tabDapth: '목표마스터 설정', htmlLink: '목표마스터설정.html', linkTarget: 'sub' },
+  { number: 4, dapth1: '평가운영', dapth2: '리더십리뷰운영', htmlLink: '리더십리뷰운영.html', linkTarget: 'sub' },
+  { number: 5, dapth1: '평가운영', dapth2: '개인성과평가운영', htmlLink: '개인성과평가운영.html', linkTarget: 'sub' },
+  { number: 6, dapth2: '리뷰문항매핑', htmlLink: '리뷰문항매핑.html', linkTarget: 'sub' },
+  { number: 7, dapth2: '평가군관리', htmlLink: '평가군관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
+  { number: 8, dapth2: '평가대상자관리', htmlLink: '평가대상자관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
+  { number: 9, dapth2: '평가조정위원회관리', htmlLink: '평가조정위원회관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
+  { number: 10, dapth2: '업무실적작성', htmlLink: '업무실적작성.html', linkTarget: 'sub', firstDraft: '2023-08-25' },
+  { number: 11, dapth2: '목표상세', htmlLink: '목표상세.html', linkTarget: 'sub', firstDraft: '2023-08-25' },
+  { number: 12, dapth2: '공지사항', htmlLink: '공지사항.html', linkTarget: 'sub', firstDraft: '2023-08-29' },
+  { number: 13, dapth2: '개인성과평가실시', htmlLink: '개인성과평가실시.html', linkTarget: 'sub', firstDraft: '2023-09-06' },
+  { number: 14, dapth2: '리더십리뷰결과', htmlLink: '리더십리뷰결과.html', linkTarget: 'sub', firstDraft: '2023-09-06' },
+  { number: 14, dapth2: '일하는방식리뷰', htmlLink: '일하는방식리뷰.html', linkTarget: 'sub', firstDraft: '2023-09-08' },
+  { number: 15, dapth2: '개인성과평가실시-변경', htmlLink: '개인성과평가실시-변경.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
+  { number: 16, dapth2: '업무이력작성', htmlLink: '업무이력작성.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
+  { number: 17, dapth2: '평가기간아닐때', htmlLink: '평가기간아닐때.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
+];
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,253 +54,32 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>0</td>
-              <td>styleGuide</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../guide/styleGuide.html" target="_blank">styleGuide</a>
-              </td>
-            </tr>
-            <tr>
-              <td>0</td>
-              <td>jqgrid</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/jqgrid.html" target="_blank">jqgrid</a>
-              </td>
-            </tr>
-            <tr>
-              <td>0</td>
-              <td>공통팝업</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../popup/공통팝업.html" target="_blank">공통팝업</a>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>로그인</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../main/main.html" target="_blank"> main.html</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>대시보드</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/대시보드.html" target="_blank">
-                  대시보드.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>평가관리</td>
-              <td>목표·면담 설정</td>
-              <td>목표마스터 설정</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/목표마스터설정.html" target="_blank">
-                  목표마스터설정.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>평가운영</td>
-              <td>리더십리뷰운영</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/리더십리뷰운영.html" target="_blank">
-                  리더십리뷰운영.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>평가운영</td>
-              <td>개인성과평가운영</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/개인성과평가운영.html" target="_blank">
-                  개인성과평가운영.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td></td>
-              <td>리뷰문항매핑</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/리뷰문항매핑.html" target="_blank">
-                  리뷰문항매핑.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td></td>
-              <td>평가군관리</td>
-              <td></td>
-              <td>2023-08-21</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/평가군관리.html" target="_blank">
-                  평가군관리.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td></td>
-              <td>평가대상자관리</td>
-              <td></td>
-              <td>2023-08-21</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/평가대상자관리.html" target="_blank">
-                  평가대상자관리.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td></td>
-              <td>평가조정위원회관리</td>
-              <td></td>
-              <td>2023-08-21</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/평가조정위원회관리.html" target="_blank">
-                  평가조정위원회관리.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td></td>
-              <td>업무실적작성</td>
-              <td></td>
-              <td>2023-08-25</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/업무실적작성.html" target="_blank">
-                  업무실적작성.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td></td>
-              <td>목표상세</td>
-              <td></td>
-              <td>2023-08-25</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/목표상세.html" target="_blank">
-                  목표상세.html</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td></td>
-              <td>공지사항</td>
-              <td></td>
-              <td>2023-08-29</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="../sub/공지사항.html" target="_blank">
-                  공지사항.html</a
-                >
-              </td>
-            </tr>
+            {
+              tableCnt.map(function (item) {
+                return (
+                  <>
+                    <tr>
+                      <td>{item.number}</td>
+                      <td>{item.dapth1}</td>
+                      <td>{item.dapth2}</td>
+                      <td>{item.tabDapth}</td>
+                      <td>{item.firstDraft}</td>
+                      <td>{item.revisedDraft}</td>
+                      <td>{item.draftConfirmation}</td>
+                      <td>{item.additionalComments}</td>
+                      <td>{item.defaultStay}</td>
+                      <td>{item.remarks}</td>
+                      <td>
+                        <a href=`../${item.linkTarget}/${item.htmlLink}` target="_blank">
+                          {item.htmlLink}
+                        </a>
+                      </td>
+                    </tr>
+                  </>
+                );
+              })
+            }
+
           </tbody>
         </table>
       </div>

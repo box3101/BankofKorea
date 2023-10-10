@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DateRange from '../../components/DateRange.astro';
+import ComSelect from '../../components/ComSelect.astro';
+import ComRadio from '../../components/ComRadio.astro';
+
+const title = '일하는방법리뷰';
+const pageTitle = `Home > ${title}`;
+const idName = 'GoalMaster';
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <div class="cnt-wrap">
+    <section class="cnt">
+      <div class="cnt__head">
+        <h3 class="com-title-lg">일하는방법리뷰</h3>
+      </div>
+      <div class="cnt__body">
+        <div class="com-title type-2 mb10">
+          <div class="flex gap15">
+            <div class="info">리뷰대상자 : 홍길동</div>
+            <div class="info">직급 : 4급</div>
+            <div class="info">직책 : 팀원</div>
+          </div>
+        </div>
+
+        <div class="flex end">
+          <div class="btn-set">
+            <button type="button" class="com-btn btn-sm bg-main">저장</button>
+            <button type="button" class="com-btn btn-sm bg-main">제출</button>
+            <button
+              type="button"
+              class="com-btn btn-sm bg-white border-main text-main">목록</button
+            >
+          </div>
+        </div>
+
+        <div class="com-table mt10">
+          <table>
+            <colgroup>
+              <col width="10%" />
+              <col width="68%" />
+              <col width="22%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>순번</th>
+                <th>평가문항</th>
+                <th>리뷰</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left"
+                  >글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</td
+                >
+                <td>
+                  <ComRadio
+                    name="radio1"
+                    align="center"
+                    options={[
+                      { label: '그렇다' },
+                      { label: '잘 모르겠다' },
+                      { label: '아니다' },
+                    ]}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left"
+                  >2023년말까지 평가제도 개편 관련 세부작업을 완료한다.</td
+                >
+                <td>
+                  <ComRadio
+                    name="radio2"
+                    align="center"
+                    options={[
+                      { label: '그렇다' },
+                      { label: '잘 모르겠다' },
+                      { label: '아니다' },
+                    ]}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left"
+                  >2023년말까지 평가제도 개편 관련 세부작업을 완료한다.</td
+                >
+                <td>
+                  <ComRadio
+                    name="radio3"
+                    align="center"
+                    options={[
+                      { label: '그렇다' },
+                      { label: '잘 모르겠다' },
+                      { label: '아니다' },
+                    ]}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left"
+                  >2023년말까지 평가제도 개편 관련 세부작업을 완료한다.</td
+                >
+                <td>
+                  <ComRadio
+                    name="radio4"
+                    align="center"
+                    options={[
+                      { label: '그렇다' },
+                      { label: '잘 모르겠다' },
+                      { label: '아니다' },
+                    ]}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left"
+                  >2023년말까지 평가제도 개편 관련 세부작업을 완료한다.</td
+                >
+                <td>
+                  <ComRadio
+                    name="radio5"
+                    align="center"
+                    options={[
+                      { label: '그렇다' },
+                      { label: '잘 모르겠다' },
+                      { label: '아니다' },
+                    ]}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="com-card mt30">
+          <div class="flex jcb gap10">
+            <div class="left">
+              <span class="fwb mt10">종합의견</span>
+            </div>
+            <div class="right flex gap10 aic" style="flex:1">
+              <textarea
+                style="height:100px"
+                class="com-textarea"
+                name=""
+                id=""
+                cols="30"
+                rows="10"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 컨텐츠가 들어갈 부분 eee -->
+  </div>
+</Layout>
