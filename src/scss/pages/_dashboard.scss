@@ -145,6 +145,7 @@ ul.step {
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 50%;
         span {
           font: normal normal normal 0.75rem/1rem Pretendard;
           letter-spacing: 0rem;
@@ -252,7 +253,7 @@ ul.step {
       font-size: 1rem !important;
       font-weight: bold;
     }
-    @at-root .status-current .circle-number {
+    @at-root .type2 .status-current .circle-number {
       @include make-before{
         position: absolute;
         left: 6px;

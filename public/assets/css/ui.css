@@ -16375,6 +16375,7 @@ ul.step li.step__item div.circle-number div.circle-small {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 ul.step li.step__item div.circle-number div.circle-small span {
   font: normal normal normal 0.75rem/1rem Pretendard;
@@ -16492,7 +16493,7 @@ ul.step.type2 .circle-number {
   font-size: 1rem !important;
   font-weight: bold;
 }
-.status-current .circle-number:before {
+.type2 .status-current .circle-number:before {
   content: "";
   display: block;
   position: absolute;
