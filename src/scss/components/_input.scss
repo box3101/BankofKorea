@@ -127,20 +127,18 @@ input {
   label,input{
     cursor: pointer;
     background: #fff;
-  }
-  label{
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 15px;
-    background: #fff;
-  }
-  .item,.item2{
     &:hover{
       input{
         border: 1px solid var(--main-color);
         outline: 1px solid var(--main-color);
       }
     }
+  }
+  label{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 15px;
+    background: #fff;
   }
   .item2{
     display: block;
