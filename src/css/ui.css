@@ -14950,7 +14950,7 @@ h1.section-header {
   opacity: 1;
   padding: 1.875rem;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .wid100 {
@@ -15082,6 +15082,10 @@ footer#footer.footer div.flex.gap60 p {
   display: flex;
   align-items: center;
   gap: 3.6875rem;
+}
+.header__inner .logo {
+  position: relative;
+  top: -3px;
 }
 
 .breadcrumb {
