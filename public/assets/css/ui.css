@@ -16799,4 +16799,51 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   color: #222222;
 }
 
+.error-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.error-page .txt-info {
+  position: absolute;
+  left: 144px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 10;
+}
+.error-page .txt-info p {
+  font-size: 42px;
+  font-weight: 500;
+}
+.error-page .txt-info img {
+  display: block;
+  margin-top: 13px;
+}
+.error-page .txt-info button {
+  margin-top: 20px;
+}
+.error-page .txt-info button:hover {
+  filter: none;
+  box-shadow: none;
+}
+.error-page .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+}
+.error-page .bg img {
+  max-height: 100vh;
+  width: 100%;
+}
+.error-page .bg .por {
+  position: absolute;
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  width: 600px;
+}
+
 /*# sourceMappingURL=ui.css.map */

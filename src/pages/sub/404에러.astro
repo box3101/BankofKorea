@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '에러';
+---
+
+<Layout
+  pageCnt="noCnt"
+  pageHeader="noHeader"
+  pageFooter="noFooter"
+  pageNav="noNav"
+>
+  <div class="error-page">
+    <div class="txt-info">
+      <p>오류가 발생하였습니다.</p>
+      <img src="../assets/img/error-img.png" alt="">
+      <button type="button" class="com-btn btn-mid bg-main">홈으로 돌아가기</button>
+    </div>
+    <div class="bg">
+      <img src="../assets/img/bg-404.png" alt="" />
+      <img src="../assets/img/404-bg2.png" class="por" alt="">
+    </div>
+  </div>
+</Layout>

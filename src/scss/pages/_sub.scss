@@ -49,3 +49,48 @@
     }
   }
 }
+
+
+.error-page{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .txt-info{
+    position: absolute;
+    left: 144px;
+    top: 50%; transform: translateY(-50%);
+    text-align: center;
+    z-index: 10;
+    p{
+      font-size: 42px;
+      font-weight: 500;
+    }
+    img{
+      display:block;
+      margin-top: 13px;
+    }
+    button{
+      margin-top: 20px;
+      &:hover{
+        filter:none;
+        box-shadow: none;
+      }
+    }
+  }
+  .bg{
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 65%;
+    img{
+      max-height: 100vh;
+      width: 100%;
+    }
+    .por{
+      position: absolute;
+      top: 50%;
+      right: 200px;
+      transform: translateY(-50%);
+      width: 600px;
+    }
+  }
+}
