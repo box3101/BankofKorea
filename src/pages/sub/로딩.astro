@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '에러';
+---
+
+<Layout
+  pageCnt="noCnt"
+  pageHeader="noHeader"
+  pageFooter="noFooter"
+  pageNav="noNav"
+>
+  <div class="loading-bar">
+    <div class="bg"></div>
+    <div class="info">
+      <div class="bar">
+        <img src="../assets/img/loading-bar.png" alt="" />
+      </div>
+      <p class="txt">데이터를 불러오는 중입니다.</p>
+    </div>
+  </div>
+</Layout>
