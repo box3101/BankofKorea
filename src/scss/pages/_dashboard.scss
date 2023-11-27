@@ -517,3 +517,49 @@ div.shortcut {
     gap: 1rem;
   }
 }
+
+.hover-info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -30px;
+  top: -55px;
+  width: 200px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  /* Additional styling for the speech bubble */
+  text-align: center;
+}
+/* Create the triangle pointing downwards */
+.hover-info::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Adjust the triangle's position */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ddd transparent transparent transparent;
+}
+
+/* Adjust the border color to match the bubble */
+.hover-info::before {
+  content: "";
+  position: absolute;
+  bottom: -11px; /* Slightly larger to create a border effect */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 11px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+.step__item{
+  cursor: pointer;
+}
+.step__item:hover .hover-info {
+  visibility: visible;
+  opacity: 1;
+}
