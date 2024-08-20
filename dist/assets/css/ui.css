@@ -437,15 +437,15 @@ input {
   cursor: pointer;
   background: #fff;
 }
+.com-checkbox-wrap label:hover input, .com-checkbox-wrap input:hover input {
+  border: 1px solid var(--main-color);
+  outline: 1px solid var(--main-color);
+}
 .com-checkbox-wrap label {
   display: inline-block;
   margin-left: 5px;
   font-size: 15px;
   background: #fff;
-}
-.com-checkbox-wrap .item:hover input, .com-checkbox-wrap .item2:hover input {
-  border: 1px solid var(--main-color);
-  outline: 1px solid var(--main-color);
 }
 .com-checkbox-wrap .item2 {
   display: block;
@@ -14722,6 +14722,10 @@ h1.section-header {
   background: #bbbbbb;
 }
 
+.ui-jqgrid, .ui-jqgrid .ui-jqgrid-view, .ui-jqgrid .ui-jqgrid-hdiv, .ui-jqgrid-bdiv, .ui-jqgrid-bdiv {
+  width: 100% !important;
+}
+
 .com-popup {
   position: absolute;
   top: 0;
@@ -14946,7 +14950,7 @@ h1.section-header {
   opacity: 1;
   padding: 1.875rem;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .wid100 {
@@ -15078,6 +15082,10 @@ footer#footer.footer div.flex.gap60 p {
   display: flex;
   align-items: center;
   gap: 3.6875rem;
+}
+.header__inner .logo {
+  position: relative;
+  top: -3px;
 }
 
 .breadcrumb {
@@ -16277,10 +16285,9 @@ div.user-info div.welcome-msg {
 ul.step {
   position: relative;
   width: 100%;
-  position: relative;
+  justify-content: space-between; /* 이 부분을 수정 */
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 ul.step.type2 {
   padding-left: 2rem;
@@ -16298,6 +16305,24 @@ ul.step .bar {
 ul.step .bar.type-2 {
   left: 27px;
 }
+ul.step:not(.type2) li.step__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-22px);
+  width: 100%;
+  height: 0.1875rem;
+  background: #666;
+  margin: 0 2.6rem;
+  overflow: hidden;
+}
+ul.step:not(.type2) li.step__item:last-of-type:before {
+  content: "";
+  display: block;
+  display: none;
+}
 ul.step li.step__item {
   flex: 1;
   position: relative;
@@ -16307,12 +16332,6 @@ ul.step li.step__item {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-}
-ul.step li.step__item:first-of-type {
-  padding-left: 0;
-}
-ul.step li.step__item:last-of-type {
-  padding-right: 0;
 }
 ul.step li.step__item:last-of-type:after {
   content: "";
@@ -16332,7 +16351,7 @@ ul.step li.step__item:after {
   position: absolute;
   top: 0.875rem;
   background-size: contain;
-  right: 0;
+  right: -8px;
 }
 ul.step li.step__item.status-in-progress .circle-number {
   background: #4bb1ff;
@@ -16729,6 +16748,55 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
     gap: 1rem;
   }
 }
+.hover-info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -30px;
+  top: -55px;
+  width: 200px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  /* Additional styling for the speech bubble */
+  text-align: center;
+}
+
+/* Create the triangle pointing downwards */
+.hover-info::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Adjust the triangle's position */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ddd transparent transparent transparent;
+}
+
+/* Adjust the border color to match the bubble */
+.hover-info::before {
+  content: "";
+  position: absolute;
+  bottom: -11px; /* Slightly larger to create a border effect */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 11px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.step__item {
+  cursor: pointer;
+}
+
+.step__item:hover .hover-info {
+  visibility: visible;
+  opacity: 1;
+}
+
 .employee-wrap {
   padding-top: 25px;
   border-top: 1px solid #B2DDFF;
@@ -16778,6 +16846,99 @@ div.shortcut div.shortcut__list div.shortcut__item a div.txt {
   font: normal normal normal 14px/16px Pretendard;
   letter-spacing: 0px;
   color: #222222;
+}
+
+.error-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.error-page .txt-info {
+  position: absolute;
+  left: 144px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 10;
+}
+.error-page .txt-info p {
+  font-size: 42px;
+  font-weight: 500;
+}
+.error-page .txt-info img {
+  display: block;
+  margin-top: 13px;
+}
+.error-page .txt-info button {
+  margin-top: 20px;
+}
+.error-page .txt-info button:hover {
+  filter: none;
+  box-shadow: none;
+}
+.error-page .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+}
+.error-page .bg img {
+  max-height: 100vh;
+  width: 100%;
+}
+.error-page .bg .por {
+  position: absolute;
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  width: 600px;
+}
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loading-bar .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.loading-bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.loading-bar .info .bar img {
+  position: relative;
+  z-index: 10;
+  animation: spin2 3s linear infinite;
+}
+.loading-bar .info p {
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  color: #fff;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=ui.css.map */
