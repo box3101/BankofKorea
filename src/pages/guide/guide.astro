@@ -1,90 +1,565 @@
 ---
+const title = '한국은행 직원평가 시스템';
+
 const tableCnt = [
-  { number: 0, dapth1: '스타일가이드', htmlLink: 'styleGuide.html', linkTarget: 'guide' },
-  { number: 0, dapth1: 'jqgrid', htmlLink: 'jqgrid.html', linkTarget: 'sub' },
-  { number: 0, dapth1: '공통팝업', htmlLink: '공통팝업.html', linkTarget: 'popup' },
-  { number: 1, dapth1: '로그인', htmlLink: 'main.html', linkTarget: 'main' },
-  { number: 2, dapth1: '대시보드', htmlLink: '대시보드.html', linkTarget: 'sub' },
-  { number: 3, dapth1: '평가관리', dapth2: '목표·면담 설정', tabDapth: '목표마스터 설정', htmlLink: '목표마스터설정.html', linkTarget: 'sub' },
-  { number: 4, dapth1: '평가운영', dapth2: '리더십리뷰운영', htmlLink: '리더십리뷰운영.html', linkTarget: 'sub' },
-  { number: 5, dapth1: '평가운영', dapth2: '개인성과평가운영', htmlLink: '개인성과평가운영.html', linkTarget: 'sub' },
-  { number: 6, dapth2: '리뷰문항매핑', htmlLink: '리뷰문항매핑.html', linkTarget: 'sub' },
-  { number: 7, dapth2: '평가군관리', htmlLink: '평가군관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
-  { number: 8, dapth2: '평가대상자관리', htmlLink: '평가대상자관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
-  { number: 9, dapth2: '평가조정위원회관리', htmlLink: '평가조정위원회관리.html', linkTarget: 'sub', firstDraft: '2023-08-21' },
-  { number: 10, dapth2: '업무실적작성', htmlLink: '업무실적작성.html', linkTarget: 'sub', firstDraft: '2023-08-25' },
-  { number: 11, dapth2: '목표상세', htmlLink: '목표상세.html', linkTarget: 'sub', firstDraft: '2023-08-25' },
-  { number: 12, dapth2: '공지사항', htmlLink: '공지사항.html', linkTarget: 'sub', firstDraft: '2023-08-29' },
-  { number: 13, dapth2: '개인성과평가실시', htmlLink: '개인성과평가실시.html', linkTarget: 'sub', firstDraft: '2023-09-06' },
-  { number: 14, dapth2: '리더십리뷰결과', htmlLink: '리더십리뷰결과.html', linkTarget: 'sub', firstDraft: '2023-09-06' },
-  { number: 14, dapth2: '일하는방식리뷰', htmlLink: '일하는방식리뷰.html', linkTarget: 'sub', firstDraft: '2023-09-08' },
-  { number: 15, dapth2: '개인성과평가실시-변경', htmlLink: '개인성과평가실시-변경.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
-  { number: 16, dapth2: '업무이력작성', htmlLink: '업무이력작성.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
-  { number: 17, dapth2: '평가기간아닐때', htmlLink: '평가기간아닐때.html', linkTarget: 'sub', firstDraft: '2023-10-06' },
-  { number: 18, dapth2: '404에러', htmlLink: '404에러.html', linkTarget: 'sub', firstDraft: '2023-11-20' },
-  { number: 19, dapth2: '로딩', htmlLink: '로딩.html', linkTarget: 'sub', firstDraft: '2023-11-21' },
+  {
+    number: 0,
+    dapth1: '스타일가이드',
+    dapth2: '',
+    tabDapth: '',
+    firstDraft: '2023-07-01',
+    revised: '2023-07-15',
+    confirmed: '2023-07-20',
+    additionalComments: 'UI 일관성 확보',
+    contentStatus: '완료',
+    remarks: '디자인 시스템 가이드라인',
+    htmlLink: 'styleGuide.html',
+    linkTarget: 'guide',
+  },
+  {
+    number: 0,
+    dapth1: 'jqgrid',
+    dapth2: '',
+    tabDapth: '',
+    firstDraft: '2023-07-05',
+    revised: '2023-07-18',
+    confirmed: '2023-07-25',
+    additionalComments: '데이터 그리드 최적화',
+    contentStatus: '완료',
+    remarks: '데이터 시각화 개선',
+    htmlLink: 'jqgrid.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 0,
+    dapth1: '공통팝업',
+    dapth2: '',
+    tabDapth: '',
+    firstDraft: '2023-07-10',
+    revised: '2023-07-20',
+    confirmed: '2023-07-28',
+    additionalComments: '접근성 개선',
+    contentStatus: '완료',
+    remarks: '모달 디자인 패턴',
+    htmlLink: '공통팝업.html',
+    linkTarget: 'popup',
+  },
+  {
+    number: 1,
+    dapth1: '로그인',
+    dapth2: '',
+    tabDapth: '',
+    firstDraft: '2023-07-15',
+    revised: '2023-07-25',
+    confirmed: '2023-08-01',
+    additionalComments: '',
+    contentStatus: '완료',
+    remarks: '사용자 경험 최적화',
+    htmlLink: 'main.html',
+    linkTarget: 'main',
+  },
+  {
+    number: 2,
+    dapth1: '대시보드',
+    dapth2: '',
+    tabDapth: '',
+    firstDraft: '2023-07-20',
+    revised: '2023-08-05',
+    confirmed: '2023-08-15',
+    additionalComments: '데이터 시각화 개선',
+    contentStatus: '진행중',
+    remarks: '정보 구조화 및 레이아웃',
+    htmlLink: '대시보드.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 3,
+    dapth1: '평가관리',
+    dapth2: '목표·면담 설정',
+    tabDapth: '목표마스터 설정',
+    firstDraft: '2023-07-25',
+    revised: '2023-08-10',
+    confirmed: '2023-08-20',
+    additionalComments: 'OKR 연동',
+    contentStatus: '검토중',
+    remarks: '목표 설정 프로세스 개선',
+    htmlLink: '목표마스터설정.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 4,
+    dapth1: '평가운영',
+    dapth2: '리더십리뷰운영',
+    tabDapth: '',
+    firstDraft: '2023-08-01',
+    revised: '2023-08-15',
+    confirmed: '2023-08-25',
+    additionalComments: '',
+    contentStatus: '진행중',
+    remarks: '평가 프로세스 시각화',
+    htmlLink: '리더십리뷰운영.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 5,
+    dapth1: '평가운영',
+    dapth2: '개인성과평가운영',
+    tabDapth: '',
+    firstDraft: '2023-08-05',
+    revised: '2023-08-20',
+    confirmed: '2023-09-01',
+    additionalComments: '',
+    contentStatus: '개발중',
+    remarks: '사용자 중심 평가 인터페이스',
+    htmlLink: '개인성과평가운영.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 6,
+    dapth1: '',
+    dapth2: '리뷰문항매핑',
+    tabDapth: '',
+    firstDraft: '2023-08-10',
+    revised: '2023-08-25',
+    confirmed: '2023-09-05',
+    additionalComments: '유연한 문항 구성',
+    contentStatus: '테스트중',
+    remarks: '설문 디자인 패턴',
+    htmlLink: '리뷰문항매핑.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 7,
+    dapth1: '',
+    dapth2: '평가군관리',
+    tabDapth: '',
+    firstDraft: '2023-08-21',
+    revised: '2023-09-05',
+    confirmed: '2023-09-15',
+    additionalComments: '조직도 연동',
+    contentStatus: '완료',
+    remarks: '계층 구조 시각화',
+    htmlLink: '평가군관리.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 8,
+    dapth1: '',
+    dapth2: '평가대상자관리',
+    tabDapth: '',
+    firstDraft: '2023-08-21',
+    revised: '2023-09-10',
+    confirmed: '2023-09-20',
+    additionalComments: '대량 업데이트 기능',
+    contentStatus: '검토중',
+    remarks: '데이터 관리 UI 패턴',
+    htmlLink: '평가대상자관리.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 9,
+    dapth1: '',
+    dapth2: '평가조정위원회관리',
+    tabDapth: '',
+    firstDraft: '2023-08-21',
+    revised: '2023-09-15',
+    confirmed: '2023-09-25',
+    additionalComments: '의사결정 지원 도구',
+    contentStatus: '개발중',
+    remarks: '의사결정 프로세스 UI',
+    htmlLink: '평가조정위원회관리.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 10,
+    dapth1: '',
+    dapth2: '업무실적작성',
+    tabDapth: '',
+    firstDraft: '2023-08-25',
+    revised: '2023-09-20',
+    confirmed: '2023-10-01',
+    additionalComments: '템플릿 기능 강화',
+    contentStatus: '테스트중',
+    remarks: '문서 작성 UX 개선',
+    htmlLink: '업무실적작성.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 11,
+    dapth1: '',
+    dapth2: '목표상세',
+    tabDapth: '',
+    firstDraft: '2023-08-25',
+    revised: '2023-09-25',
+    confirmed: '2023-10-05',
+    additionalComments: '진척도 시각화',
+    contentStatus: '완료',
+    remarks: '목표 추적 대시보드',
+    htmlLink: '목표상세.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 12,
+    dapth1: '',
+    dapth2: '공지사항',
+    tabDapth: '',
+    firstDraft: '2023-08-29',
+    revised: '2023-09-30',
+    confirmed: '2023-10-10',
+    additionalComments: '푸시 알림 통합',
+    contentStatus: '개발중',
+    remarks: '알림 시스템 UX',
+    htmlLink: '공지사항.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 13,
+    dapth1: '',
+    dapth2: '개인성과평가실시',
+    tabDapth: '',
+    firstDraft: '2023-09-06',
+    revised: '2023-10-05',
+    confirmed: '2023-10-15',
+    additionalComments: '실시간 피드백',
+    contentStatus: '테스트중',
+    remarks: '평가 프로세스 UX 흐름',
+    htmlLink: '개인성과평가실시.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 14,
+    dapth1: '',
+    dapth2: '리더십리뷰결과',
+    tabDapth: '',
+    firstDraft: '2023-09-06',
+    revised: '2023-10-10',
+    confirmed: '2023-10-20',
+    additionalComments: '개인화된 보고서',
+    contentStatus: '개발중',
+    remarks: '데이터 시각화 대시보드',
+    htmlLink: '리더십리뷰결과.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 14,
+    dapth1: '',
+    dapth2: '일하는방식리뷰',
+    tabDapth: '',
+    firstDraft: '2023-09-08',
+    revised: '2023-10-15',
+    confirmed: '2023-10-25',
+    additionalComments: '협업 툴 연동',
+    contentStatus: '기획중',
+    remarks: '협업 활동 시각화',
+    htmlLink: '일하는방식리뷰.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 15,
+    dapth1: '',
+    dapth2: '개인성과평가실시-변경',
+    tabDapth: '',
+    firstDraft: '2023-10-06',
+    revised: '2023-10-20',
+    confirmed: '2023-10-30',
+    additionalComments: '유연한 평가 주기',
+    contentStatus: '개발중',
+    remarks: '평가 기간 설정 UI',
+    htmlLink: '개인성과평가실시-변경.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 16,
+    dapth1: '',
+    dapth2: '업무이력작성',
+    tabDapth: '',
+    firstDraft: '2023-10-06',
+    revised: '2023-10-25',
+    confirmed: '2023-11-05',
+    additionalComments: '자동 기록 기능',
+    contentStatus: '기획중',
+    remarks: '업무 기록 인터페이스',
+    htmlLink: '업무이력작성.html',
+    linkTarget: 'sub',
+  },
+  {
+    number: 17,
+    dapth1: '',
+    dapth2: '평가기간아닐때',
+    tabDapth: '',
+    firstDraft: '2023-10-06',
+    revised: '2023-10-30',
+    confirmed: '2023-11-10',
+    additionalComments: '상시 피드백 시스템',
+    contentStatus: '기획중',
+    remarks: '피드백 입력 UI',
+    htmlLink: '평가기간아닐때.html',
+    linkTarget: 'sub',
+  },
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가이드</title>
-    <link rel="stylesheet" href="../assets/css/ui.css" />
+    <title>{title} - 프로젝트 포트폴리오</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    ></script>
+    <style is:global>
+      :root {
+        --primary-color: #003f88;
+        --secondary-color: #00296b;
+        --accent-color: #fdc500;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --table-header-bg: #003f88;
+        --table-row-even: #e9ecef;
+        --table-row-odd: #ffffff;
+        --table-row-hover: #cfe2ff;
+        --table-border: #dee2e6;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 95%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      .project-info {
+        background-color: white;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-description {
+        margin-bottom: 1rem;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      .project-table {
+        width: 100%;
+        min-width: 1200px; /* 테이블의 최소 너비 설정 */
+        table-layout: fixed;
+      }
+
+      .project-table th,
+      .project-table td {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+        border-bottom: 1px solid var(--table-border);
+        font-family: 'Arial', sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .project-table th {
+        background-color: var(--table-header-bg);
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+      }
+
+      .project-table th:nth-child(1),
+      .project-table td:nth-child(1) {
+        width: 40px;
+      } /* 연번 */
+      .project-table th:nth-child(2),
+      .project-table td:nth-child(2) {
+        width: 90px;
+      } /* 1Depth */
+      .project-table th:nth-child(3),
+      .project-table td:nth-child(3) {
+        width: 120px;
+      } /* 2Depth */
+      .project-table th:nth-child(4),
+      .project-table td:nth-child(4) {
+        width: 120px;
+      } /* Tab-Depth */
+      .project-table th:nth-child(5),
+      .project-table td:nth-child(5),
+      .project-table th:nth-child(6),
+      .project-table td:nth-child(6),
+      .project-table th:nth-child(7),
+      .project-table td:nth-child(7) {
+        width: 80px;
+      } /* 날짜 필드들 */
+      .project-table th:nth-child(8),
+      .project-table td:nth-child(8) {
+        width: 150px;
+      } /* 추가의견 */
+      .project-table th:nth-child(9),
+      .project-table td:nth-child(9) {
+        width: 100px;
+      } /* 콘텐츠 */
+      .project-table th:nth-child(10),
+      .project-table td:nth-child(10) {
+        width: 120px;
+      } /* 비고 */
+      .project-table th:nth-child(11),
+      .project-table td:nth-child(11) {
+        width: 80px;
+        text-align: center;
+      } /* HTML 링크 */
+      .btn {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: var(--dark-color);
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      .btn:hover {
+        background-color: #e3b100;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background-color: var(--secondary-color);
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      @media (max-width: 1200px) {
+        .project-table {
+          font-size: 14px;
+        }
+
+        .project-table th,
+        .project-table td {
+          padding: 10px;
+        }
+
+        .project-table th {
+          font-size: 0.8rem;
+        }
+
+        .btn {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
   </head>
-
-  <body>
-    <div class="content-wrapper" id="content">
-      <div class="content-section" id="app-cn" style="display: block">
-        <table style="width: 100%" class="tbl-list mt20">
-          <thead>
-            <tr>
-              <th>연번</th>
-              <th>1Depth</th>
-              <th>2Depth</th>
-              <th>Tab-Depth</th>
-              <th>퍼블1차</th>
-              <th>퍼블수정</th>
-              <th>퍼블컨펌</th>
-              <th>추가의견</th>
-              <th>콘텐츠(기본 유지)</th>
-              <th>비고</th>
-              <th>HTML 링크</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              tableCnt.map(function (item) {
-                return (
-                  <>
-                    <tr>
-                      <td>{item.number}</td>
-                      <td>{item.dapth1}</td>
-                      <td>{item.dapth2}</td>
-                      <td>{item.tabDapth}</td>
-                      <td>{item.firstDraft}</td>
-                      <td>{item.revisedDraft}</td>
-                      <td>{item.draftConfirmation}</td>
-                      <td>{item.additionalComments}</td>
-                      <td>{item.defaultStay}</td>
-                      <td>{item.remarks}</td>
-                      <td>
-                        <a href=`../${item.linkTarget}/${item.htmlLink}` target="_blank">
-                          {item.htmlLink}
-                        </a>
-                      </td>
-                    </tr>
-                  </>
-                );
-              })
-            }
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </body>
 </html>
+<body>
+  <header>
+    <h1>{title}</h1>
+  </header>
+
+  <div class="container">
+    <section class="project-info">
+      <h2>프로젝트 개요</h2>
+      <div class="project-description">
+        <p>
+          본 프로젝트는 한국은행의 직원 평가 프로세스를 현대화하고 효율화하기
+          위해 개발된 종합적인 웹 기반 시스템입니다.
+        </p>
+        <p>사용된 기술 스택:</p>
+        <ul>
+          <li>프론트엔드: Astro, CSS3, JavaScript (ES6+)</li>
+          <li>추가 라이브러리: jqGrid, Chart.js, D3.js</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="table-container">
+      <h2>프로젝트 구성 및 진행 현황</h2>
+      <table class="project-table">
+        <thead>
+          <tr>
+            <th>연번</th>
+            <th>1Depth</th>
+            <th>2Depth</th>
+            <th>Tab-Depth</th>
+            <th>퍼블1차</th>
+            <th>퍼블수정</th>
+            <th>퍼블컨펌</th>
+            <th>추가의견</th>
+            <th>콘텐츠(기본 유지)</th>
+            <th>비고</th>
+            <th>HTML 링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            tableCnt.map((item) => (
+              <tr>
+                <td>{item.number}</td>
+                <td>{item.dapth1 || '-'}</td>
+                <td>{item.dapth2 || '-'}</td>
+                <td>{item.tabDapth || '-'}</td>
+                <td>{item.firstDraft || '-'}</td>
+                <td>{item.revised || '-'}</td>
+                <td>{item.confirmed || '-'}</td>
+                <td>{item.additionalComments || '-'}</td>
+                <td>{item.contentStatus || '-'}</td>
+                <td>{item.remarks || '-'}</td>
+                <td>
+                  <a
+                    href={`../${item.linkTarget}/${item.htmlLink}`}
+                    target="_blank"
+                    class="btn"
+                  >
+                    보기
+                  </a>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2024 한국은행 직원평가 시스템 프로젝트 포트폴리오. 모든 권리 보유.
+    </p>
+  </footer>
+</body>
