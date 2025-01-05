@@ -2,10 +2,8 @@
 
 ## 👌 Project Deliverables
 * Project Documentation
-  * 한국은행_직원평가관리시스템_UI가이드.pdf
-* URL
-  * 한국은행 직원평가관리시스템
-
+ * [한국은행_직원평가관리시스템_UI가이드](https://venerable-treacle-f7ca8a.netlify.app/guide/guide.html)
+   
 ## 🚀 Project Structure
 ```bash
 public
