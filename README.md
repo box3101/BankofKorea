@@ -44,23 +44,23 @@ public
        ├── utility
        └── ui.scss
 
-
-🧞 Commands
+## 🧞 Commands
 bashCopy# 개발 서버 실행 (localhost:3000)
 npm run dev
 
-# 프로덕션 빌드
+## 프로덕션 빌드
 npm run build
 
-# 빌드 미리보기
+## 빌드 미리보기
 npm run preview
-💻 Tech Stack
+
+##💻 Tech Stack
 
 Astro.js
 SCSS
 JavaScript
 
-📦 Features
+##📦 Features
 
 직원 평가 관리
 실적 평가 시스템
