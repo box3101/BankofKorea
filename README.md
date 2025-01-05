@@ -1,7 +1,7 @@
 # Bank of Korea - Employee Management System
 
 ## 👌 Project Deliverables
-* Project Documentation
+* Publishing Guide Document
  * [한국은행_직원평가관리시스템_UI가이드](https://venerable-treacle-f7ca8a.netlify.app/guide/guide.html)
    
 ## 🚀 Project Structure
