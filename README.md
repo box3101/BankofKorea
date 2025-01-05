@@ -1,12 +1,12 @@
 # Bank of Korea - Employee Management System
 
-👌 Project Deliverables
+## 👌 Project Deliverables
 * Project Documentation
   * 한국은행_직원평가관리시스템_UI가이드.pdf
 * URL
   * 한국은행 직원평가관리시스템
 
-🚀 Project Structure
+## 🚀 Project Structure
 ```bash
 public
 ├── assets
@@ -43,6 +43,7 @@ public
        ├── pages
        ├── utility
        └── ui.scss
+```
 
 ## 🧞 Commands
 bashCopy# 개발 서버 실행 (localhost:3000)
